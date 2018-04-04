@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "42DD298E20751B1A00C9C014"
-               BuildableName = "VirgilSDKPythia_iOS.framework"
+               BuildableName = "VirgilSDKPythia.framework"
                BlueprintName = "VirgilSDKPythia iOS"
                ReferencedContainer = "container:VirgilSDKPythia.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "42DD298E20751B1A00C9C014"
-            BuildableName = "VirgilSDKPythia_iOS.framework"
+            BuildableName = "VirgilSDKPythia.framework"
             BlueprintName = "VirgilSDKPythia iOS"
             ReferencedContainer = "container:VirgilSDKPythia.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "42DD298E20751B1A00C9C014"
-            BuildableName = "VirgilSDKPythia_iOS.framework"
+            BuildableName = "VirgilSDKPythia.framework"
             BlueprintName = "VirgilSDKPythia iOS"
             ReferencedContainer = "container:VirgilSDKPythia.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "42DD298E20751B1A00C9C014"
-            BuildableName = "VirgilSDKPythia_iOS.framework"
+            BuildableName = "VirgilSDKPythia.framework"
             BlueprintName = "VirgilSDKPythia iOS"
             ReferencedContainer = "container:VirgilSDKPythia.xcodeproj">
          </BuildableReference>

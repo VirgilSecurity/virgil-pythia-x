@@ -11,6 +11,11 @@
 		42DD2A3C207522DA00C9C014 /* VirgilSDKPythia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DD298F20751B1A00C9C014 /* VirgilSDKPythia.framework */; };
 		42DD2A442075234C00C9C014 /* VirgilSDKPythia_iOS_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DD2A432075234C00C9C014 /* VirgilSDKPythia_iOS_Tests.m */; };
 		42DD2A732075294900C9C014 /* VirgilSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DD29F52075214000C9C014 /* VirgilSDK.framework */; };
+		42DD2A7C207529A200C9C014 /* PythiaClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DD2A76207529A200C9C014 /* PythiaClientProtocol.swift */; };
+		42DD2A7D207529A200C9C014 /* PythiaClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DD2A77207529A200C9C014 /* PythiaClient.swift */; };
+		42DD2A7E207529A200C9C014 /* TransformPasswordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DD2A79207529A200C9C014 /* TransformPasswordResponse.swift */; };
+		42DD2A7F207529A200C9C014 /* RotatePasswordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DD2A7A207529A200C9C014 /* RotatePasswordResponse.swift */; };
+		42DD2A80207529A200C9C014 /* PythiaClient+Queries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42DD2A7B207529A200C9C014 /* PythiaClient+Queries.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -241,6 +246,11 @@
 		42DD29E32075214000C9C014 /* VirgilSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VirgilSDK.xcodeproj; path = "Carthage/Checkouts/virgil-sdk-x/VirgilSDK.xcodeproj"; sourceTree = "<group>"; };
 		42DD2A37207522D900C9C014 /* VirgilSDKPythia iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VirgilSDKPythia iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42DD2A432075234C00C9C014 /* VirgilSDKPythia_iOS_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VirgilSDKPythia_iOS_Tests.m; sourceTree = "<group>"; };
+		42DD2A76207529A200C9C014 /* PythiaClientProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PythiaClientProtocol.swift; sourceTree = "<group>"; };
+		42DD2A77207529A200C9C014 /* PythiaClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PythiaClient.swift; sourceTree = "<group>"; };
+		42DD2A79207529A200C9C014 /* TransformPasswordResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformPasswordResponse.swift; sourceTree = "<group>"; };
+		42DD2A7A207529A200C9C014 /* RotatePasswordResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotatePasswordResponse.swift; sourceTree = "<group>"; };
+		42DD2A7B207529A200C9C014 /* PythiaClient+Queries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PythiaClient+Queries.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -296,6 +306,7 @@
 		42DD29A020751EAC00C9C014 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				42DD2A74207529A200C9C014 /* Client */,
 				42DD29A120751EAC00C9C014 /* VirgilSDKPythia.h */,
 			);
 			path = Source;
@@ -357,6 +368,34 @@
 			children = (
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		42DD2A74207529A200C9C014 /* Client */ = {
+			isa = PBXGroup;
+			children = (
+				42DD2A75207529A200C9C014 /* Pythia */,
+			);
+			path = Client;
+			sourceTree = "<group>";
+		};
+		42DD2A75207529A200C9C014 /* Pythia */ = {
+			isa = PBXGroup;
+			children = (
+				42DD2A78207529A200C9C014 /* Models */,
+				42DD2A76207529A200C9C014 /* PythiaClientProtocol.swift */,
+				42DD2A77207529A200C9C014 /* PythiaClient.swift */,
+				42DD2A7B207529A200C9C014 /* PythiaClient+Queries.swift */,
+			);
+			path = Pythia;
+			sourceTree = "<group>";
+		};
+		42DD2A78207529A200C9C014 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				42DD2A79207529A200C9C014 /* TransformPasswordResponse.swift */,
+				42DD2A7A207529A200C9C014 /* RotatePasswordResponse.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -685,6 +724,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42DD2A80207529A200C9C014 /* PythiaClient+Queries.swift in Sources */,
+				42DD2A7F207529A200C9C014 /* RotatePasswordResponse.swift in Sources */,
+				42DD2A7C207529A200C9C014 /* PythiaClientProtocol.swift in Sources */,
+				42DD2A7D207529A200C9C014 /* PythiaClient.swift in Sources */,
+				42DD2A7E207529A200C9C014 /* TransformPasswordResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -847,6 +891,7 @@
 				PRODUCT_NAME = VirgilSDKPythia;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -870,6 +915,7 @@
 				PRODUCT_NAME = VirgilSDKPythia;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
@@ -877,6 +923,7 @@
 		42DD2A40207522DA00C9C014 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.virgilsecurity.VirgilSDKPythia-iOS-Tests";
@@ -888,6 +935,7 @@
 		42DD2A41207522DA00C9C014 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.virgilsecurity.VirgilSDKPythia-iOS-Tests";

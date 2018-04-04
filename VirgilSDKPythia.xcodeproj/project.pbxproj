@@ -10,6 +10,7 @@
 		42DD29A220751EAC00C9C014 /* VirgilSDKPythia.h in Headers */ = {isa = PBXBuildFile; fileRef = 42DD29A120751EAC00C9C014 /* VirgilSDKPythia.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		42DD2A3C207522DA00C9C014 /* VirgilSDKPythia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DD298F20751B1A00C9C014 /* VirgilSDKPythia.framework */; };
 		42DD2A442075234C00C9C014 /* VirgilSDKPythia_iOS_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DD2A432075234C00C9C014 /* VirgilSDKPythia_iOS_Tests.m */; };
+		42DD2A732075294900C9C014 /* VirgilSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DD29F52075214000C9C014 /* VirgilSDK.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -223,6 +224,13 @@
 			remoteGlobalIDString = 42DD298E20751B1A00C9C014;
 			remoteInfo = "VirgilSDKPythia iOS";
 		};
+		42DD2A702075293900C9C014 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42DD29E32075214000C9C014 /* VirgilSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 42EB30E31DB8EC17001DF4C0;
+			remoteInfo = "VirgilSDK iOS";
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
@@ -240,6 +248,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42DD2A732075294900C9C014 /* VirgilSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -263,6 +272,7 @@
 				42DD299120751B1A00C9C014 /* VirgilSDKPythia */,
 				42DD2A422075234C00C9C014 /* Tests */,
 				42DD299020751B1A00C9C014 /* Products */,
+				42DD2A722075294900C9C014 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -342,6 +352,13 @@
 			path = Tests;
 			sourceTree = "<group>";
 		};
+		42DD2A722075294900C9C014 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXHeadersBuildPhase section */
@@ -368,6 +385,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				42DD2A712075293900C9C014 /* PBXTargetDependency */,
 			);
 			name = "VirgilSDKPythia iOS";
 			productName = VirgilSDKPythia;
@@ -685,6 +703,11 @@
 			isa = PBXTargetDependency;
 			target = 42DD298E20751B1A00C9C014 /* VirgilSDKPythia iOS */;
 			targetProxy = 42DD2A3D207522DA00C9C014 /* PBXContainerItemProxy */;
+		};
+		42DD2A712075293900C9C014 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "VirgilSDK iOS";
+			targetProxy = 42DD2A702075293900C9C014 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 

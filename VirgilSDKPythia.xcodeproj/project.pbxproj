@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		42DD29A220751EAC00C9C014 /* VirgilSDKPythia.h in Headers */ = {isa = PBXBuildFile; fileRef = 42DD29A120751EAC00C9C014 /* VirgilSDKPythia.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		42DD2A3C207522DA00C9C014 /* VirgilSDKPythia_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DD298F20751B1A00C9C014 /* VirgilSDKPythia_iOS.framework */; };
+		42DD2A3C207522DA00C9C014 /* VirgilSDKPythia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DD298F20751B1A00C9C014 /* VirgilSDKPythia.framework */; };
 		42DD2A442075234C00C9C014 /* VirgilSDKPythia_iOS_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DD2A432075234C00C9C014 /* VirgilSDKPythia_iOS_Tests.m */; };
 /* End PBXBuildFile section */
 
@@ -226,7 +226,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		42DD298F20751B1A00C9C014 /* VirgilSDKPythia_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VirgilSDKPythia_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42DD298F20751B1A00C9C014 /* VirgilSDKPythia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VirgilSDKPythia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42DD299320751B1A00C9C014 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42DD29A120751EAC00C9C014 /* VirgilSDKPythia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VirgilSDKPythia.h; sourceTree = "<group>"; };
 		42DD29A62075213900C9C014 /* VirgilCrypto.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VirgilCrypto.xcodeproj; path = "Carthage/Checkouts/virgil-foundation-x/VirgilCrypto.xcodeproj"; sourceTree = "<group>"; };
@@ -247,7 +247,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42DD2A3C207522DA00C9C014 /* VirgilSDKPythia_iOS.framework in Frameworks */,
+				42DD2A3C207522DA00C9C014 /* VirgilSDKPythia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -269,7 +269,7 @@
 		42DD299020751B1A00C9C014 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				42DD298F20751B1A00C9C014 /* VirgilSDKPythia_iOS.framework */,
+				42DD298F20751B1A00C9C014 /* VirgilSDKPythia.framework */,
 				42DD2A37207522D900C9C014 /* VirgilSDKPythia iOS Tests.xctest */,
 			);
 			name = Products;
@@ -371,7 +371,7 @@
 			);
 			name = "VirgilSDKPythia iOS";
 			productName = VirgilSDKPythia;
-			productReference = 42DD298F20751B1A00C9C014 /* VirgilSDKPythia_iOS.framework */;
+			productReference = 42DD298F20751B1A00C9C014 /* VirgilSDKPythia.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		42DD2A36207522D900C9C014 /* VirgilSDKPythia iOS Tests */ = {
@@ -821,7 +821,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilSDKPythia;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = VirgilSDKPythia;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -844,7 +844,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilSDKPythia;
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				PRODUCT_NAME = VirgilSDKPythia;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";

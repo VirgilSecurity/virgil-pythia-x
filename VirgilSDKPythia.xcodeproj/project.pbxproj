@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		420120EB207623EC00632FD9 /* VirgilSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DD29F52075214000C9C014 /* VirgilSDK.framework */; };
 		42DD29A220751EAC00C9C014 /* VirgilSDKPythia.h in Headers */ = {isa = PBXBuildFile; fileRef = 42DD29A120751EAC00C9C014 /* VirgilSDKPythia.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		42DD2A3C207522DA00C9C014 /* VirgilSDKPythia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DD298F20751B1A00C9C014 /* VirgilSDKPythia.framework */; };
 		42DD2A442075234C00C9C014 /* VirgilSDKPythia_iOS_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DD2A432075234C00C9C014 /* VirgilSDKPythia_iOS_Tests.m */; };
@@ -239,6 +240,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		420120C62076239600632FD9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		42DD298F20751B1A00C9C014 /* VirgilSDKPythia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VirgilSDKPythia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42DD299320751B1A00C9C014 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42DD29A120751EAC00C9C014 /* VirgilSDKPythia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VirgilSDKPythia.h; sourceTree = "<group>"; };
@@ -266,6 +268,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				420120EB207623EC00632FD9 /* VirgilSDK.framework in Frameworks */,
 				42DD2A3C207522DA00C9C014 /* VirgilSDKPythia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -366,6 +369,7 @@
 		42DD2A722075294900C9C014 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				420120C62076239600632FD9 /* Foundation.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";

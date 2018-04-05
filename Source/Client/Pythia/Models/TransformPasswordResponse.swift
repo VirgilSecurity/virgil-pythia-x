@@ -36,7 +36,7 @@
 
 import Foundation
 
-@objc(VSSTransformPasswordResponse) public final class TransformPasswordResponse: NSObject, Codable {
+@objc(VSYTransformPasswordResponse) public final class TransformPasswordResponse: NSObject, Codable {
     @objc public let transformedPassword: Data
     
     /// Defines coding keys for encoding and decoding

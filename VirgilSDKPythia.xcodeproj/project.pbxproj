@@ -459,6 +459,7 @@
 		42DD298620751B1A00C9C014 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = VSY;
 				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = "Virgil Security";
 				TargetAttributes = {

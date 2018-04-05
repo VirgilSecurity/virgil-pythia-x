@@ -39,7 +39,7 @@ import Foundation
 /// Protocol for PythiaClient
 ///
 /// See: PythiaClient for default implementation
-@objc(VSSPythiaClientProtocol) public protocol PythiaClientProtocol: class {
+@objc(VSYPythiaClientProtocol) public protocol PythiaClientProtocol: class {
     @objc func transformPassword(salt: Data, blindedPassword: Data, version: String?, includeProof: Bool, token: String) throws -> TransformPasswordResponse
     @objc func rotatePassword(token: String) throws -> RotatePasswordResponse
 }

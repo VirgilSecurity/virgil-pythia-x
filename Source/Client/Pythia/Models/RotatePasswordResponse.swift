@@ -36,7 +36,7 @@
 
 import Foundation
 
-@objc(VSSRotatePasswordResponse) public final class RotatePasswordResponse: NSObject, Codable {
+@objc(VSYRotatePasswordResponse) public final class RotatePasswordResponse: NSObject, Codable {
     @objc public let passwordUpdateToken: Data
     @objc public let updatedTransformationPublicKey: Data
     @objc public let updatedVersion: String

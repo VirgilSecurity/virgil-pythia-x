@@ -40,12 +40,12 @@ import VirgilSDK
 /// Declares client error types and codes
 ///
 /// - constructingUrl: constructing url of endpoint failed
-@objc(VSSPythiaClientError) public enum PythiaClientError: Int, Error {
+@objc(VSYPythiaClientError) public enum PythiaClientError: Int, Error {
     case constructingUrl = 1
 }
 
 /// Represent card service error
-@objc(VSSPythiaServiceError) public final class PythiaServiceError: NSObject, CustomNSError {
+@objc(VSYPythiaServiceError) public final class PythiaServiceError: NSObject, CustomNSError {
     /// Http status code
     @objc public let httpStatusCode: Int
     /// Recieved and decoded `RawServiceError`
@@ -68,7 +68,7 @@ import VirgilSDK
 }
 
 /// Class representing operations with Virgil Cards service
-@objc(VSSPythiaClient) open class PythiaClient: BaseClient {
+@objc(VSYPythiaClient) open class PythiaClient: BaseClient {
     /// Default URL for service
     @objc public static let defaultURL = URL(string: "https://api.virgilsecurity.com")!
     /// Error domain for Error instances thrown from service

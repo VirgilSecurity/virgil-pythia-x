@@ -36,16 +36,33 @@
 
 import Foundation
 
-@objc(VSYTransformPasswordResponse) public final class TransformPasswordResponse: NSObject, Codable {
+@objc(VSYTransformProof) public final class TransformProof: NSObject, Codable {
+    @objc public let p: Data
+    @objc public let c: Data
+    @objc public let u: Data
+    
+    @objc public init(p: Data, c: Data, u: Data) {
+        self.p = p
+        self.c = c
+        self.u = u
+        
+        super.init()
+    }
+}
+
+@objc(VSYTransformResponse) public final class TransformResponse: NSObject, Codable {
     @objc public let transformedPassword: Data
+    @objc public let proof: TransformProof?
     
     /// Defines coding keys for encoding and decoding
     private enum CodingKeys: String, CodingKey {
         case transformedPassword = "transformed_password"
+        case proof = "proof"
     }
     
-    @objc public init(transformedPassword: Data) {
+    @objc public init(transformedPassword: Data, proof: TransformProof?) {
         self.transformedPassword = transformedPassword
+        self.proof = proof
         
         super.init()
     }

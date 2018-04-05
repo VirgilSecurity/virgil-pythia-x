@@ -10,9 +10,12 @@
 		420120EB207623EC00632FD9 /* VirgilSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DD29F52075214000C9C014 /* VirgilSDK.framework */; };
 		420120F6207625F500632FD9 /* PythiaClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420120F0207625F400632FD9 /* PythiaClientProtocol.swift */; };
 		420120F7207625F500632FD9 /* PythiaClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420120F1207625F400632FD9 /* PythiaClient.swift */; };
-		420120F8207625F500632FD9 /* TransformPasswordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420120F3207625F400632FD9 /* TransformPasswordResponse.swift */; };
-		420120F9207625F500632FD9 /* RotatePasswordResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420120F4207625F400632FD9 /* RotatePasswordResponse.swift */; };
+		420120F8207625F500632FD9 /* TransformResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420120F3207625F400632FD9 /* TransformResponse.swift */; };
+		420120F9207625F500632FD9 /* RotateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420120F4207625F400632FD9 /* RotateResponse.swift */; };
 		420120FA207625F500632FD9 /* PythiaClient+Queries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420120F5207625F400632FD9 /* PythiaClient+Queries.swift */; };
+		420120FD2076294F00632FD9 /* PythiaAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420120FC2076294F00632FD9 /* PythiaAuth.swift */; };
+		420120FF20762D1C00632FD9 /* OperationsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420120FE20762D1C00632FD9 /* OperationsUtils.swift */; };
+		4201210120764AB500632FD9 /* PythiaAuth+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4201210020764AB500632FD9 /* PythiaAuth+Operations.swift */; };
 		42DD29A220751EAC00C9C014 /* VirgilSDKPythia.h in Headers */ = {isa = PBXBuildFile; fileRef = 42DD29A120751EAC00C9C014 /* VirgilSDKPythia.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		42DD2A3C207522DA00C9C014 /* VirgilSDKPythia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DD298F20751B1A00C9C014 /* VirgilSDKPythia.framework */; };
 		42DD2A442075234C00C9C014 /* VirgilSDKPythia_iOS_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DD2A432075234C00C9C014 /* VirgilSDKPythia_iOS_Tests.m */; };
@@ -243,9 +246,12 @@
 		420120C62076239600632FD9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		420120F0207625F400632FD9 /* PythiaClientProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PythiaClientProtocol.swift; sourceTree = "<group>"; };
 		420120F1207625F400632FD9 /* PythiaClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PythiaClient.swift; sourceTree = "<group>"; };
-		420120F3207625F400632FD9 /* TransformPasswordResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformPasswordResponse.swift; sourceTree = "<group>"; };
-		420120F4207625F400632FD9 /* RotatePasswordResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotatePasswordResponse.swift; sourceTree = "<group>"; };
+		420120F3207625F400632FD9 /* TransformResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformResponse.swift; sourceTree = "<group>"; };
+		420120F4207625F400632FD9 /* RotateResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RotateResponse.swift; sourceTree = "<group>"; };
 		420120F5207625F400632FD9 /* PythiaClient+Queries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PythiaClient+Queries.swift"; sourceTree = "<group>"; };
+		420120FC2076294F00632FD9 /* PythiaAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PythiaAuth.swift; sourceTree = "<group>"; };
+		420120FE20762D1C00632FD9 /* OperationsUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationsUtils.swift; sourceTree = "<group>"; };
+		4201210020764AB500632FD9 /* PythiaAuth+Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PythiaAuth+Operations.swift"; sourceTree = "<group>"; };
 		42DD298F20751B1A00C9C014 /* VirgilSDKPythia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VirgilSDKPythia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42DD299320751B1A00C9C014 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42DD29A120751EAC00C9C014 /* VirgilSDKPythia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VirgilSDKPythia.h; sourceTree = "<group>"; };
@@ -290,10 +296,19 @@
 		420120F2207625F400632FD9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				420120F3207625F400632FD9 /* TransformPasswordResponse.swift */,
-				420120F4207625F400632FD9 /* RotatePasswordResponse.swift */,
+				420120F3207625F400632FD9 /* TransformResponse.swift */,
+				420120F4207625F400632FD9 /* RotateResponse.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		420120FB2076263700632FD9 /* Pythia Auth */ = {
+			isa = PBXGroup;
+			children = (
+				420120FC2076294F00632FD9 /* PythiaAuth.swift */,
+				4201210020764AB500632FD9 /* PythiaAuth+Operations.swift */,
+			);
+			path = "Pythia Auth";
 			sourceTree = "<group>";
 		};
 		42DD298520751B1A00C9C014 = {
@@ -329,8 +344,10 @@
 		42DD29A020751EAC00C9C014 /* Source */ = {
 			isa = PBXGroup;
 			children = (
+				420120FB2076263700632FD9 /* Pythia Auth */,
 				420120EF207625F400632FD9 /* Client */,
 				42DD29A120751EAC00C9C014 /* VirgilSDKPythia.h */,
+				420120FE20762D1C00632FD9 /* OperationsUtils.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -722,10 +739,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				420120FA207625F500632FD9 /* PythiaClient+Queries.swift in Sources */,
-				420120F9207625F500632FD9 /* RotatePasswordResponse.swift in Sources */,
+				420120F9207625F500632FD9 /* RotateResponse.swift in Sources */,
 				420120F6207625F500632FD9 /* PythiaClientProtocol.swift in Sources */,
+				420120FF20762D1C00632FD9 /* OperationsUtils.swift in Sources */,
 				420120F7207625F500632FD9 /* PythiaClient.swift in Sources */,
-				420120F8207625F500632FD9 /* TransformPasswordResponse.swift in Sources */,
+				420120FD2076294F00632FD9 /* PythiaAuth.swift in Sources */,
+				4201210120764AB500632FD9 /* PythiaAuth+Operations.swift in Sources */,
+				420120F8207625F500632FD9 /* TransformResponse.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

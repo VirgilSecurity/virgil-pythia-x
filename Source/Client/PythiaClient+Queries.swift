@@ -40,7 +40,7 @@ import VirgilSDK
 extension PythiaClient: PythiaClientProtocol {
     @objc public static let xVirgilIncludeProofTrue = "true"
     
-    @objc public func transformPassword(salt: Data, blindedPassword: Data, version: String? = nil, includeProof: Bool = false, token: String) throws -> TransformPasswordResponse {
+    @objc public func transformPassword(salt: Data, blindedPassword: Data, version: String? = nil, includeProof: Bool = false, token: String) throws -> TransformResponse {
         guard let url = URL(string: "pythia/v1/password", relativeTo: self.serviceUrl) else {
             throw PythiaClientError.constructingUrl
         }
@@ -65,7 +65,7 @@ extension PythiaClient: PythiaClientProtocol {
         return try self.processResponse(response)
     }
     
-    @objc public func rotatePassword(token: String) throws -> RotatePasswordResponse {
+    @objc public func rotatePassword(token: String) throws -> RotateResponse {
         guard let url = URL(string: "pythia/v1/password/actions/rotate", relativeTo: self.serviceUrl) else {
             throw PythiaClientError.constructingUrl
         }

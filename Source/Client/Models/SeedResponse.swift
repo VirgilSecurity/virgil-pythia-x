@@ -36,11 +36,12 @@
 
 import Foundation
 
-/// Protocol for PythiaClient
-///
-/// See: PythiaClient for default implementation
-@objc(VSYPythiaClientProtocol) public protocol PythiaClientProtocol: class {
-    @objc func transformPassword(salt: Data, blindedPassword: Data, version: String?, includeProof: Bool, token: String) throws -> TransformResponse
-    @objc func rotatePassword(token: String) throws -> RotateResponse
-    @objc func seed(blindedPassword: Data, brainKeyId: String, token: String) throws -> Data
+@objc(VSYSeedResponse) public final class SeedResponse: NSObject, Codable {
+    @objc public let seed: Data
+    
+    @objc public init(seed: Data) {
+        self.seed = seed
+        
+        super.init()
+    }
 }

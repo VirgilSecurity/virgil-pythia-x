@@ -35,12 +35,37 @@
 //
 
 import Foundation
+import VirgilSDK
+import VirgilCryptoApiImpl
 
-/// Protocol for PythiaClient
-///
-/// See: PythiaClient for default implementation
-@objc(VSYPythiaClientProtocol) public protocol PythiaClientProtocol: class {
-    @objc func transformPassword(salt: Data, blindedPassword: Data, version: String?, includeProof: Bool, token: String) throws -> TransformResponse
-    @objc func rotatePassword(token: String) throws -> RotateResponse
-    @objc func seed(blindedPassword: Data, brainKeyId: String, token: String) throws -> Data
+extension BrainKey {
+    func makeSeedOperation(blindedPassword: Data, brainKeyId: String) -> GenericOperation<Data> {
+        return CallbackOperation { operation, completion in
+            do {
+                let token: AccessToken = try operation.findDependencyResult()
+                
+                let seed = try self.client.seed(blindedPassword: blindedPassword, brainKeyId: brainKeyId, token: token.stringRepresentation())
+                
+                completion(seed, nil)
+            }
+            catch {
+                completion(nil, error)
+            }
+        }
+    }
+    
+    func makeGenerateKeyOperation() -> GenericOperation<VirgilPrivateKey> {
+        return CallbackOperation { operation, completion in
+            do {
+                // TODO: Implement
+                let privateKey = try VirgilCrypto().generateKeyPair().privateKey
+                
+                completion(privateKey, nil)
+            }
+            catch {
+                completion(nil, error)
+            }
+        }
+    }
 }
+

@@ -36,23 +36,9 @@
 
 import Foundation
 
-@objc(VSYTransformProof) public final class TransformProof: NSObject, Codable {
-    @objc public let p: Data
-    @objc public let c: Data
-    @objc public let u: Data
-    
-    @objc public init(p: Data, c: Data, u: Data) {
-        self.p = p
-        self.c = c
-        self.u = u
-        
-        super.init()
-    }
-}
-
 @objc(VSYTransformResponse) public final class TransformResponse: NSObject, Codable {
     @objc public let transformedPassword: Data
-    @objc public let proof: TransformProof?
+    @objc public let proof: PythiaProof?
     
     /// Defines coding keys for encoding and decoding
     private enum CodingKeys: String, CodingKey {
@@ -60,7 +46,7 @@ import Foundation
         case proof = "proof"
     }
     
-    @objc public init(transformedPassword: Data, proof: TransformProof?) {
+    @objc public init(transformedPassword: Data, proof: PythiaProof?) {
         self.transformedPassword = transformedPassword
         self.proof = proof
         

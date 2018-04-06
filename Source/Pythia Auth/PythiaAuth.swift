@@ -37,19 +37,6 @@
 import Foundation
 import VirgilSDK
 
-@objc protocol PythiaCryptoProtocol: class {
-    @objc func blind(password: String) throws -> Data
-    @objc func verify(transformedPassword: Data, blindedPassword: Data, tweak: Data, transofrmationPublicKey: Data, proofC: Data, proofU: Data) -> Bool
-    @objc func generateSalt() throws -> Data
-}
-
-public struct PythiaAuthUserInfo {
-    let salt: Data
-    let transformedPassword: Data
-    let transformationPublicKey: Data
-    let version: String
-}
-
 public protocol PythiaAuthProtocol: class {
     func authenticate(password: String, salt: Data, transformedPassword: Data, version: String, proof: Bool) -> GenericOperation<Bool>
     func register(password: String, version: String) -> CallbackOperation<PythiaAuthUserInfo>
@@ -69,7 +56,7 @@ public protocol PythiaAuthProtocol: class {
     }
     
     open func rotatePassword() {
-        
+        // TODO: Implement
     }
     
     open func register(password: String, version: String) -> CallbackOperation<PythiaAuthUserInfo> {
@@ -89,18 +76,12 @@ public protocol PythiaAuthProtocol: class {
             let tokenContext = TokenContext(operation: "get", forceReload: false)
             let getTokenOperation = OperationsUtils.makeGetTokenOperation(tokenContext: tokenContext, accessTokenProvider: self.accessTokenProvider)
             let transformOperation = self.makeTransformOperation(blindedPassword: blindedPassword, salt: salt, version: version, proof: true)
-            let proofOperation = self.makeProofOperation(blindedPassword: blindedPassword, salt: salt)
+            let proofOperation = self.makeProofOperation(blindedPassword: blindedPassword, salt: salt, transformationPublicKey: Data()) // FIXME: transformationPublicKey
             let finishRegistrationOperation = CallbackOperation<PythiaAuthUserInfo> { operation, completion in
                 do {
                     let transformResponse: TransformResponse = try operation.findDependencyResult()
                     
-                    guard let proof = transformResponse.proof else {
-                        // FIXME: Proper error
-                        completion(nil, NSError())
-                        return
-                    }
-                    
-                    let registrationResponse = PythiaAuthUserInfo(salt: salt, transformedPassword: transformResponse.transformedPassword, transformationPublicKey: proof.p, version: version)
+                    let registrationResponse = PythiaAuthUserInfo(salt: salt, transformedPassword: transformResponse.transformedPassword, version: version) // FIXME: transformationPublicKey
                     completion(registrationResponse, nil)
                 }
                 catch {
@@ -145,7 +126,7 @@ public protocol PythiaAuthProtocol: class {
             
             let proofOperation: GenericOperation<Bool>
             if proof {
-                proofOperation = self.makeProofOperation(blindedPassword: blindedPassword, salt: salt)
+                proofOperation = self.makeProofOperation(blindedPassword: blindedPassword, salt: salt, transformationPublicKey: Data()) // FIXME: transformationPublicKey
             }
             else {
                 proofOperation = CallbackOperation { _, completion in

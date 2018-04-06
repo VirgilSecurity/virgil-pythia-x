@@ -53,7 +53,7 @@ extension PythiaAuth {
         }
     }
     
-    func makeProofOperation(blindedPassword: Data, salt: Data) -> GenericOperation<Bool> {
+    func makeProofOperation(blindedPassword: Data, salt: Data, transformationPublicKey: Data) -> GenericOperation<Bool> {
         return CallbackOperation { operation, completion in
             let transformResponse: TransformResponse
             do {
@@ -71,7 +71,7 @@ extension PythiaAuth {
             
             let verified = self.pythiaCrypto.verify(transformedPassword: transformResponse.transformedPassword,
                                                     blindedPassword: blindedPassword, tweak: salt,
-                                                    transofrmationPublicKey: proof.p, proofC: proof.c, proofU: proof.u)
+                                                    transofrmationPublicKey: transformationPublicKey, proofC: proof.c, proofU: proof.u)
             
             guard verified else {
                 completion(false, nil)

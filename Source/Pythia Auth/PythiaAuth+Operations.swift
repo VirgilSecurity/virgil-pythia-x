@@ -38,7 +38,7 @@ import Foundation
 import VirgilSDK
 
 extension PythiaAuth {
-    func makeTransformOperation(blindedPassword: Data, salt: Data, version: String, proof: Bool) -> GenericOperation<TransformResponse> {
+    func makeTransformOperation(blindedPassword: Data, salt: Data, version: Int, proof: Bool) -> GenericOperation<TransformResponse> {
         return CallbackOperation { operation, completion in
             do {
                 let token: AccessToken = try operation.findDependencyResult()
@@ -53,7 +53,7 @@ extension PythiaAuth {
         }
     }
     
-    func makeProofOperation(blindedPassword: Data, salt: Data, transformationPublicKey: Data) -> GenericOperation<Bool> {
+    func makeVerifyOperation(blindedPassword: Data, salt: Data, transformationPublicKey: Data) -> GenericOperation<Bool> {
         return CallbackOperation { operation, completion in
             let transformResponse: TransformResponse
             do {

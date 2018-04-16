@@ -59,7 +59,7 @@ extension PythiaClient: PythiaClientProtocol {
         return seedResponse.seed
     }
     
-    @objc public func transformPassword(salt: Data, blindedPassword: Data, version: String? = nil, includeProof: Bool = false, token: String) throws -> TransformResponse {
+    @objc public func transformPassword(salt: Data, blindedPassword: Data, version: Int, includeProof: Bool = false, token: String) throws -> TransformResponse {
         guard let url = URL(string: "pythia/v1/password", relativeTo: self.serviceUrl) else {
             throw PythiaClientError.constructingUrl
         }
@@ -69,9 +69,7 @@ extension PythiaClient: PythiaClientProtocol {
             "blinded_password": blindedPassword.base64EncodedString()
         ]
         
-        if let version = version {
-            params["version"] = version
-        }
+        params["version"] = "\(version)"
         
         if includeProof {
             params["include_proof"] = PythiaClient.xVirgilIncludeProofTrue

@@ -36,8 +36,40 @@
 
 import Foundation
 
-public struct PythiaAuthUserInfo {
-    let salt: Data
-    let transformedPassword: Data
-    let version: String
+struct PythiaConfig {
+    let oldTransformationPublicKey: (Int, Data)?
+    let transformationPublicKey: (Int, Data)
+    
+    init(transformationPublicKey: (Int, String), oldTransformationPublicKey: (Int, String)? = nil) throws {
+        guard let trPubData = Data(base64Encoded: transformationPublicKey.1) else {
+            throw NSError()
+        }
+        
+        self.transformationPublicKey = (transformationPublicKey.0, trPubData)
+        
+        if let oldTrKey = oldTransformationPublicKey {
+            guard let oldTrPubData = Data(base64Encoded: oldTrKey.1) else {
+                throw NSError()
+            }
+            
+            self.oldTransformationPublicKey = (oldTrKey.0, oldTrPubData)
+        }
+        else {
+            self.oldTransformationPublicKey = nil
+        }
+    }
+    
+    func transformationPublicKey(forVersion version: Int) throws -> Data {
+        if version == self.transformationPublicKey.0 {
+            return self.transformationPublicKey.1
+        }
+        
+        
+        if let old = self.oldTransformationPublicKey, version == old.0 {
+            return old.1
+        }
+        
+        // Something very bad has happened. Probably, unsuccessful migration
+        throw NSError()
+    }
 }

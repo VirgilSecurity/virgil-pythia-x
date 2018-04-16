@@ -18,13 +18,12 @@
 		4201210120764AB500632FD9 /* PythiaAuth+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4201210020764AB500632FD9 /* PythiaAuth+Operations.swift */; };
 		420121032077964200632FD9 /* SeedResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420121022077964200632FD9 /* SeedResponse.swift */; };
 		4201210520779A3300632FD9 /* PythiaProof.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4201210420779A3300632FD9 /* PythiaProof.swift */; };
-		420121082077BFC100632FD9 /* BrainKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420121072077BFC100632FD9 /* BrainKey.swift */; };
 		4201210B2077C1E800632FD9 /* PythiaCryptoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4201210A2077C1E800632FD9 /* PythiaCryptoProtocol.swift */; };
-		4201210E2077C21300632FD9 /* PythiaAuthUserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4201210D2077C21300632FD9 /* PythiaAuthUserInfo.swift */; };
+		4201210E2077C21300632FD9 /* PythiaUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4201210D2077C21300632FD9 /* PythiaUser.swift */; };
 		420121152077C2BB00632FD9 /* VirgilCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DD29C02075213900C9C014 /* VirgilCrypto.framework */; };
 		420121162077C2BB00632FD9 /* VirgilCryptoApiImpl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DD29CE2075213900C9C014 /* VirgilCryptoApiImpl.framework */; };
 		420121172077C2BB00632FD9 /* VSCCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DD29DC2075213900C9C014 /* VSCCrypto.framework */; };
-		4267C60E2077C4A1007EAEB2 /* BrainKey+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267C60D2077C4A1007EAEB2 /* BrainKey+Operations.swift */; };
+		4267C61C2084E21F007EAEB2 /* PythiaConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267C61B2084E21F007EAEB2 /* PythiaConfig.swift */; };
 		42DD29A220751EAC00C9C014 /* VirgilSDKPythia.h in Headers */ = {isa = PBXBuildFile; fileRef = 42DD29A120751EAC00C9C014 /* VirgilSDKPythia.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		42DD2A3C207522DA00C9C014 /* VirgilSDKPythia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DD298F20751B1A00C9C014 /* VirgilSDKPythia.framework */; };
 		42DD2A442075234C00C9C014 /* VirgilSDKPythia_iOS_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DD2A432075234C00C9C014 /* VirgilSDKPythia_iOS_Tests.m */; };
@@ -286,8 +285,9 @@
 		4201210420779A3300632FD9 /* PythiaProof.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PythiaProof.swift; sourceTree = "<group>"; };
 		420121072077BFC100632FD9 /* BrainKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainKey.swift; sourceTree = "<group>"; };
 		4201210A2077C1E800632FD9 /* PythiaCryptoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PythiaCryptoProtocol.swift; sourceTree = "<group>"; };
-		4201210D2077C21300632FD9 /* PythiaAuthUserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PythiaAuthUserInfo.swift; sourceTree = "<group>"; };
+		4201210D2077C21300632FD9 /* PythiaUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PythiaUser.swift; sourceTree = "<group>"; };
 		4267C60D2077C4A1007EAEB2 /* BrainKey+Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BrainKey+Operations.swift"; sourceTree = "<group>"; };
+		4267C61B2084E21F007EAEB2 /* PythiaConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PythiaConfig.swift; sourceTree = "<group>"; };
 		42DD298F20751B1A00C9C014 /* VirgilSDKPythia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VirgilSDKPythia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42DD299320751B1A00C9C014 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42DD29A120751EAC00C9C014 /* VirgilSDKPythia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VirgilSDKPythia.h; sourceTree = "<group>"; };
@@ -372,7 +372,8 @@
 		4201210C2077C20900632FD9 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				4201210D2077C21300632FD9 /* PythiaAuthUserInfo.swift */,
+				4201210D2077C21300632FD9 /* PythiaUser.swift */,
+				4267C61B2084E21F007EAEB2 /* PythiaConfig.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -814,16 +815,15 @@
 				420120F9207625F500632FD9 /* RotateResponse.swift in Sources */,
 				420120F6207625F500632FD9 /* PythiaClientProtocol.swift in Sources */,
 				420121032077964200632FD9 /* SeedResponse.swift in Sources */,
-				4267C60E2077C4A1007EAEB2 /* BrainKey+Operations.swift in Sources */,
 				420120FF20762D1C00632FD9 /* OperationsUtils.swift in Sources */,
 				420120F7207625F500632FD9 /* PythiaClient.swift in Sources */,
-				420121082077BFC100632FD9 /* BrainKey.swift in Sources */,
 				420120FD2076294F00632FD9 /* PythiaAuth.swift in Sources */,
 				4201210520779A3300632FD9 /* PythiaProof.swift in Sources */,
+				4267C61C2084E21F007EAEB2 /* PythiaConfig.swift in Sources */,
 				4201210120764AB500632FD9 /* PythiaAuth+Operations.swift in Sources */,
 				420120F8207625F500632FD9 /* TransformResponse.swift in Sources */,
 				4201210B2077C1E800632FD9 /* PythiaCryptoProtocol.swift in Sources */,
-				4201210E2077C21300632FD9 /* PythiaAuthUserInfo.swift in Sources */,
+				4201210E2077C21300632FD9 /* PythiaUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

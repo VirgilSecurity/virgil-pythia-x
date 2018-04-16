@@ -38,16 +38,20 @@ import Foundation
 import VirgilSDK
 
 public protocol PythiaAuthProtocol: class {
-    func authenticate(password: String, salt: Data, transformedPassword: Data, version: String, proof: Bool) -> GenericOperation<Bool>
-    func register(password: String, version: String) -> CallbackOperation<PythiaAuthUserInfo>
+    func authenticate(password: String, pythiaUser: PythiaUser, proof: Bool) -> GenericOperation<Bool>
+    func register(password: String) -> GenericOperation<PythiaUser>
+    func rotateSecret(newVersion: Int, updateToken: String, pythiaUser: PythiaUser) throws -> PythiaUser
+    func changePassword(for pythiaUser: PythiaUser, newPassword: String) -> GenericOperation<PythiaUser>
 }
 
-@objc(VSYPythiaAuth) open class PythiaAuth: NSObject, PythiaAuthProtocol {
-    @objc let client: PythiaClientProtocol
-    @objc let pythiaCrypto: PythiaCryptoProtocol
-    @objc let accessTokenProvider: AccessTokenProvider
+open class PythiaAuth: NSObject, PythiaAuthProtocol {
+    let config: PythiaConfig
+    let client: PythiaClientProtocol
+    let pythiaCrypto: PythiaCryptoProtocol
+    let accessTokenProvider: AccessTokenProvider
     
-    init(client: PythiaClientProtocol, pythiaCrypto: PythiaCryptoProtocol, accessTokenProvider: AccessTokenProvider) {
+    init(config: PythiaConfig, client: PythiaClientProtocol, pythiaCrypto: PythiaCryptoProtocol, accessTokenProvider: AccessTokenProvider) {
+        self.config = config
         self.client = client
         self.pythiaCrypto = pythiaCrypto
         self.accessTokenProvider = accessTokenProvider
@@ -55,17 +59,16 @@ public protocol PythiaAuthProtocol: class {
         super.init()
     }
     
-    open func rotatePassword() {
-        // TODO: Implement
-    }
-    
-    open func register(password: String, version: String) -> CallbackOperation<PythiaAuthUserInfo> {
+    open func changePassword(for pythiaUser: PythiaUser, newPassword: String) -> GenericOperation<PythiaUser> {
         return CallbackOperation { _, completion in
-            let salt: Data
+            // FIXME: Should we regenerate salt?
+            let salt = pythiaUser.salt
             let blindedPassword: Data
+            let blindingSecret: Data
             do {
-                salt = try self.pythiaCrypto.generateSalt()
-                blindedPassword = try self.pythiaCrypto.blind(password: password)
+                let blinded = try self.pythiaCrypto.blind(password: newPassword)
+                blindedPassword = blinded.0
+                blindingSecret = blinded.1
             }
             catch {
                 completion(nil, error)
@@ -75,13 +78,17 @@ public protocol PythiaAuthProtocol: class {
             // TODO: Update TokenContext
             let tokenContext = TokenContext(operation: "get", forceReload: false)
             let getTokenOperation = OperationsUtils.makeGetTokenOperation(tokenContext: tokenContext, accessTokenProvider: self.accessTokenProvider)
-            let transformOperation = self.makeTransformOperation(blindedPassword: blindedPassword, salt: salt, version: version, proof: true)
-            let proofOperation = self.makeProofOperation(blindedPassword: blindedPassword, salt: salt, transformationPublicKey: Data()) // FIXME: transformationPublicKey
-            let finishRegistrationOperation = CallbackOperation<PythiaAuthUserInfo> { operation, completion in
+            let latestTransformationPublicKey = self.config.transformationPublicKey
+            let transformOperation = self.makeTransformOperation(blindedPassword: blindedPassword, salt: salt, version: latestTransformationPublicKey.0, proof: true)
+            let verifyOperation = self.makeVerifyOperation(blindedPassword: blindedPassword, salt: salt, transformationPublicKey: latestTransformationPublicKey.1)
+            let finishRegistrationOperation = CallbackOperation<PythiaUser> { operation, completion in
                 do {
                     let transformResponse: TransformResponse = try operation.findDependencyResult()
                     
-                    let registrationResponse = PythiaAuthUserInfo(salt: salt, transformedPassword: transformResponse.transformedPassword, version: version) // FIXME: transformationPublicKey
+                    let deblindedPassword = try self.pythiaCrypto.deblind(transformedPassword: transformResponse.transformedPassword, blindingSecret: blindingSecret)
+                    
+                    let registrationResponse = PythiaUser(salt: salt, deblindedPassword: deblindedPassword, version: latestTransformationPublicKey.0)
+                    
                     completion(registrationResponse, nil)
                 }
                 catch {
@@ -93,43 +100,112 @@ public protocol PythiaAuthProtocol: class {
             
             transformOperation.addDependency(getTokenOperation)
             
-            proofOperation.addDependency(transformOperation)
+            verifyOperation.addDependency(transformOperation)
             finishRegistrationOperation.addDependency(transformOperation)
             
             completionOperation.addDependency(getTokenOperation)
             completionOperation.addDependency(transformOperation)
-            completionOperation.addDependency(proofOperation)
+            completionOperation.addDependency(verifyOperation)
             completionOperation.addDependency(finishRegistrationOperation)
             
             let queue = OperationQueue()
-            let operations = [getTokenOperation, transformOperation, proofOperation, finishRegistrationOperation, completionOperation]
+            let operations = [getTokenOperation, transformOperation, verifyOperation, finishRegistrationOperation, completionOperation]
             queue.addOperations(operations, waitUntilFinished: false)
         }
     }
     
-    open func authenticate(password: String, salt: Data, transformedPassword: Data, version: String, proof: Bool) -> GenericOperation<Bool> {
+    open func rotateSecret(newVersion: Int, updateToken: String, pythiaUser: PythiaUser) throws -> PythiaUser {
+        let updateTokenData = Data(base64Encoded: updateToken)!
+        let newDeblindedPassword = try self.pythiaCrypto.updateDeblindedWithToken(deblindedPassword: pythiaUser.deblindedPassword, updateToken: updateTokenData)
+        
+        // FIXME: Should we regenerate salt?
+        return PythiaUser(salt: pythiaUser.salt, deblindedPassword: newDeblindedPassword, version: newVersion)
+    }
+    
+    open func register(password: String) -> GenericOperation<PythiaUser> {
         return CallbackOperation { _, completion in
-            // TODO: Update TokenContext
-            let tokenContext = TokenContext(operation: "get", forceReload: false)
-            let getTokenOperation = OperationsUtils.makeGetTokenOperation(tokenContext: tokenContext, accessTokenProvider: self.accessTokenProvider)
-            
+            let salt: Data
             let blindedPassword: Data
+            let blindingSecret: Data
             do {
-                blindedPassword = try self.pythiaCrypto.blind(password: password)
+                salt = try self.pythiaCrypto.generateSalt()
+                let blinded = try self.pythiaCrypto.blind(password: password)
+                blindedPassword = blinded.0
+                blindingSecret = blinded.1
             }
             catch {
                 completion(nil, error)
                 return
             }
             
-            let transformPasswordOperation = self.makeTransformOperation(blindedPassword: blindedPassword, salt: salt, version: version, proof: proof)
+            // TODO: Update TokenContext
+            let tokenContext = TokenContext(operation: "get", forceReload: false)
+            let getTokenOperation = OperationsUtils.makeGetTokenOperation(tokenContext: tokenContext, accessTokenProvider: self.accessTokenProvider)
+            let latestTransformationPublicKey = self.config.transformationPublicKey
+            let transformOperation = self.makeTransformOperation(blindedPassword: blindedPassword, salt: salt, version: latestTransformationPublicKey.0, proof: true)
+            let verifyOperation = self.makeVerifyOperation(blindedPassword: blindedPassword, salt: salt, transformationPublicKey: latestTransformationPublicKey.1)
+            let finishRegistrationOperation = CallbackOperation<PythiaUser> { operation, completion in
+                do {
+                    let transformResponse: TransformResponse = try operation.findDependencyResult()
+                    
+                    let deblindedPassword = try self.pythiaCrypto.deblind(transformedPassword: transformResponse.transformedPassword, blindingSecret: blindingSecret)
+                    
+                    let registrationResponse = PythiaUser(salt: salt, deblindedPassword: deblindedPassword, version: latestTransformationPublicKey.0)
+                    
+                    completion(registrationResponse, nil)
+                }
+                catch {
+                    completion(nil, error)
+                }
+            }
             
-            let proofOperation: GenericOperation<Bool>
+            let completionOperation = OperationsUtils.makeCompletionOperation(completion: completion)
+            
+            transformOperation.addDependency(getTokenOperation)
+            
+            verifyOperation.addDependency(transformOperation)
+            finishRegistrationOperation.addDependency(transformOperation)
+            
+            completionOperation.addDependency(getTokenOperation)
+            completionOperation.addDependency(transformOperation)
+            completionOperation.addDependency(verifyOperation)
+            completionOperation.addDependency(finishRegistrationOperation)
+            
+            let queue = OperationQueue()
+            let operations = [getTokenOperation, transformOperation, verifyOperation, finishRegistrationOperation, completionOperation]
+            queue.addOperations(operations, waitUntilFinished: false)
+        }
+    }
+    
+    open func authenticate(password: String, pythiaUser: PythiaUser, proof: Bool) -> GenericOperation<Bool> {
+        return CallbackOperation { _, completion in
+            // TODO: Update TokenContext
+            let tokenContext = TokenContext(operation: "get", forceReload: false)
+            let getTokenOperation = OperationsUtils.makeGetTokenOperation(tokenContext: tokenContext, accessTokenProvider: self.accessTokenProvider)
+            
+            let blindedPassword: Data
+            let blindingSecret: Data
+            let transformationPublicKey: Data
+            do {
+                let blinded = try self.pythiaCrypto.blind(password: password)
+                blindedPassword = blinded.0
+                blindingSecret = blinded.1
+                
+                transformationPublicKey = try self.config.transformationPublicKey(forVersion: pythiaUser.version)
+            }
+            catch {
+                completion(nil, error)
+                return
+            }
+            
+            let transformPasswordOperation = self.makeTransformOperation(blindedPassword: blindedPassword, salt: pythiaUser.salt, version: pythiaUser.version, proof: proof)
+            
+            let verifyOperation: GenericOperation<Bool>
             if proof {
-                proofOperation = self.makeProofOperation(blindedPassword: blindedPassword, salt: salt, transformationPublicKey: Data()) // FIXME: transformationPublicKey
+                verifyOperation = self.makeVerifyOperation(blindedPassword: blindedPassword, salt: pythiaUser.salt, transformationPublicKey: transformationPublicKey)
             }
             else {
-                proofOperation = CallbackOperation { _, completion in
+                verifyOperation = CallbackOperation { _, completion in
                     completion(true, nil)
                 }
             }
@@ -138,7 +214,9 @@ public protocol PythiaAuthProtocol: class {
                 do {
                     let transformResponse: TransformResponse = try operation.findDependencyResult()
                     
-                    guard transformResponse.transformedPassword == transformedPassword else {
+                    let deblindedPassowrd = try self.pythiaCrypto.deblind(transformedPassword: transformResponse.transformedPassword, blindingSecret: blindingSecret)
+                    
+                    guard deblindedPassowrd == pythiaUser.deblindedPassword else {
                         completion(false, nil)
                         return
                     }
@@ -155,7 +233,7 @@ public protocol PythiaAuthProtocol: class {
             }
             
             completionOperation.completionBlock = {
-                guard let proofResult = proofOperation.result,
+                guard let proofResult = verifyOperation.result,
                     let authResult = authOperation.result,
                     case let .success(proof) = proofResult, proof,
                     case let .success(auth) = authResult, auth else {
@@ -169,15 +247,15 @@ public protocol PythiaAuthProtocol: class {
             transformPasswordOperation.addDependency(getTokenOperation)
             
             authOperation.addDependency(transformPasswordOperation)
-            proofOperation.addDependency(transformPasswordOperation)
+            verifyOperation.addDependency(transformPasswordOperation)
             
             completionOperation.addDependency(getTokenOperation)
             completionOperation.addDependency(transformPasswordOperation)
-            completionOperation.addDependency(proofOperation)
+            completionOperation.addDependency(verifyOperation)
             completionOperation.addDependency(authOperation)
             
             let queue = OperationQueue()
-            let operations = [getTokenOperation, transformPasswordOperation, authOperation, completionOperation]
+            let operations = [getTokenOperation, transformPasswordOperation, verifyOperation, authOperation, completionOperation]
             queue.addOperations(operations, waitUntilFinished: false)
         }
     }

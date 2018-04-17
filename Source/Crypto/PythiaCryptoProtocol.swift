@@ -41,5 +41,5 @@ protocol PythiaCryptoProtocol: class {
     func deblind(transformedPassword:Data, blindingSecret: Data) throws -> Data
     func verify(transformedPassword: Data, blindedPassword: Data, tweak: Data, transofrmationPublicKey: Data, proofC: Data, proofU: Data) -> Bool
     func updateDeblindedWithToken(deblindedPassword: Data, updateToken: Data) throws -> Data
-    func generateSalt() throws -> Data
+    func generateSalt() throws -> Data // FIXME: This should be replaced with VirgilRandom usage
 }

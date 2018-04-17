@@ -61,14 +61,15 @@ open class PythiaAuth: NSObject, PythiaAuthProtocol {
     
     open func changePassword(for pythiaUser: PythiaUser, newPassword: String) -> GenericOperation<PythiaUser> {
         return CallbackOperation { _, completion in
-            // FIXME: Should we regenerate salt?
-            let salt = pythiaUser.salt
+            let salt: Data
             let blindedPassword: Data
             let blindingSecret: Data
             do {
                 let blinded = try self.pythiaCrypto.blind(password: newPassword)
                 blindedPassword = blinded.0
                 blindingSecret = blinded.1
+                
+                salt = try self.pythiaCrypto.generateSalt()
             }
             catch {
                 completion(nil, error)
@@ -117,8 +118,7 @@ open class PythiaAuth: NSObject, PythiaAuthProtocol {
     open func rotateSecret(newVersion: Int, updateToken: String, pythiaUser: PythiaUser) throws -> PythiaUser {
         let updateTokenData = Data(base64Encoded: updateToken)!
         let newDeblindedPassword = try self.pythiaCrypto.updateDeblindedWithToken(deblindedPassword: pythiaUser.deblindedPassword, updateToken: updateTokenData)
-        
-        // FIXME: Should we regenerate salt?
+                
         return PythiaUser(salt: pythiaUser.salt, deblindedPassword: newDeblindedPassword, version: newVersion)
     }
     

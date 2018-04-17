@@ -38,7 +38,7 @@ import Foundation
 
 @objc(VSYTransformResponse) public final class TransformResponse: NSObject, Codable {
     @objc public let transformedPassword: Data
-    @objc public let proof: PythiaProof?
+    @objc public let proof: Proof?
     
     /// Defines coding keys for encoding and decoding
     private enum CodingKeys: String, CodingKey {
@@ -46,7 +46,7 @@ import Foundation
         case proof = "proof"
     }
     
-    @objc public init(transformedPassword: Data, proof: PythiaProof?) {
+    @objc public init(transformedPassword: Data, proof: Proof?) {
         self.transformedPassword = transformedPassword
         self.proof = proof
         

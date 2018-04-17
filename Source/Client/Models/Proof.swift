@@ -36,7 +36,7 @@
 
 import Foundation
 
-@objc(VSYPythiaProof) public final class PythiaProof: NSObject, Codable {
+@objc(VSYPythiaProof) public final class Proof: NSObject, Codable {
     @objc public let c: Data
     @objc public let u: Data
     

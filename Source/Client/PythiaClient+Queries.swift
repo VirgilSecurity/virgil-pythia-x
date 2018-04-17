@@ -40,25 +40,6 @@ import VirgilSDK
 extension PythiaClient: PythiaClientProtocol {
     @objc public static let xVirgilIncludeProofTrue = "true"
     
-    @objc public func seed(blindedPassword: Data, brainKeyId: String, token: String) throws -> Data {
-        guard let url = URL(string: "pythia/v1/seed", relativeTo: self.serviceUrl) else {
-            throw PythiaClientError.constructingUrl
-        }
-        
-        let params = [
-            "blinded_password": blindedPassword.base64EncodedString(),
-            "brain_key_id": brainKeyId
-        ]
-        
-        let request = try ServiceRequest(url: url, method: .post, accessToken: token, params: params)
-        
-        let response = try self.connection.send(request)
-        
-        let seedResponse: SeedResponse = try self.processResponse(response)
-        
-        return seedResponse.seed
-    }
-    
     @objc public func transformPassword(salt: Data, blindedPassword: Data, version: Int, includeProof: Bool = false, token: String) throws -> TransformResponse {
         guard let url = URL(string: "pythia/v1/password", relativeTo: self.serviceUrl) else {
             throw PythiaClientError.constructingUrl
@@ -76,18 +57,6 @@ extension PythiaClient: PythiaClientProtocol {
         }
         
         let request = try ServiceRequest(url: url, method: .post, accessToken: token, params: params)
-        
-        let response = try self.connection.send(request)
-        
-        return try self.processResponse(response)
-    }
-    
-    @objc public func rotatePassword(token: String) throws -> RotateResponse {
-        guard let url = URL(string: "pythia/v1/password/actions/rotate", relativeTo: self.serviceUrl) else {
-            throw PythiaClientError.constructingUrl
-        }
-        
-        let request = try ServiceRequest(url: url, method: .post, accessToken: token)
         
         let response = try self.connection.send(request)
         

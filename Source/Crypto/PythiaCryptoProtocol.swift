@@ -35,11 +35,11 @@
 //
 
 import Foundation
+import VirgilCryptoApiImpl
+import VirgilCrypto
 
-protocol PythiaCryptoProtocol: class {
-    func blind(password: String) throws -> (Data, Data)
-    func deblind(transformedPassword:Data, blindingSecret: Data) throws -> Data
-    func verify(transformedPassword: Data, blindedPassword: Data, tweak: Data, transofrmationPublicKey: Data, proofC: Data, proofU: Data) -> Bool
-    func updateDeblindedWithToken(deblindedPassword: Data, updateToken: Data) throws -> Data
-    func generateSalt() throws -> Data // FIXME: This should be replaced with VirgilRandom usage
+@objc(VSYPythiaCryptoProtocol) public protocol PythiaCryptoProtocol: class {
+    @objc func blind(password: String) throws -> BlindResult
+    @objc func deblind(transformedPassword:Data, blindingSecret: Data) throws -> Data
+    @objc func generateKeyPair(ofType type: VSCKeyType, fromSeed seed: Data) throws -> VirgilKeyPair
 }

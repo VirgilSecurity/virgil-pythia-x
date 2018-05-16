@@ -35,9 +35,37 @@
 //
 
 import Foundation
+import VirgilSDK
+import VirgilCryptoApiImpl
 
-public struct PythiaUser {
-    let salt: Data
-    let deblindedPassword: Data
-    let version: Int
+extension BrainKey {
+    internal func makeSeedOperation(blindedPassword: Data, brainKeyId: String) -> GenericOperation<Data> {
+        return CallbackOperation { operation, completion in
+            do {
+                let token: AccessToken = try operation.findDependencyResult()
+                
+                let seed = try self.client.generateSeed(blindedPassword: blindedPassword, brainKeyId: brainKeyId, token: token.stringRepresentation())
+                
+                completion(seed, nil)
+            }
+            catch {
+                completion(nil, error)
+            }
+        }
+    }
+    
+    internal func makeGenerateOperation(blindingSecret: Data) -> GenericOperation<VirgilKeyPair> {
+        return CallbackOperation { operation, completion in
+            do {
+                let seed: Data = try operation.findDependencyResult()
+                
+                let deblindedPassword = try self.pythiaCrypto.deblind(transformedPassword: seed, blindingSecret: blindingSecret)
+                
+                completion(try self.pythiaCrypto.generateKeyPair(ofType: self.keyPairType, fromSeed: deblindedPassword), nil)
+            }
+            catch {
+                completion(nil, error)
+            }
+        }
+    }
 }

@@ -35,21 +35,17 @@
 //
 
 import Foundation
+import VirgilCryptoApiImpl
 
-@objc(VSYTransformResponse) public final class TransformResponse: NSObject, Codable {
-    @objc public let transformedPassword: Data
-    @objc public let proof: Proof?
-    
-    /// Defines coding keys for encoding and decoding
-    private enum CodingKeys: String, CodingKey {
-        case transformedPassword = "transformed_password"
-        case proof = "proof"
-    }
-    
-    @objc public init(transformedPassword: Data, proof: Proof?) {
-        self.transformedPassword = transformedPassword
-        self.proof = proof
-        
-        super.init()
+extension BrainKey {
+    @objc open func generateKeyPair(password: String, brainKeyId: String = "DEFAULT-ID", completion: @escaping (VirgilKeyPair?, Error?) -> ()) {
+        self.generateKeyPair(password: password, brainKeyId: brainKeyId).start { result in
+            switch result {
+            case .success(let keyPair):
+                completion(keyPair, nil)
+            case .failure(let error):
+                completion(nil, error)
+            }
+        }
     }
 }

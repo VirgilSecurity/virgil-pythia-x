@@ -38,28 +38,26 @@ import Foundation
 import VirgilSDK
 
 extension PythiaClient: PythiaClientProtocol {
-    @objc public static let xVirgilIncludeProofTrue = "true"
-    
-    @objc public func transformPassword(salt: Data, blindedPassword: Data, version: Int, includeProof: Bool = false, token: String) throws -> TransformResponse {
-        guard let url = URL(string: "pythia/v1/password", relativeTo: self.serviceUrl) else {
+    @objc public func generateSeed(blindedPassword: Data, brainKeyId: String, token: String) throws -> Data {
+        guard let url = URL(string: "pythia/v1/seed", relativeTo: self.serviceUrl) else {
             throw PythiaClientError.constructingUrl
         }
         
-        var params = [
-            "salt": salt.base64EncodedString(),
-            "blinded_password": blindedPassword.base64EncodedString()
+        let params = [
+            "blinded_password": blindedPassword.base64EncodedString(),
+            "brain_key_id": brainKeyId
         ]
-        
-        params["version"] = "\(version)"
-        
-        if includeProof {
-            params["include_proof"] = PythiaClient.xVirgilIncludeProofTrue
-        }
         
         let request = try ServiceRequest(url: url, method: .post, accessToken: token, params: params)
         
         let response = try self.connection.send(request)
         
-        return try self.processResponse(response)
+        class SeedResponse: Codable {
+            let seed: Data
+        }
+        
+        let seedResponse: SeedResponse = try self.processResponse(response)
+        
+        return seedResponse.seed
     }
 }

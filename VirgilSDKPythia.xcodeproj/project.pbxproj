@@ -10,21 +10,20 @@
 		420120EB207623EC00632FD9 /* VirgilSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DD29F52075214000C9C014 /* VirgilSDK.framework */; };
 		420120F6207625F500632FD9 /* PythiaClientProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420120F0207625F400632FD9 /* PythiaClientProtocol.swift */; };
 		420120F7207625F500632FD9 /* PythiaClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420120F1207625F400632FD9 /* PythiaClient.swift */; };
-		420120F8207625F500632FD9 /* TransformResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420120F3207625F400632FD9 /* TransformResponse.swift */; };
 		420120FA207625F500632FD9 /* PythiaClient+Queries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420120F5207625F400632FD9 /* PythiaClient+Queries.swift */; };
-		420120FD2076294F00632FD9 /* PythiaAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420120FC2076294F00632FD9 /* PythiaAuth.swift */; };
-		420120FF20762D1C00632FD9 /* OperationsUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420120FE20762D1C00632FD9 /* OperationsUtils.swift */; };
-		4201210120764AB500632FD9 /* PythiaAuth+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4201210020764AB500632FD9 /* PythiaAuth+Operations.swift */; };
-		4201210520779A3300632FD9 /* Proof.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4201210420779A3300632FD9 /* Proof.swift */; };
 		4201210B2077C1E800632FD9 /* PythiaCryptoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4201210A2077C1E800632FD9 /* PythiaCryptoProtocol.swift */; };
-		4201210E2077C21300632FD9 /* PythiaUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4201210D2077C21300632FD9 /* PythiaUser.swift */; };
 		420121152077C2BB00632FD9 /* VirgilCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DD29C02075213900C9C014 /* VirgilCrypto.framework */; };
 		420121162077C2BB00632FD9 /* VirgilCryptoApiImpl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DD29CE2075213900C9C014 /* VirgilCryptoApiImpl.framework */; };
 		420121172077C2BB00632FD9 /* VSCCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DD29DC2075213900C9C014 /* VSCCrypto.framework */; };
-		4267C61C2084E21F007EAEB2 /* PythiaConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4267C61B2084E21F007EAEB2 /* PythiaConfig.swift */; };
+		42792EB820A9A4B400C95A29 /* BrainKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42792EB720A9A4B400C95A29 /* BrainKey.swift */; };
+		42792EBA20A9A52C00C95A29 /* BrainKey+Obj-C.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42792EB920A9A52C00C95A29 /* BrainKey+Obj-C.swift */; };
+		42792EBC20A9AAE200C95A29 /* BrainKeyContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42792EBB20A9AAE200C95A29 /* BrainKeyContext.swift */; };
+		42792EBE20A9AC4900C95A29 /* BlindResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42792EBD20A9AC4900C95A29 /* BlindResult.swift */; };
+		42792EC020A9AD3500C95A29 /* PythiaCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42792EBF20A9AD3500C95A29 /* PythiaCrypto.swift */; };
+		42792EC220A9AE1D00C95A29 /* BrainKey+Operations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42792EC120A9AE1D00C95A29 /* BrainKey+Operations.swift */; };
+		42792F8320AC6C4400C95A29 /* VSY001_BrainKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42792F8220AC6C4400C95A29 /* VSY001_BrainKeyTests.swift */; };
 		42DD29A220751EAC00C9C014 /* VirgilSDKPythia.h in Headers */ = {isa = PBXBuildFile; fileRef = 42DD29A120751EAC00C9C014 /* VirgilSDKPythia.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		42DD2A3C207522DA00C9C014 /* VirgilSDKPythia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DD298F20751B1A00C9C014 /* VirgilSDKPythia.framework */; };
-		42DD2A442075234C00C9C014 /* VirgilSDKPythia_iOS_Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = 42DD2A432075234C00C9C014 /* VirgilSDKPythia_iOS_Tests.m */; };
 		42DD2A732075294900C9C014 /* VirgilSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DD29F52075214000C9C014 /* VirgilSDK.framework */; };
 /* End PBXBuildFile section */
 
@@ -273,22 +272,21 @@
 		420120C62076239600632FD9 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		420120F0207625F400632FD9 /* PythiaClientProtocol.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PythiaClientProtocol.swift; sourceTree = "<group>"; };
 		420120F1207625F400632FD9 /* PythiaClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PythiaClient.swift; sourceTree = "<group>"; };
-		420120F3207625F400632FD9 /* TransformResponse.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransformResponse.swift; sourceTree = "<group>"; };
 		420120F5207625F400632FD9 /* PythiaClient+Queries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PythiaClient+Queries.swift"; sourceTree = "<group>"; };
-		420120FC2076294F00632FD9 /* PythiaAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PythiaAuth.swift; sourceTree = "<group>"; };
-		420120FE20762D1C00632FD9 /* OperationsUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OperationsUtils.swift; sourceTree = "<group>"; };
-		4201210020764AB500632FD9 /* PythiaAuth+Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "PythiaAuth+Operations.swift"; sourceTree = "<group>"; };
-		4201210420779A3300632FD9 /* Proof.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Proof.swift; sourceTree = "<group>"; };
 		4201210A2077C1E800632FD9 /* PythiaCryptoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PythiaCryptoProtocol.swift; sourceTree = "<group>"; };
-		4201210D2077C21300632FD9 /* PythiaUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PythiaUser.swift; sourceTree = "<group>"; };
-		4267C61B2084E21F007EAEB2 /* PythiaConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PythiaConfig.swift; sourceTree = "<group>"; };
+		42792EB720A9A4B400C95A29 /* BrainKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainKey.swift; sourceTree = "<group>"; };
+		42792EB920A9A52C00C95A29 /* BrainKey+Obj-C.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BrainKey+Obj-C.swift"; sourceTree = "<group>"; };
+		42792EBB20A9AAE200C95A29 /* BrainKeyContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainKeyContext.swift; sourceTree = "<group>"; };
+		42792EBD20A9AC4900C95A29 /* BlindResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BlindResult.swift; sourceTree = "<group>"; };
+		42792EBF20A9AD3500C95A29 /* PythiaCrypto.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PythiaCrypto.swift; sourceTree = "<group>"; };
+		42792EC120A9AE1D00C95A29 /* BrainKey+Operations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BrainKey+Operations.swift"; sourceTree = "<group>"; };
+		42792F8220AC6C4400C95A29 /* VSY001_BrainKeyTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VSY001_BrainKeyTests.swift; sourceTree = "<group>"; };
 		42DD298F20751B1A00C9C014 /* VirgilSDKPythia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VirgilSDKPythia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42DD299320751B1A00C9C014 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42DD29A120751EAC00C9C014 /* VirgilSDKPythia.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VirgilSDKPythia.h; sourceTree = "<group>"; };
 		42DD29A62075213900C9C014 /* VirgilCrypto.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VirgilCrypto.xcodeproj; path = "Carthage/Checkouts/virgil-foundation-x/VirgilCrypto.xcodeproj"; sourceTree = "<group>"; };
 		42DD29E32075214000C9C014 /* VirgilSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VirgilSDK.xcodeproj; path = "Carthage/Checkouts/virgil-sdk-x/VirgilSDK.xcodeproj"; sourceTree = "<group>"; };
 		42DD2A37207522D900C9C014 /* VirgilSDKPythia iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VirgilSDKPythia iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
-		42DD2A432075234C00C9C014 /* VirgilSDKPythia_iOS_Tests.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VirgilSDKPythia_iOS_Tests.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -318,7 +316,6 @@
 		420120EF207625F400632FD9 /* Client */ = {
 			isa = PBXGroup;
 			children = (
-				420120F2207625F400632FD9 /* Models */,
 				420120F0207625F400632FD9 /* PythiaClientProtocol.swift */,
 				420120F1207625F400632FD9 /* PythiaClient.swift */,
 				420120F5207625F400632FD9 /* PythiaClient+Queries.swift */,
@@ -326,39 +323,25 @@
 			path = Client;
 			sourceTree = "<group>";
 		};
-		420120F2207625F400632FD9 /* Models */ = {
-			isa = PBXGroup;
-			children = (
-				420120F3207625F400632FD9 /* TransformResponse.swift */,
-				4201210420779A3300632FD9 /* Proof.swift */,
-			);
-			path = Models;
-			sourceTree = "<group>";
-		};
-		420120FB2076263700632FD9 /* Pythia Auth */ = {
-			isa = PBXGroup;
-			children = (
-				420120FC2076294F00632FD9 /* PythiaAuth.swift */,
-				4201210020764AB500632FD9 /* PythiaAuth+Operations.swift */,
-			);
-			path = "Pythia Auth";
-			sourceTree = "<group>";
-		};
 		420121092077C1DD00632FD9 /* Crypto */ = {
 			isa = PBXGroup;
 			children = (
 				4201210A2077C1E800632FD9 /* PythiaCryptoProtocol.swift */,
+				42792EBD20A9AC4900C95A29 /* BlindResult.swift */,
+				42792EBF20A9AD3500C95A29 /* PythiaCrypto.swift */,
 			);
 			path = Crypto;
 			sourceTree = "<group>";
 		};
-		4201210C2077C20900632FD9 /* Models */ = {
+		42792EB620A9A4A800C95A29 /* BrainKey */ = {
 			isa = PBXGroup;
 			children = (
-				4201210D2077C21300632FD9 /* PythiaUser.swift */,
-				4267C61B2084E21F007EAEB2 /* PythiaConfig.swift */,
+				42792EB720A9A4B400C95A29 /* BrainKey.swift */,
+				42792EB920A9A52C00C95A29 /* BrainKey+Obj-C.swift */,
+				42792EC120A9AE1D00C95A29 /* BrainKey+Operations.swift */,
+				42792EBB20A9AAE200C95A29 /* BrainKeyContext.swift */,
 			);
-			path = Models;
+			path = BrainKey;
 			sourceTree = "<group>";
 		};
 		42DD298520751B1A00C9C014 = {
@@ -394,12 +377,10 @@
 		42DD29A020751EAC00C9C014 /* Source */ = {
 			isa = PBXGroup;
 			children = (
-				4201210C2077C20900632FD9 /* Models */,
+				42792EB620A9A4A800C95A29 /* BrainKey */,
 				420121092077C1DD00632FD9 /* Crypto */,
-				420120FB2076263700632FD9 /* Pythia Auth */,
 				420120EF207625F400632FD9 /* Client */,
 				42DD29A120751EAC00C9C014 /* VirgilSDKPythia.h */,
-				420120FE20762D1C00632FD9 /* OperationsUtils.swift */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -450,7 +431,7 @@
 		42DD2A422075234C00C9C014 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
-				42DD2A432075234C00C9C014 /* VirgilSDKPythia_iOS_Tests.m */,
+				42792F8220AC6C4400C95A29 /* VSY001_BrainKeyTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -533,6 +514,7 @@
 					};
 					42DD2A36207522D900C9C014 = {
 						CreatedOnToolsVersion = 9.3;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -793,17 +775,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42792EBA20A9A52C00C95A29 /* BrainKey+Obj-C.swift in Sources */,
 				420120FA207625F500632FD9 /* PythiaClient+Queries.swift in Sources */,
+				42792EB820A9A4B400C95A29 /* BrainKey.swift in Sources */,
+				42792EBC20A9AAE200C95A29 /* BrainKeyContext.swift in Sources */,
+				42792EC020A9AD3500C95A29 /* PythiaCrypto.swift in Sources */,
+				42792EBE20A9AC4900C95A29 /* BlindResult.swift in Sources */,
 				420120F6207625F500632FD9 /* PythiaClientProtocol.swift in Sources */,
-				420120FF20762D1C00632FD9 /* OperationsUtils.swift in Sources */,
 				420120F7207625F500632FD9 /* PythiaClient.swift in Sources */,
-				420120FD2076294F00632FD9 /* PythiaAuth.swift in Sources */,
-				4201210520779A3300632FD9 /* Proof.swift in Sources */,
-				4267C61C2084E21F007EAEB2 /* PythiaConfig.swift in Sources */,
-				4201210120764AB500632FD9 /* PythiaAuth+Operations.swift in Sources */,
-				420120F8207625F500632FD9 /* TransformResponse.swift in Sources */,
+				42792EC220A9AE1D00C95A29 /* BrainKey+Operations.swift in Sources */,
 				4201210B2077C1E800632FD9 /* PythiaCryptoProtocol.swift in Sources */,
-				4201210E2077C21300632FD9 /* PythiaUser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -811,7 +792,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42DD2A442075234C00C9C014 /* VirgilSDKPythia_iOS_Tests.m in Sources */,
+				42792F8320AC6C4400C95A29 /* VSY001_BrainKeyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -976,7 +957,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = VirgilSDKPythia/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilSDKPythia;
 				PRODUCT_NAME = VirgilSDKPythia;
@@ -1000,7 +981,7 @@
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
 				INFOPLIST_FILE = VirgilSDKPythia/Info.plist;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilSDKPythia;
 				PRODUCT_NAME = VirgilSDKPythia;
@@ -1015,10 +996,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.virgilsecurity.VirgilSDKPythia-iOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
@@ -1027,10 +1011,12 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.virgilsecurity.VirgilSDKPythia-iOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;

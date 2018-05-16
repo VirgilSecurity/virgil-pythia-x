@@ -34,34 +34,33 @@
 // Lead Maintainer: Virgil Security Inc. <support@virgilsecurity.com>
 //
 
-#import <XCTest/XCTest.h>
+import Foundation
+import VirgilCryptoApiImpl
+import VirgilCrypto
 
-@interface VirgilSDKPythia_iOS_Tests : XCTestCase
+@objc(VSYPythiaCrypto) open class PythiaCrypto: NSObject, PythiaCryptoProtocol {
+    @objc public let virgilPythia = VirgilPythia()
+    @objc public let virgilCrypto = VirgilCrypto()
+    
+    @objc open func blind(password: String) throws -> BlindResult {
+        guard let passwordData = password.data(using: .utf8) else {
+            throw NSError() // FIXME
+        }
+        
+        let blindResult = try self.virgilPythia.blind(password: passwordData)
+        
+        return BlindResult(blindedPassword: blindResult.blindedPassword, blindingSecret: blindResult.blindingSecret)
+    }
+    
+    @objc open func deblind(transformedPassword: Data, blindingSecret: Data) throws -> Data {
+        return try self.virgilPythia.deblind(transformedPassword: transformedPassword, blindingSecret: blindingSecret)
+    }
+    
+    @objc open func generateKeyPair(ofType type: VSCKeyType, fromSeed seed: Data) throws -> VirgilKeyPair {
+        guard let keyPair = KeyPair(keyPairType: type, keyMaterial: seed, password: nil) else {
+            throw NSError() // FIXME
+        }
 
-@end
-
-@implementation VirgilSDKPythia_iOS_Tests
-
-- (void)setUp {
-    [super setUp];
-    // Put setup code here. This method is called before the invocation of each test method in the class.
+        return try self.virgilCrypto.wrapKeyPair(privateKey: keyPair.privateKey(), publicKey: keyPair.publicKey())
+    }
 }
-
-- (void)tearDown {
-    // Put teardown code here. This method is called after the invocation of each test method in the class.
-    [super tearDown];
-}
-
-- (void)testExample {
-    // This is an example of a functional test case.
-    // Use XCTAssert and related functions to verify your tests produce the correct results.
-}
-
-- (void)testPerformanceExample {
-    // This is an example of a performance test case.
-    [self measureBlock:^{
-        // Put the code you want to measure the time of here.
-    }];
-}
-
-@end

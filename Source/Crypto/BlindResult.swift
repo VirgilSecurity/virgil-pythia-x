@@ -36,13 +36,13 @@
 
 import Foundation
 
-@objc(VSYPythiaProof) public final class Proof: NSObject, Codable {
-    @objc public let c: Data
-    @objc public let u: Data
+@objc(VSYBlindResult) public final class BlindResult: NSObject {
+    @objc public let blindedPassword: Data
+    @objc public let blindingSecret: Data
     
-    @objc public init(p: Data, c: Data, u: Data) {
-        self.c = c
-        self.u = u
+    @objc public init(blindedPassword: Data, blindingSecret: Data) {
+        self.blindedPassword = blindedPassword
+        self.blindingSecret = blindingSecret
         
         super.init()
     }

@@ -40,5 +40,5 @@ import Foundation
 ///
 /// See: PythiaClient for default implementation
 @objc(VSYPythiaClientProtocol) public protocol PythiaClientProtocol: class {
-    @objc func transformPassword(salt: Data, blindedPassword: Data, version: Int, includeProof: Bool, token: String) throws -> TransformResponse
+    @objc func generateSeed(blindedPassword: Data, brainKeyId: String, token: String) throws -> Data
 }

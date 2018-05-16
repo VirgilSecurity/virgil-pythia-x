@@ -35,41 +35,25 @@
 //
 
 import Foundation
+import VirgilSDK
+import VirgilCrypto
 
-struct PythiaConfig {
-    let oldTransformationPublicKey: (Int, Data)?
-    let transformationPublicKey: (Int, Data)
+@objc(VSYBrainKeyContext) public final class BrainKeyContext: NSObject {
+    @objc public let client: PythiaClientProtocol
+    @objc public let pythiaCrypto: PythiaCryptoProtocol
+    @objc public let accessTokenProvider: AccessTokenProvider
+    @objc public let keyPairType: VSCKeyType
     
-    init(transformationPublicKey: (Int, String), oldTransformationPublicKey: (Int, String)? = nil) throws {
-        guard let trPubData = Data(base64Encoded: transformationPublicKey.1) else {
-            throw NSError()
-        }
+    @objc public init(client: PythiaClientProtocol, pythiaCrypto: PythiaCryptoProtocol, accessTokenProvider: AccessTokenProvider, keyPairType: VSCKeyType) {
+        self.client = client
+        self.pythiaCrypto = pythiaCrypto
+        self.accessTokenProvider = accessTokenProvider
+        self.keyPairType = keyPairType
         
-        self.transformationPublicKey = (transformationPublicKey.0, trPubData)
-        
-        if let oldTrKey = oldTransformationPublicKey {
-            guard let oldTrPubData = Data(base64Encoded: oldTrKey.1) else {
-                throw NSError()
-            }
-            
-            self.oldTransformationPublicKey = (oldTrKey.0, oldTrPubData)
-        }
-        else {
-            self.oldTransformationPublicKey = nil
-        }
+        super.init()
     }
     
-    func transformationPublicKey(forVersion version: Int) throws -> Data {
-        if version == self.transformationPublicKey.0 {
-            return self.transformationPublicKey.1
-        }
-        
-        
-        if let old = self.oldTransformationPublicKey, version == old.0 {
-            return old.1
-        }
-        
-        // Something very bad has happened. Probably, unsuccessful migration
-        throw NSError()
+    @objc public static func makeContext(accessTokenProvider: AccessTokenProvider) throws -> BrainKeyContext {
+        return BrainKeyContext(client: PythiaClient(), pythiaCrypto: PythiaCrypto(), accessTokenProvider: accessTokenProvider, keyPairType: .FAST_EC_ED25519)
     }
 }

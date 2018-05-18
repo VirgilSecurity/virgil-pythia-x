@@ -86,6 +86,8 @@
 		42A76C0220AEDAD800561EA2 /* VirgilCryptoApiImpl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DD29DA2075213900C9C014 /* VirgilCryptoApiImpl.framework */; };
 		42A76C0320AEDAD800561EA2 /* VirgilSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DD2A012075214000C9C014 /* VirgilSDK.framework */; };
 		42A76C0420AEDAD800561EA2 /* VSCCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DD29E22075213900C9C014 /* VSCCrypto.framework */; };
+		42A76C0520AEDD0700561EA2 /* VSY001_BrainKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42792F8220AC6C4400C95A29 /* VSY001_BrainKeyTests.swift */; };
+		42A76C0620AEDD0800561EA2 /* VSY001_BrainKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42792F8220AC6C4400C95A29 /* VSY001_BrainKeyTests.swift */; };
 		42DD2A3C207522DA00C9C014 /* VirgilSDKPythia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DD298F20751B1A00C9C014 /* VirgilSDKPythia.framework */; };
 		42DD2A732075294900C9C014 /* VirgilSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DD29F52075214000C9C014 /* VirgilSDK.framework */; };
 /* End PBXBuildFile section */
@@ -1143,6 +1145,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42A76C0520AEDD0700561EA2 /* VSY001_BrainKeyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1167,6 +1170,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42A76C0620AEDD0800561EA2 /* VSY001_BrainKeyTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

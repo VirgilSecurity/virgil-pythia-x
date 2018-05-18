@@ -38,7 +38,8 @@ import Foundation
 import VirgilCryptoApiImpl
 
 extension BrainKey {
-    @objc open func generateKeyPair(password: String, brainKeyId: String = "DEFAULT-ID", completion: @escaping (VirgilKeyPair?, Error?) -> ()) {
+    @objc open func generateKeyPair(password: String, brainKeyId: String = "DEFAULT-ID",
+                                    completion: @escaping (VirgilKeyPair?, Error?) -> ()) {
         self.generateKeyPair(password: password, brainKeyId: brainKeyId).start { result in
             switch result {
             case .success(let keyPair):

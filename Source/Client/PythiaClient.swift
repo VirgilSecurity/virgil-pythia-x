@@ -50,7 +50,7 @@ import VirgilSDK
     @objc public let httpStatusCode: Int
     /// Recieved and decoded `RawServiceError`
     @objc public let rawServiceError: RawServiceError
-    
+
     /// Initializer
     ///
     /// - Parameter rawServiceError: recieved and decoded rawServiceError
@@ -58,7 +58,7 @@ import VirgilSDK
         self.httpStatusCode = httpStatusCode
         self.rawServiceError = rawServiceError
     }
-    
+
     /// Error domain or Error instances thrown from Service
     @objc public static var errorDomain: String { return PythiaClient.serviceErrorDomain }
     /// Code of error
@@ -73,7 +73,7 @@ import VirgilSDK
     @objc public static let defaultURL = URL(string: "https://api.virgilsecurity.com")!
     /// Error domain for Error instances thrown from service
     @objc override open class var serviceErrorDomain: String { return "VirgilSDK.PythiaServiceErrorDomain" }
-    
+
     /// Initializes a new `PythiaClient` instance
     ///
     /// - Parameters:
@@ -82,24 +82,24 @@ import VirgilSDK
     public override init(serviceUrl: URL = PythiaClient.defaultURL, connection: HttpConnectionProtocol) {
         super.init(serviceUrl: serviceUrl, connection: connection)
     }
-    
+
     /// Initializes a new `PythiaClient` instance
     @objc convenience public init() {
         self.init(serviceUrl: PythiaClient.defaultURL)
     }
-    
+
     /// Initializes a new `PythiaClient` instance
     ///
     /// - Parameter serviceUrl: URL of service client will use
     @objc convenience public init(serviceUrl: URL) {
         self.init(serviceUrl: serviceUrl, connection: HttpConnection())
     }
-    
+
     override open func handleError(statusCode: Int, body: Data?) -> Error {
         if let body = body, let rawServiceError = try? JSONDecoder().decode(RawServiceError.self, from: body) {
             return PythiaServiceError(httpStatusCode: statusCode, rawServiceError: rawServiceError)
         }
-        
+
         return super.handleError(statusCode: statusCode, body: body)
     }
 }

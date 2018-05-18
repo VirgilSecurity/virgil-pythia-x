@@ -43,17 +43,19 @@ import VirgilCrypto
     @objc public let pythiaCrypto: PythiaCryptoProtocol
     @objc public let accessTokenProvider: AccessTokenProvider
     @objc public let keyPairType: VSCKeyType
-    
-    @objc public init(client: PythiaClientProtocol, pythiaCrypto: PythiaCryptoProtocol, accessTokenProvider: AccessTokenProvider, keyPairType: VSCKeyType) {
+
+    @objc public init(client: PythiaClientProtocol, pythiaCrypto: PythiaCryptoProtocol,
+                      accessTokenProvider: AccessTokenProvider, keyPairType: VSCKeyType) {
         self.client = client
         self.pythiaCrypto = pythiaCrypto
         self.accessTokenProvider = accessTokenProvider
         self.keyPairType = keyPairType
-        
+
         super.init()
     }
-    
+
     @objc public static func makeContext(accessTokenProvider: AccessTokenProvider) throws -> BrainKeyContext {
-        return BrainKeyContext(client: PythiaClient(), pythiaCrypto: PythiaCrypto(), accessTokenProvider: accessTokenProvider, keyPairType: .FAST_EC_ED25519)
+        return BrainKeyContext(client: PythiaClient(), pythiaCrypto: PythiaCrypto(),
+                               accessTokenProvider: accessTokenProvider, keyPairType: .FAST_EC_ED25519)
     }
 }

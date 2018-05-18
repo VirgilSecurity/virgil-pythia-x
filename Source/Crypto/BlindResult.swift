@@ -39,11 +39,11 @@ import Foundation
 @objc(VSYBlindResult) public final class BlindResult: NSObject {
     @objc public let blindedPassword: Data
     @objc public let blindingSecret: Data
-    
+
     @objc public init(blindedPassword: Data, blindingSecret: Data) {
         self.blindedPassword = blindedPassword
         self.blindingSecret = blindingSecret
-        
+
         super.init()
     }
 }

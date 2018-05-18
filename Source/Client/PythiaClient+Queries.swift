@@ -42,22 +42,22 @@ extension PythiaClient: PythiaClientProtocol {
         guard let url = URL(string: "pythia/v1/seed", relativeTo: self.serviceUrl) else {
             throw PythiaClientError.constructingUrl
         }
-        
+
         let params = [
             "blinded_password": blindedPassword.base64EncodedString(),
             "brain_key_id": brainKeyId
         ]
-        
+
         let request = try ServiceRequest(url: url, method: .post, accessToken: token, params: params)
-        
+
         let response = try self.connection.send(request)
-        
+
         class SeedResponse: Codable {
             let seed: Data
         }
-        
+
         let seedResponse: SeedResponse = try self.processResponse(response)
-        
+
         return seedResponse.seed
     }
 }

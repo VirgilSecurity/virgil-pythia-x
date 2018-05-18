@@ -41,21 +41,21 @@ import VirgilCrypto
 @objc(VSYPythiaCrypto) open class PythiaCrypto: NSObject, PythiaCryptoProtocol {
     @objc public let virgilPythia = VirgilPythia()
     @objc public let virgilCrypto = VirgilCrypto()
-    
+
     @objc open func blind(password: String) throws -> BlindResult {
         guard let passwordData = password.data(using: .utf8) else {
             throw NSError() // FIXME
         }
-        
+
         let blindResult = try self.virgilPythia.blind(password: passwordData)
-        
+
         return BlindResult(blindedPassword: blindResult.blindedPassword, blindingSecret: blindResult.blindingSecret)
     }
-    
+
     @objc open func deblind(transformedPassword: Data, blindingSecret: Data) throws -> Data {
         return try self.virgilPythia.deblind(transformedPassword: transformedPassword, blindingSecret: blindingSecret)
     }
-    
+
     @objc open func generateKeyPair(ofType type: VSCKeyType, fromSeed seed: Data) throws -> VirgilKeyPair {
         guard let keyPair = KeyPair(keyPairType: type, keyMaterial: seed, password: nil) else {
             throw NSError() // FIXME

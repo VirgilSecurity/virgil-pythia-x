@@ -44,19 +44,20 @@ import VirgilCryptoApiImpl
     @objc public let accessTokenProvider: AccessTokenProvider
     @objc public let pythiaCrypto: PythiaCryptoProtocol
     @objc public let keyPairType: VSCKeyType
-    
+
     @objc public init(context: BrainKeyContext) {
         self.client = context.client
         self.accessTokenProvider = context.accessTokenProvider
         self.pythiaCrypto = context.pythiaCrypto
         self.keyPairType = context.keyPairType
     }
-    
+
     open func generateKeyPair(password: String, brainKeyId: String = "DEFAULT-ID") -> GenericOperation<VirgilKeyPair> {
         return CallbackOperation { _, completion in
             let tokenContext = TokenContext(service: "pythia", operation: "seed", forceReload: false)
-            let getTokenOperation = OperationUtils.makeGetTokenOperation(tokenContext: tokenContext, accessTokenProvider: self.accessTokenProvider)
-            
+            let getTokenOperation = OperationUtils.makeGetTokenOperation(
+                tokenContext: tokenContext, accessTokenProvider: self.accessTokenProvider)
+
             let blindedResult: BlindResult
             do {
                 blindedResult = try self.pythiaCrypto.blind(password: password)
@@ -65,21 +66,22 @@ import VirgilCryptoApiImpl
                 completion(nil, error)
                 return
             }
-            
-            let seedOperation = self.makeSeedOperation(blindedPassword: blindedResult.blindedPassword, brainKeyId: brainKeyId)
-            
+
+            let seedOperation = self.makeSeedOperation(blindedPassword: blindedResult.blindedPassword,
+                                                       brainKeyId: brainKeyId)
+
             let generateOperation = self.makeGenerateOperation(blindingSecret: blindedResult.blindingSecret)
-            
+
             let completionOperation = OperationUtils.makeCompletionOperation(completion: completion)
-            
+
             seedOperation.addDependency(getTokenOperation)
-            
+
             generateOperation.addDependency(seedOperation)
-            
+
             completionOperation.addDependency(getTokenOperation)
             completionOperation.addDependency(seedOperation)
             completionOperation.addDependency(generateOperation)
-            
+
             let queue = OperationQueue()
             let operations = [getTokenOperation, seedOperation, generateOperation, completionOperation]
             queue.addOperations(operations, waitUntilFinished: false)

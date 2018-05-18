@@ -40,6 +40,6 @@ import VirgilCrypto
 
 @objc(VSYPythiaCryptoProtocol) public protocol PythiaCryptoProtocol: class {
     @objc func blind(password: String) throws -> BlindResult
-    @objc func deblind(transformedPassword:Data, blindingSecret: Data) throws -> Data
+    @objc func deblind(transformedPassword: Data, blindingSecret: Data) throws -> Data
     @objc func generateKeyPair(ofType type: VSCKeyType, fromSeed seed: Data) throws -> VirgilKeyPair
 }

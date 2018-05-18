@@ -43,9 +43,11 @@ extension BrainKey {
         return CallbackOperation { operation, completion in
             do {
                 let token: AccessToken = try operation.findDependencyResult()
-                
-                let seed = try self.client.generateSeed(blindedPassword: blindedPassword, brainKeyId: brainKeyId, token: token.stringRepresentation())
-                
+
+                let seed = try self.client.generateSeed(blindedPassword: blindedPassword,
+                                                        brainKeyId: brainKeyId,
+                                                        token: token.stringRepresentation())
+
                 completion(seed, nil)
             }
             catch {
@@ -53,15 +55,17 @@ extension BrainKey {
             }
         }
     }
-    
+
     internal func makeGenerateOperation(blindingSecret: Data) -> GenericOperation<VirgilKeyPair> {
         return CallbackOperation { operation, completion in
             do {
                 let seed: Data = try operation.findDependencyResult()
-                
-                let deblindedPassword = try self.pythiaCrypto.deblind(transformedPassword: seed, blindingSecret: blindingSecret)
-                
-                completion(try self.pythiaCrypto.generateKeyPair(ofType: self.keyPairType, fromSeed: deblindedPassword), nil)
+
+                let deblindedPassword = try self.pythiaCrypto.deblind(transformedPassword: seed,
+                                                                      blindingSecret: blindingSecret)
+
+                completion(try self.pythiaCrypto.generateKeyPair(ofType: self.keyPairType,
+                                                                 fromSeed: deblindedPassword), nil)
             }
             catch {
                 completion(nil, error)

@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "42A76B9D20AED99A00561EA2"
-               BuildableName = "VirgilSDKPythia_tvOS.framework"
+               BuildableName = "VirgilSDKPythia.framework"
                BlueprintName = "VirgilSDKPythia tvOS"
                ReferencedContainer = "container:VirgilSDKPythia.xcodeproj">
             </BuildableReference>
@@ -43,7 +43,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "42A76B9D20AED99A00561EA2"
-            BuildableName = "VirgilSDKPythia_tvOS.framework"
+            BuildableName = "VirgilSDKPythia.framework"
             BlueprintName = "VirgilSDKPythia tvOS"
             ReferencedContainer = "container:VirgilSDKPythia.xcodeproj">
          </BuildableReference>
@@ -65,7 +65,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "42A76B9D20AED99A00561EA2"
-            BuildableName = "VirgilSDKPythia_tvOS.framework"
+            BuildableName = "VirgilSDKPythia.framework"
             BlueprintName = "VirgilSDKPythia tvOS"
             ReferencedContainer = "container:VirgilSDKPythia.xcodeproj">
          </BuildableReference>
@@ -83,7 +83,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "42A76B9D20AED99A00561EA2"
-            BuildableName = "VirgilSDKPythia_tvOS.framework"
+            BuildableName = "VirgilSDKPythia.framework"
             BlueprintName = "VirgilSDKPythia tvOS"
             ReferencedContainer = "container:VirgilSDKPythia.xcodeproj">
          </BuildableReference>

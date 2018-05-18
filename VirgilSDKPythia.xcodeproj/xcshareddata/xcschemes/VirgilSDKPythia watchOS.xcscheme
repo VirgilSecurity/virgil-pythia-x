@@ -15,7 +15,7 @@
             <BuildableReference
                BuildableIdentifier = "primary"
                BlueprintIdentifier = "42A76BB920AED9D200561EA2"
-               BuildableName = "VirgilSDKPythia_watchOS.framework"
+               BuildableName = "VirgilSDKPythia.framework"
                BlueprintName = "VirgilSDKPythia watchOS"
                ReferencedContainer = "container:VirgilSDKPythia.xcodeproj">
             </BuildableReference>
@@ -46,7 +46,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "42A76BB920AED9D200561EA2"
-            BuildableName = "VirgilSDKPythia_watchOS.framework"
+            BuildableName = "VirgilSDKPythia.framework"
             BlueprintName = "VirgilSDKPythia watchOS"
             ReferencedContainer = "container:VirgilSDKPythia.xcodeproj">
          </BuildableReference>
@@ -64,7 +64,7 @@
          <BuildableReference
             BuildableIdentifier = "primary"
             BlueprintIdentifier = "42A76BB920AED9D200561EA2"
-            BuildableName = "VirgilSDKPythia_watchOS.framework"
+            BuildableName = "VirgilSDKPythia.framework"
             BlueprintName = "VirgilSDKPythia watchOS"
             ReferencedContainer = "container:VirgilSDKPythia.xcodeproj">
          </BuildableReference>

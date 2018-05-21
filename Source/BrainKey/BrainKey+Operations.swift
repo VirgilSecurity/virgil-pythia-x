@@ -39,7 +39,7 @@ import VirgilSDK
 import VirgilCryptoApiImpl
 
 extension BrainKey {
-    internal func makeSeedOperation(blindedPassword: Data, brainKeyId: String) -> GenericOperation<Data> {
+    internal func makeSeedOperation(blindedPassword: Data, brainKeyId: String?) -> GenericOperation<Data> {
         return CallbackOperation { operation, completion in
             do {
                 let token: AccessToken = try operation.findDependencyResult()

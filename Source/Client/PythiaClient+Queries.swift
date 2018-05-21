@@ -49,15 +49,18 @@ extension PythiaClient: PythiaClientProtocol {
     /// - Throws: PythiaClientError.constructingUrl if url is not valid
     ///           Rethrows from HttpConnectionProtocol.send, PythiaClient.proccessResponse
     ///           See PythiaClient.handleError
-    @objc public func generateSeed(blindedPassword: Data, brainKeyId: String, token: String) throws -> Data {
+    @objc public func generateSeed(blindedPassword: Data, brainKeyId: String?, token: String) throws -> Data {
         guard let url = URL(string: "pythia/v1/brainkey/", relativeTo: self.serviceUrl) else {
             throw PythiaClientError.constructingUrl
         }
 
-        let params = [
-            "blinded_password": blindedPassword.base64EncodedString(),
-            "brainkey_id": brainKeyId
+        var params = [
+            "blinded_password": blindedPassword.base64EncodedString()
         ]
+
+        if let brainKeyId = brainKeyId {
+            params["brainkey_id"] = brainKeyId
+        }
 
         let request = try ServiceRequest(url: url, method: .post, accessToken: token, params: params)
 

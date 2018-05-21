@@ -48,5 +48,5 @@ import Foundation
     ///   - token: authorization token
     /// - Returns: Generated seed
     /// - Throws: Depends on implementation
-    @objc func generateSeed(blindedPassword: Data, brainKeyId: String, token: String) throws -> Data
+    @objc func generateSeed(blindedPassword: Data, brainKeyId: String?, token: String) throws -> Data
 }

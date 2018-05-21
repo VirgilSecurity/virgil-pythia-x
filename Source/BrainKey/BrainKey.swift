@@ -52,7 +52,7 @@ import VirgilCryptoApiImpl
         self.keyPairType = context.keyPairType
     }
 
-    open func generateKeyPair(password: String, brainKeyId: String = "DEFAULT-ID") -> GenericOperation<VirgilKeyPair> {
+    open func generateKeyPair(password: String, brainKeyId: String?) -> GenericOperation<VirgilKeyPair> {
         return CallbackOperation { _, completion in
             let tokenContext = TokenContext(service: "pythia", operation: "seed", forceReload: false)
             let getTokenOperation = OperationUtils.makeGetTokenOperation(

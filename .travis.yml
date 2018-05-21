@@ -30,6 +30,8 @@ before_install:
   - xcodebuild -showsdks
 
 script:
+  - openssl aes-256-cbc -K $encrypted_224f5f09f017_key -iv $encrypted_224f5f09f017_iv -in TestConfig.plist.enc -out Tests/Data/TestConfig.plist -d
+
   - carthage version
   - carthage bootstrap --no-build
 
@@ -74,6 +76,6 @@ deploy:
     file: $FRAMEWORK_NAME.framework.zip
     skip_cleanup: true
     on:
-      repo: VirgilSecurity/virgil-sdk-pythia-x
+      repo: VirgilSecurity/pythia-x
       tags: true
       condition: $PUBLISH_CARTHAGE = "YES"

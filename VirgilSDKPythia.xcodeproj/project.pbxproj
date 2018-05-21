@@ -88,6 +88,12 @@
 		42A76C0420AEDAD800561EA2 /* VSCCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DD29E22075213900C9C014 /* VSCCrypto.framework */; };
 		42A76C0520AEDD0700561EA2 /* VSY001_BrainKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42792F8220AC6C4400C95A29 /* VSY001_BrainKeyTests.swift */; };
 		42A76C0620AEDD0800561EA2 /* VSY001_BrainKeyTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42792F8220AC6C4400C95A29 /* VSY001_BrainKeyTests.swift */; };
+		42A76D4220AF1AFD00561EA2 /* TestConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42A76D3E20AF1AFD00561EA2 /* TestConfig.plist */; };
+		42A76D4320AF1AFD00561EA2 /* TestConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42A76D3E20AF1AFD00561EA2 /* TestConfig.plist */; };
+		42A76D4420AF1AFD00561EA2 /* TestConfig.plist in Resources */ = {isa = PBXBuildFile; fileRef = 42A76D3E20AF1AFD00561EA2 /* TestConfig.plist */; };
+		42A76D4620AF1B4F00561EA2 /* TestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A76D4520AF1B4F00561EA2 /* TestConfig.swift */; };
+		42A76D4720AF1B4F00561EA2 /* TestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A76D4520AF1B4F00561EA2 /* TestConfig.swift */; };
+		42A76D4820AF1B4F00561EA2 /* TestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A76D4520AF1B4F00561EA2 /* TestConfig.swift */; };
 		42DD2A3C207522DA00C9C014 /* VirgilSDKPythia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DD298F20751B1A00C9C014 /* VirgilSDKPythia.framework */; };
 		42DD2A732075294900C9C014 /* VirgilSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DD29F52075214000C9C014 /* VirgilSDK.framework */; };
 /* End PBXBuildFile section */
@@ -398,6 +404,8 @@
 		42A76BEB20AEDA6200561EA2 /* VirgilCryptoAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VirgilCryptoAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A76BF920AEDAC400561EA2 /* VirgilCryptoAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VirgilCryptoAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A76BFF20AEDAD800561EA2 /* VirgilCryptoAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VirgilCryptoAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42A76D3E20AF1AFD00561EA2 /* TestConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestConfig.plist; sourceTree = "<group>"; };
+		42A76D4520AF1B4F00561EA2 /* TestConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConfig.swift; sourceTree = "<group>"; };
 		42DD298F20751B1A00C9C014 /* VirgilSDKPythia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VirgilSDKPythia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42DD299320751B1A00C9C014 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42DD29A62075213900C9C014 /* VirgilCrypto.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VirgilCrypto.xcodeproj; path = "Carthage/Checkouts/virgil-foundation-x/VirgilCrypto.xcodeproj"; sourceTree = "<group>"; };
@@ -512,6 +520,14 @@
 			path = BrainKey;
 			sourceTree = "<group>";
 		};
+		42A76D3C20AF1AFD00561EA2 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				42A76D3E20AF1AFD00561EA2 /* TestConfig.plist */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
 		42DD298520751B1A00C9C014 = {
 			isa = PBXGroup;
 			children = (
@@ -603,7 +619,9 @@
 		42DD2A422075234C00C9C014 /* Tests */ = {
 			isa = PBXGroup;
 			children = (
+				42A76D3C20AF1AFD00561EA2 /* Data */,
 				42792F8220AC6C4400C95A29 /* VSY001_BrainKeyTests.swift */,
+				42A76D4520AF1B4F00561EA2 /* TestConfig.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -1083,6 +1101,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42A76D4320AF1AFD00561EA2 /* TestConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1097,6 +1116,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42A76D4420AF1AFD00561EA2 /* TestConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1118,6 +1138,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				42A76D4220AF1AFD00561EA2 /* TestConfig.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1146,6 +1167,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42A76C0520AEDD0700561EA2 /* VSY001_BrainKeyTests.swift in Sources */,
+				42A76D4720AF1B4F00561EA2 /* TestConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1171,6 +1193,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42A76C0620AEDD0800561EA2 /* VSY001_BrainKeyTests.swift in Sources */,
+				42A76D4820AF1B4F00561EA2 /* TestConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1213,6 +1236,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				42792F8320AC6C4400C95A29 /* VSY001_BrainKeyTests.swift in Sources */,
+				42A76D4620AF1B4F00561EA2 /* TestConfig.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

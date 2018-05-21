@@ -63,8 +63,8 @@ class VSY001_BrainKeyTests: XCTestCase {
     class FakeClient: PythiaClientProtocol {
         let virgilPythia = VirgilPythia()
         
-        func generateSeed(blindedPassword: Data, brainKeyId: String, token: String) throws -> Data {
-            let tweak = brainKeyId.data(using: .utf8)!
+        func generateSeed(blindedPassword: Data, brainKeyId: String?, token: String) throws -> Data {
+            let tweak = "userId".data(using: .utf8)! + (brainKeyId?.data(using: .utf8) ?? Data())
             
             let transformationKey = try self.virgilPythia.computeTransformationKey(transformationKeyId: "test".data(using: .utf8)!, pythiaSecret: "secret".data(using: .utf8)!, pythiaScopeSecret: "scope secret".data(using: .utf8)!)
             

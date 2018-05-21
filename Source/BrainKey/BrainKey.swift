@@ -39,12 +39,20 @@ import VirgilSDK
 import VirgilCrypto
 import VirgilCryptoApiImpl
 
+/// Class for Pythia BrainKey
 @objc(VSYBrainKey) open class BrainKey: NSObject {
+    /// PythiaClientProtocol implementation
     @objc public let client: PythiaClientProtocol
-    @objc public let accessTokenProvider: AccessTokenProvider
+    /// PythiaCryptoProtocol implementation
     @objc public let pythiaCrypto: PythiaCryptoProtocol
+    /// AccessTokenProvider implementation
+    @objc public let accessTokenProvider: AccessTokenProvider
+    /// Default key type to be generated
     @objc public let keyPairType: VSCKeyType
 
+    /// Initializer
+    ///
+    /// - Parameter context: BrainKey context
     @objc public init(context: BrainKeyContext) {
         self.client = context.client
         self.accessTokenProvider = context.accessTokenProvider
@@ -52,7 +60,13 @@ import VirgilCryptoApiImpl
         self.keyPairType = context.keyPairType
     }
 
-    open func generateKeyPair(password: String, brainKeyId: String?) -> GenericOperation<VirgilKeyPair> {
+    /// Generates key pair based on given password and brainkeyId
+    ///
+    /// - Parameters:
+    ///   - password: password from which key pair will be generated
+    ///   - brainKeyId: optional brainKey identifier (in case one wants to generate several key pairs from 1 password)
+    /// - Returns: GenericOperation with VirgilKeyPair
+    open func generateKeyPair(password: String, brainKeyId: String? = nil) -> GenericOperation<VirgilKeyPair> {
         return CallbackOperation { _, completion in
             let tokenContext = TokenContext(service: "pythia", operation: "seed", forceReload: false)
             let getTokenOperation = OperationUtils.makeGetTokenOperation(

@@ -37,6 +37,7 @@
 import Foundation
 import VirgilCryptoApiImpl
 
+/// Exstension with Obj-C compatible methods
 extension BrainKey {
     @objc open func generateKeyPair(password: String, brainKeyId: String?,
                                     completion: @escaping (VirgilKeyPair?, Error?) -> ()) {

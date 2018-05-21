@@ -38,12 +38,24 @@ import Foundation
 import VirgilSDK
 import VirgilCrypto
 
+/// Context with dependencies needed for BrainKey
 @objc(VSYBrainKeyContext) public final class BrainKeyContext: NSObject {
+    /// PythiaClientProtocol implementation
     @objc public let client: PythiaClientProtocol
+    /// PythiaCryptoProtocol implementation
     @objc public let pythiaCrypto: PythiaCryptoProtocol
+    /// AccessTokenProvider implementation
     @objc public let accessTokenProvider: AccessTokenProvider
+    /// Default key type to be generated
     @objc public let keyPairType: VSCKeyType
 
+    /// Initializer
+    ///
+    /// - Parameters:
+    ///   - client: PythiaClientProtocol implementation
+    ///   - pythiaCrypto: PythiaCryptoProtocol implementation
+    ///   - accessTokenProvider: AccessTokenProvider implementation
+    ///   - keyPairType: Default key type to be generated
     @objc public init(client: PythiaClientProtocol = PythiaClient(),
                       pythiaCrypto: PythiaCryptoProtocol = PythiaCrypto(),
                       accessTokenProvider: AccessTokenProvider,
@@ -56,7 +68,11 @@ import VirgilCrypto
         super.init()
     }
 
-    @objc public static func makeContext(accessTokenProvider: AccessTokenProvider) throws -> BrainKeyContext {
+    /// Fabric method to create context
+    ///
+    /// - Parameter accessTokenProvider: AccessTokenProvider implementation
+    /// - Returns: Initialized BrainKeyContext instance
+    @objc public static func makeContext(accessTokenProvider: AccessTokenProvider) -> BrainKeyContext {
         return BrainKeyContext(client: PythiaClient(), pythiaCrypto: PythiaCrypto(),
                                accessTokenProvider: accessTokenProvider, keyPairType: .FAST_EC_ED25519)
     }

@@ -49,7 +49,7 @@ import VirgilCrypto
     /// - Returns: BlindResult with blinded password and blinding secret
     /// - Throws: Depends on implementation
     @objc func blind(password: String) throws -> BlindResult
-    
+
     /// Deblinds transformed password value using previously returned blinding_secret from blind operation.
     ///
     /// - Parameters:
@@ -58,7 +58,7 @@ import VirgilCrypto
     /// - Returns: GT deblinded transformed password
     /// - Throws: Depends on implementation
     @objc func deblind(transformedPassword: Data, blindingSecret: Data) throws -> Data
-    
+
     /// Generates key pair of given type using random seed
     ///
     /// - Parameters:

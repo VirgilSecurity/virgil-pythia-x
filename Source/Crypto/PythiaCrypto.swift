@@ -52,7 +52,7 @@ import VirgilCrypto
     @objc public let virgilPythia = VirgilPythia()
     /// Virgil Crypto
     @objc public let virgilCrypto = VirgilCrypto()
-    
+
     /// Blinds password.
     ///
     /// Turns password into a pseudo-random string.

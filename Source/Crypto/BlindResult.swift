@@ -42,11 +42,11 @@ import Foundation
     @objc public let blindedPassword: Data
     /// BN random value used to blind user's password.
     @objc public let blindingSecret: Data
-    
+
     internal init(blindedPassword: Data, blindingSecret: Data) {
         self.blindedPassword = blindedPassword
         self.blindingSecret = blindingSecret
-        
+
         super.init()
     }
 }

@@ -95,6 +95,12 @@ import VirgilSDK
         self.init(serviceUrl: serviceUrl, connection: HttpConnection())
     }
 
+    /// Handles error
+    ///
+    /// - Parameters:
+    ///   - statusCode: http status code
+    ///   - body: response
+    /// - Returns: Corresponding error
     override open func handleError(statusCode: Int, body: Data?) -> Error {
         if let body = body, let rawServiceError = try? JSONDecoder().decode(RawServiceError.self, from: body) {
             return PythiaServiceError(httpStatusCode: statusCode, rawServiceError: rawServiceError)

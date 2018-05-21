@@ -37,15 +37,26 @@
 import Foundation
 import VirgilSDK
 
+// MARK: - PythiaClientProtocol implementation
 extension PythiaClient: PythiaClientProtocol {
+    /// Generates seed using given blinded password and brainkey id
+    ///
+    /// - Parameters:
+    ///   - blindedPassword: blinded password
+    ///   - brainKeyId: brainkey id
+    ///   - token: authorization token
+    /// - Returns: Generated seed
+    /// - Throws: PythiaClientError.constructingUrl if url is not valid
+    ///           Rethrows from HttpConnectionProtocol.send, PythiaClient.proccessResponse
+    ///           See PythiaClient.handleError
     @objc public func generateSeed(blindedPassword: Data, brainKeyId: String, token: String) throws -> Data {
-        guard let url = URL(string: "pythia/v1/seed", relativeTo: self.serviceUrl) else {
+        guard let url = URL(string: "pythia/v1/brainkey/", relativeTo: self.serviceUrl) else {
             throw PythiaClientError.constructingUrl
         }
 
         let params = [
             "blinded_password": blindedPassword.base64EncodedString(),
-            "brain_key_id": brainKeyId
+            "brainkey_id": brainKeyId
         ]
 
         let request = try ServiceRequest(url: url, method: .post, accessToken: token, params: params)

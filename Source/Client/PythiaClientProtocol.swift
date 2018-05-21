@@ -40,5 +40,13 @@ import Foundation
 ///
 /// See: PythiaClient for default implementation
 @objc(VSYPythiaClientProtocol) public protocol PythiaClientProtocol: class {
+    /// Generates seed using given blinded password and brainkey id
+    ///
+    /// - Parameters:
+    ///   - blindedPassword: blinded password
+    ///   - brainKeyId: brainkey id
+    ///   - token: authorization token
+    /// - Returns: Generated seed
+    /// - Throws: Depends on implementation
     @objc func generateSeed(blindedPassword: Data, brainKeyId: String, token: String) throws -> Data
 }

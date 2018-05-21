@@ -38,8 +38,33 @@ import Foundation
 import VirgilCryptoApiImpl
 import VirgilCrypto
 
+/// Crypto operations needed for Pythia BrainKey
 @objc(VSYPythiaCryptoProtocol) public protocol PythiaCryptoProtocol: class {
+    /// Blinds password.
+    ///
+    /// Turns password into a pseudo-random string.
+    /// This step is necessary to prevent 3rd-parties from knowledge of end user's password.
+    ///
+    /// - Parameter password: end user's password.
+    /// - Returns: BlindResult with blinded password and blinding secret
+    /// - Throws: Depends on implementation
     @objc func blind(password: String) throws -> BlindResult
+    
+    /// Deblinds transformed password value using previously returned blinding_secret from blind operation.
+    ///
+    /// - Parameters:
+    ///   - transformedPassword: GT transformed password from transform operation
+    ///   - blindingSecret: BN value that was generated during blind operation
+    /// - Returns: GT deblinded transformed password
+    /// - Throws: Depends on implementation
     @objc func deblind(transformedPassword: Data, blindingSecret: Data) throws -> Data
+    
+    /// Generates key pair of given type using random seed
+    ///
+    /// - Parameters:
+    ///   - type: type of key pair
+    ///   - seed: random seed
+    /// - Returns: generated key pair
+    /// - Throws: Depends on implementation
     @objc func generateKeyPair(ofType type: VSCKeyType, fromSeed seed: Data) throws -> VirgilKeyPair
 }

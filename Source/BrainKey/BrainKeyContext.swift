@@ -44,8 +44,10 @@ import VirgilCrypto
     @objc public let accessTokenProvider: AccessTokenProvider
     @objc public let keyPairType: VSCKeyType
 
-    @objc public init(client: PythiaClientProtocol, pythiaCrypto: PythiaCryptoProtocol,
-                      accessTokenProvider: AccessTokenProvider, keyPairType: VSCKeyType) {
+    @objc public init(client: PythiaClientProtocol = PythiaClient(),
+                      pythiaCrypto: PythiaCryptoProtocol = PythiaCrypto(),
+                      accessTokenProvider: AccessTokenProvider,
+                      keyPairType: VSCKeyType = .FAST_EC_ED25519) {
         self.client = client
         self.pythiaCrypto = pythiaCrypto
         self.accessTokenProvider = accessTokenProvider

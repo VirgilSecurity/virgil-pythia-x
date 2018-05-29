@@ -65,10 +65,10 @@ script:
       pod lib lint;
     fi
 
-before_deploy:
-  - carthage archive
+# before_deploy:
+#   - carthage archive
 
-deploy:
+# deploy:
   # Upload framework to gh-releases for carthage
   # - provider: releases
   #   api_key:

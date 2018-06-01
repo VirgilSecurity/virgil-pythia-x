@@ -143,7 +143,23 @@ Next, on your application target's “General” settings tab, in the “Embedde
 
 ## Usage Examples
 
+*PYTHIA* Service can be used directly as a means to generate strong cryptographic keys based on user's **password**. We call these keys the **BrainKeys**. Thus when you need to restore a Private Key you use only user's Password and Pythia Service.
+
 ### Generate BrainKey
+
+Use this flow to generate a new BrainKey for a user.
+
+In order to create a user's BrainKey, go through the following operations:
+- Register your E2EE application on [Virgil Dashboard][_dashboard] and get your app credentials
+- Generate your API key or use available
+- Set up **JWT provider** using previously mentioned parameters (**App ID, API key, API key ID**) on the Server side
+- Generate JWT token with **user's identity** inside and transmit it to Client side (user's side)
+- On Client side set up **access token provider** in order to specify JWT provider
+- Setup BrainKey function with access token provider and pass user's password 
+- Send BrainKey request to Pythia Service
+- Generate keypair based on BrainKey that you've got from Pythia Service and create user's Card 
+- Pass user's Card to cardManager
+- Publish user's Card that is related to the BrainKey
 
 ```swift
 import VirgilSDK

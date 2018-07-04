@@ -21,7 +21,7 @@
 
 ## Installation
 
-Virgil Pythia is provided as a set of frameworks. These frameworks are distributed via Carthage and CocoaPods. Also in this guide, you find one more package called VirgilCrypto (Virgil Crypto Library) that is used by the SDK to perform cryptographic operations.
+Virgil Pythia SDK is provided as a set of frameworks. These frameworks are distributed via Carthage and CocoaPods. Also in this guide, you find one more package called VirgilCrypto (Virgil Crypto Library) that is used by the SDK to perform cryptographic operations.
 
 Frameworks are available for:
 - iOS 9.0+
@@ -195,7 +195,7 @@ Virgil Security has a powerful set of APIs, and the documentation below can get 
 
 * [Breach-Proof Password][_pythia_use_case] Use Case
 * [The Pythia PRF Service](https://eprint.iacr.org/2015/644.pdf) - foundation principles of the protocol
-* [Virgil Security Documenation][_documentation]
+* [Virgil Security Documentation][_documentation]
 
 ## License
 

@@ -90,3 +90,12 @@ deploy:
       repo: VirgilSecurity/pythia-x
       tags: true
       condition: $PUBLISH_CARTHAGE = "YES"
+
+  # Upload docs to gh-pages
+  - provider: pages
+    skip_cleanup: true
+    github-token: $GITHUB_TOKEN
+    local_dir: "docs"
+    on:
+      # tags: true
+      condition: $PUBLISH_DOCS = "YES"

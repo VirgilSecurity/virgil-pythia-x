@@ -91,7 +91,8 @@ class VSY001_BrainKeyTests: XCTestCase {
         let apiKey = try! VirgilCrypto().importPrivateKey(from: Data(base64Encoded: self.config.ApiPrivateKey)!)
         
         let generator = JwtGenerator(apiKey: apiKey, apiPublicKeyIdentifier: self.config.ApiPublicKeyId, accessTokenSigner: VirgilAccessTokenSigner(), appId: self.config.AppId, ttl: 3600)
-        let provider = GeneratorJwtProvider(jwtGenerator: generator, defaultIdentity: "Test")
+        let identity = UUID().uuidString
+        let provider = GeneratorJwtProvider(jwtGenerator: generator, defaultIdentity: identity)
         
         let brainKeyContext = BrainKeyContext(client: client, accessTokenProvider: provider)
         let brainKey = BrainKey(context: brainKeyContext)

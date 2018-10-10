@@ -45,7 +45,7 @@ class TestConfig: Decodable {
     
     var AppId: String {
     #if os(iOS)
-        return self.AppId_tvOS
+        return self.AppId_iOS
     #elseif os(macOS)
         return self.AppId_macOS
     #elseif os(tvOS)

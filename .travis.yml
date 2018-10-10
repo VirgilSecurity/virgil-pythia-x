@@ -1,5 +1,5 @@
 language: swift
-osx_image: xcode9.3
+osx_image: xcode10
 
 env:
   global:
@@ -9,17 +9,18 @@ env:
     - MACOS_FRAMEWORK_SCHEME="VirgilSDKPythia macOS"
     - TVOS_FRAMEWORK_SCHEME="VirgilSDKPythia tvOS"
     - WATCHOS_FRAMEWORK_SCHEME="VirgilSDKPythia watchOS"
-    - IOS_SDK=iphonesimulator11.3
-    - MACOS_SDK=macosx10.13
-    - TVOS_SDK=appletvsimulator11.3
-    - WATCHOS_SDK=watchsimulator4.3
+    - IOS_SDK=iphonesimulator12.0
+    - MACOS_SDK=macosx10.14
+    - TVOS_SDK=appletvsimulator12.0
+    - WATCHOS_SDK=watchsimulator5.0
     - FRAMEWORK_NAME=VirgilSDKPythia
 
   matrix:
-    - DESTINATION="OS=11.3,name=iPhone SE"            SCHEME="$IOS_FRAMEWORK_SCHEME"        SDK="$IOS_SDK"        TWO_STEP_BUILD_ENABLED="YES"    CARTHAGE_PLATFORM_NAME="iOS"        RUN_TESTS="YES"    PUBLISH_DOCS="NO"     PUBLISH_CARTHAGE="NO"     POD_LIB_LINT="YES"   SWIFT_LINT="NO"
-    - DESTINATION="arch=x86_64"                       SCHEME="$MACOS_FRAMEWORK_SCHEME"      SDK="$MACOS_SDK"      TWO_STEP_BUILD_ENABLED="YES"    CARTHAGE_PLATFORM_NAME="Mac"        RUN_TESTS="YES"    PUBLISH_DOCS="NO"     PUBLISH_CARTHAGE="YES"    POD_LIB_LINT="NO"    SWIFT_LINT="NO"
-    - DESTINATION="OS=11.3,name=Apple TV 4K"          SCHEME="$TVOS_FRAMEWORK_SCHEME"       SDK="$TVOS_SDK"       TWO_STEP_BUILD_ENABLED="YES"    CARTHAGE_PLATFORM_NAME="tvOS"       RUN_TESTS="YES"    PUBLISH_DOCS="NO"     PUBLISH_CARTHAGE="NO"     POD_LIB_LINT="NO"    SWIFT_LINT="YES"
-    - DESTINATION="OS=4.3,name=Apple Watch - 42mm"    SCHEME="$WATCHOS_FRAMEWORK_SCHEME"    SDK="$WATCHOS_SDK"    TWO_STEP_BUILD_ENABLED="NO"     CARTHAGE_PLATFORM_NAME="watchOS"    RUN_TESTS="NO"     PUBLISH_DOCS="NO"     PUBLISH_CARTHAGE="NO"     POD_LIB_LINT="NO"    SWIFT_LINT="NO"
+    - DESTINATION="OS=12.0,name=iPhone SE"                     ENABLE_BUILD="YES"    SCHEME="$IOS_FRAMEWORK_SCHEME"        SDK="$IOS_SDK"        TWO_STEP_BUILD_ENABLED="YES"    CARTHAGE_PLATFORM_NAME="iOS"        RUN_TESTS="YES"    PUBLISH_DOCS="NO"     PUBLISH_CARTHAGE="NO"     POD_LIB_LINT="NO"    SWIFT_LINT="NO"
+    - DESTINATION="arch=x86_64"                                ENABLE_BUILD="YES"    SCHEME="$MACOS_FRAMEWORK_SCHEME"      SDK="$MACOS_SDK"      TWO_STEP_BUILD_ENABLED="YES"    CARTHAGE_PLATFORM_NAME="Mac"        RUN_TESTS="YES"    PUBLISH_DOCS="NO"     PUBLISH_CARTHAGE="NO"     POD_LIB_LINT="NO"    SWIFT_LINT="NO"
+    - DESTINATION="OS=12.0,name=Apple TV 4K"                   ENABLE_BUILD="YES"    SCHEME="$TVOS_FRAMEWORK_SCHEME"       SDK="$TVOS_SDK"       TWO_STEP_BUILD_ENABLED="YES"    CARTHAGE_PLATFORM_NAME="tvOS"       RUN_TESTS="YES"    PUBLISH_DOCS="NO"     PUBLISH_CARTHAGE="NO"     POD_LIB_LINT="NO"    SWIFT_LINT="NO"
+    - DESTINATION="OS=5.0,name=Apple Watch Series 4 - 44mm"    ENABLE_BUILD="YES"    SCHEME="$WATCHOS_FRAMEWORK_SCHEME"    SDK="$WATCHOS_SDK"    TWO_STEP_BUILD_ENABLED="NO"     CARTHAGE_PLATFORM_NAME="watchOS"    RUN_TESTS="NO"     PUBLISH_DOCS="NO"     PUBLISH_CARTHAGE="NO"     POD_LIB_LINT="NO"    SWIFT_LINT="NO"
+    - DESTINATION="arch=x86_64"                                ENABLE_BUILD="NO"     SCHEME="$MACOS_FRAMEWORK_SCHEME"      SDK="$MACOS_SDK"      TWO_STEP_BUILD_ENABLED="YES"    CARTHAGE_PLATFORM_NAME="Mac"        RUN_TESTS="NO"     PUBLISH_DOCS="YES"    PUBLISH_CARTHAGE="YES"    POD_LIB_LINT="YES"   SWIFT_LINT="YES"
 
 before_install:
   - set -e
@@ -30,7 +31,12 @@ before_install:
   - xcodebuild -showsdks
 
 script:
-  - openssl aes-256-cbc -K $encrypted_224f5f09f017_key -iv $encrypted_224f5f09f017_iv -in TestConfig.plist.enc -out Tests/Data/TestConfig.plist -d
+  - |
+    if [ -n "$TRAVIS_TAG" ]; then
+      openssl aes-256-cbc -K $encrypted_ceba4cc4fb2f_key -iv $encrypted_ceba4cc4fb2f_iv -in TestConfig_prod.plist.enc -out Tests/Data/TestConfig.plist -d
+    else
+      openssl aes-256-cbc -K $encrypted_ceba4cc4fb2f_key -iv $encrypted_ceba4cc4fb2f_iv -in TestConfig_stg.plist.enc -out Tests/Data/TestConfig.plist -d
+    fi
 
   - carthage version
   - carthage bootstrap --no-build
@@ -42,16 +48,18 @@ script:
     fi
   
   - |
-    if [ $TWO_STEP_BUILD_ENABLED == "YES" ]; then
-      # Build Framework
-      xcodebuild -verbose -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug clean build-for-testing | xcpretty;
-      # Build Framework in Release and Run Tests if specified
-      if [ $RUN_TESTS == "YES" ]; then
-        xcodebuild -verbose -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug test-without-building;
+    if [ $ENABLE_BUILD == "YES" ]; then
+      if [ $TWO_STEP_BUILD_ENABLED == "YES" ]; then
+        # Build Framework
+        xcodebuild -verbose -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug clean build-for-testing | xcpretty;
+        # Build Framework in Release and Run Tests if specified
+        if [ $RUN_TESTS == "YES" ]; then
+          xcodebuild -verbose -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Debug test-without-building;
+        fi
+      else
+        # Build Framework
+        xcodebuild -verbose -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Release clean build | xcpretty;  
       fi
-    else
-      # Build Framework
-      xcodebuild -verbose -project "$PROJECT" -scheme "$SCHEME" -sdk "$SDK" -destination "$DESTINATION" -configuration Release clean build | xcpretty;  
     fi
 
   # Build with carthage
@@ -61,12 +69,20 @@ script:
   
   # Check pod lib
   - if [ $POD_LIB_LINT == "YES" ]; then
+      gem install cocoapods --pre;
       pod repo update;
       pod lib lint;
     fi
 
 before_deploy:
   - carthage archive
+
+after_success:
+  # Generate and publish docs
+  # - if [ -n "${TRAVIS_TAG}" ] && [ $PUBLISH_DOCS == "YES" ]; then
+  - if [ $PUBLISH_DOCS == "YES" ]; then
+      ./CI/publish-docs.sh;
+    fi
 
 deploy:
   # Upload framework to gh-releases for carthage
@@ -79,3 +95,13 @@ deploy:
       repo: VirgilSecurity/pythia-x
       tags: true
       condition: $PUBLISH_CARTHAGE = "YES"
+
+  # Upload docs to gh-pages
+  - provider: pages
+    skip_cleanup: true
+    github-token: $GITHUB_TOKEN
+    local_dir: "docs"
+    on:
+      # tags: true
+      branch: develop
+      condition: $PUBLISH_DOCS = "YES"

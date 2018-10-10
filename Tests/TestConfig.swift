@@ -39,7 +39,20 @@ import Foundation
 class TestConfig: Decodable {
     let ApiPublicKeyId: String
     let ApiPrivateKey: String
-    let AppId: String
+    let AppId_iOS: String
+    let AppId_macOS: String
+    let AppId_tvOS: String
+    
+    var AppId: String {
+    #if os(iOS)
+        return self.AppId_tvOS
+    #elseif os(macOS)
+        return self.AppId_macOS
+    #elseif os(tvOS)
+        return self.AppId_tvOS
+    #endif
+    }
+    
     let ServiceURL: String
     
     static func readFromBundle() -> TestConfig {

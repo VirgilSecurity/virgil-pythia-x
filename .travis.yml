@@ -36,9 +36,9 @@ script:
 
   - |
     if [ -n "$TRAVIS_TAG" ]; then
-      cp config/TestConfig_prod.plist Tests/Data/TestConfig.plist
+      cp TestConfig_prod.plist Tests/Data/TestConfig.plist
     else
-      cp config/TestConfig_stg.plist Tests/Data/TestConfig.plist
+      cp TestConfig_stg.plist Tests/Data/TestConfig.plist
     fi
 
   - carthage version

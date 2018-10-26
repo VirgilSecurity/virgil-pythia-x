@@ -1,5 +1,5 @@
 Pod::Spec.new do |s|
-  s.name                        = "VirgilPythia"
+  s.name                        = "VirgilSDKPythia"
   s.version                     = "0.3.2"
   s.license                     = { :type => "BSD", :file => "LICENSE" }
   s.summary                     = "Virgil Pythia SDK for Apple devices and languages."

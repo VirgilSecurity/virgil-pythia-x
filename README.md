@@ -1,9 +1,9 @@
 # Virgil Pythia Objective-C/Swift SDK
 
 [![Build Status](https://api.travis-ci.org/VirgilSecurity/pythia-x.svg?branch=master)](https://travis-ci.org/VirgilSecurity/pythia-x)
-[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/VirgilPythia.svg)](https://cocoapods.org/pods/VirgilPythia) 
+[![CocoaPods Compatible](https://img.shields.io/cocoapods/v/VirgilSDKPythia.svg)](https://cocoapods.org/pods/VirgilSDKPythia)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![Platform](https://img.shields.io/cocoapods/p/VirgilPythia.svg?style=flat)](http://cocoadocs.org/docsets/VirgilPythia)
+[![Platform](https://img.shields.io/cocoapods/p/VirgilSDKPythia.svg?style=flat)](http://cocoadocs.org/docsets/VirgilSDKPythia)
 [![GitHub license](https://img.shields.io/badge/license-BSD%203--Clause-blue.svg)](https://github.com/VirgilSecurity/virgil/blob/master/LICENSE)
 
 
@@ -43,7 +43,7 @@ To integrate Virgil Pythia into your Xcode project using CocoaPods, specify it i
 target '<Your Target Name>' do
   use_frameworks!
 
-  pod 'VirgilPythia', '~> 0.3.0'
+  pod 'VirgilSDKPythia', '~> 0.3.3'
 end
 ```
 
@@ -67,7 +67,7 @@ $ brew install carthage
 To integrate Virgil Pythia into your Xcode project using Carthage, create an empty file with name *Cartfile* in your project's root folder and add following lines to your *Cartfile*
 
 ```
-github "VirgilSecurity/pythia-x" ~> 0.3.0
+github "VirgilSecurity/pythia-x" ~> 0.3.3
 ```
 
 #### Linking against prebuilt binaries

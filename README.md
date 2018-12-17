@@ -1,6 +1,6 @@
 # Virgil Pythia Objective-C/Swift SDK
 
-[![Build Status](https://api.travis-ci.org/VirgilSecurity/pythia-x.svg?branch=master)](https://travis-ci.org/VirgilSecurity/pythia-x)
+[![Build Status](https://api.travis-ci.org/VirgilSecurity/virgil-pythia-x.svg?branch=master)](https://travis-ci.org/VirgilSecurity/virgil-pythia-x)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/VirgilSDKPythia.svg)](https://cocoapods.org/pods/VirgilSDKPythia)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
 [![Platform](https://img.shields.io/cocoapods/p/VirgilSDKPythia.svg?style=flat)](http://cocoadocs.org/docsets/VirgilSDKPythia)
@@ -67,7 +67,7 @@ $ brew install carthage
 To integrate Virgil Pythia into your Xcode project using Carthage, create an empty file with name *Cartfile* in your project's root folder and add following lines to your *Cartfile*
 
 ```
-github "VirgilSecurity/pythia-x" ~> 0.3.3
+github "VirgilSecurity/virgil-pythia-x" ~> 0.3.3
 ```
 
 #### Linking against prebuilt binaries

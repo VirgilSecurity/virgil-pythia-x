@@ -33,25 +33,21 @@
 		4249A07C21EE9C3A0076851C /* VirgilCryptoApiImpl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4249A05621EE98540076851C /* VirgilCryptoApiImpl.framework */; };
 		4249A07D21EE9C3A0076851C /* VirgilSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4249A05221EE98540076851C /* VirgilSDK.framework */; };
 		4249A07E21EE9C3A0076851C /* VSCCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4249A05321EE98540076851C /* VSCCrypto.framework */; };
-		4249A08021EE9C3B0076851C /* VirgilSDKPythia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4249A07F21EE9C3B0076851C /* VirgilSDKPythia.framework */; };
 		4249A08121EE9C580076851C /* VirgilCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4249A06021EE98640076851C /* VirgilCrypto.framework */; };
 		4249A08221EE9C580076851C /* VirgilCryptoAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4249A05C21EE98640076851C /* VirgilCryptoAPI.framework */; };
 		4249A08321EE9C580076851C /* VirgilCryptoApiImpl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4249A05D21EE98640076851C /* VirgilCryptoApiImpl.framework */; };
 		4249A08421EE9C580076851C /* VirgilSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4249A05F21EE98640076851C /* VirgilSDK.framework */; };
 		4249A08521EE9C580076851C /* VSCCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4249A05E21EE98640076851C /* VSCCrypto.framework */; };
-		4249A08721EE9C580076851C /* VirgilSDKPythia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4249A08621EE9C580076851C /* VirgilSDKPythia.framework */; };
 		4249A08821EE9C6D0076851C /* VirgilCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4249A06721EE98780076851C /* VirgilCrypto.framework */; };
 		4249A08921EE9C6D0076851C /* VirgilCryptoAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4249A06621EE98780076851C /* VirgilCryptoAPI.framework */; };
 		4249A08A21EE9C6D0076851C /* VirgilCryptoApiImpl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4249A06A21EE98790076851C /* VirgilCryptoApiImpl.framework */; };
 		4249A08B21EE9C6D0076851C /* VirgilSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4249A06921EE98790076851C /* VirgilSDK.framework */; };
 		4249A08C21EE9C6D0076851C /* VSCCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4249A06821EE98780076851C /* VSCCrypto.framework */; };
-		4249A08E21EE9C6D0076851C /* VirgilSDKPythia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4249A08D21EE9C6D0076851C /* VirgilSDKPythia.framework */; };
 		4249A08F21EE9C8E0076851C /* VirgilCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4249A07121EE98880076851C /* VirgilCrypto.framework */; };
 		4249A09021EE9C8E0076851C /* VirgilCryptoAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4249A07321EE98880076851C /* VirgilCryptoAPI.framework */; };
 		4249A09121EE9C8E0076851C /* VirgilCryptoApiImpl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4249A07421EE98880076851C /* VirgilCryptoApiImpl.framework */; };
 		4249A09221EE9C8E0076851C /* VirgilSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4249A07021EE98880076851C /* VirgilSDK.framework */; };
 		4249A09321EE9C8E0076851C /* VSCCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4249A07221EE98880076851C /* VSCCrypto.framework */; };
-		4249A09521EE9C8E0076851C /* VirgilSDKPythia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4249A09421EE9C8E0076851C /* VirgilSDKPythia.framework */; };
 		42792EB820A9A4B400C95A29 /* BrainKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42792EB720A9A4B400C95A29 /* BrainKey.swift */; };
 		42792EBA20A9A52C00C95A29 /* BrainKey+Obj-C.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42792EB920A9A52C00C95A29 /* BrainKey+Obj-C.swift */; };
 		42792EBC20A9AAE200C95A29 /* BrainKeyContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42792EBB20A9AAE200C95A29 /* BrainKeyContext.swift */; };
@@ -225,7 +221,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4249A08721EE9C580076851C /* VirgilSDKPythia.framework in Frameworks */,
 				4249A08121EE9C580076851C /* VirgilCrypto.framework in Frameworks */,
 				4249A08221EE9C580076851C /* VirgilCryptoAPI.framework in Frameworks */,
 				4249A08321EE9C580076851C /* VirgilCryptoApiImpl.framework in Frameworks */,
@@ -247,7 +242,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4249A08E21EE9C6D0076851C /* VirgilSDKPythia.framework in Frameworks */,
 				4249A08821EE9C6D0076851C /* VirgilCrypto.framework in Frameworks */,
 				4249A08921EE9C6D0076851C /* VirgilCryptoAPI.framework in Frameworks */,
 				4249A08A21EE9C6D0076851C /* VirgilCryptoApiImpl.framework in Frameworks */,
@@ -269,7 +263,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4249A09521EE9C8E0076851C /* VirgilSDKPythia.framework in Frameworks */,
 				4249A08F21EE9C8E0076851C /* VirgilCrypto.framework in Frameworks */,
 				4249A09021EE9C8E0076851C /* VirgilCryptoAPI.framework in Frameworks */,
 				4249A09121EE9C8E0076851C /* VirgilCryptoApiImpl.framework in Frameworks */,
@@ -282,7 +275,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4249A08021EE9C3B0076851C /* VirgilSDKPythia.framework in Frameworks */,
 				4249A07A21EE9C3A0076851C /* VirgilCrypto.framework in Frameworks */,
 				4249A07B21EE9C3A0076851C /* VirgilCryptoAPI.framework in Frameworks */,
 				4249A07C21EE9C3A0076851C /* VirgilCryptoApiImpl.framework in Frameworks */,

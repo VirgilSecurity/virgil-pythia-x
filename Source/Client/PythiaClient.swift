@@ -69,8 +69,10 @@ import VirgilSDK
 
 /// Class representing operations with Virgil Cards service
 @objc(VSYPythiaClient) open class PythiaClient: BaseClient {
+    // swiftlint:disable force_unwrapping
     /// Default URL for service
     @objc public static let defaultURL = URL(string: "https://api.virgilsecurity.com")!
+    // swiftlint:enable force_unwrapping
     /// Error domain for Error instances thrown from service
     @objc override open class var serviceErrorDomain: String { return "VirgilSDK.PythiaServiceErrorDomain" }
 
@@ -79,19 +81,19 @@ import VirgilSDK
     /// - Parameters:
     ///   - serviceUrl: URL of service client will use
     ///   - connection: custom HTTPConnection
-    public override init(serviceUrl: URL = PythiaClient.defaultURL, connection: HttpConnectionProtocol) {
+    override public init(serviceUrl: URL = PythiaClient.defaultURL, connection: HttpConnectionProtocol) {
         super.init(serviceUrl: serviceUrl, connection: connection)
     }
 
     /// Initializes a new `PythiaClient` instance
-    @objc convenience public init() {
+    @objc public convenience init() {
         self.init(serviceUrl: PythiaClient.defaultURL)
     }
 
     /// Initializes a new `PythiaClient` instance
     ///
     /// - Parameter serviceUrl: URL of service client will use
-    @objc convenience public init(serviceUrl: URL) {
+    @objc public convenience init(serviceUrl: URL) {
         self.init(serviceUrl: serviceUrl, connection: HttpConnection())
     }
 

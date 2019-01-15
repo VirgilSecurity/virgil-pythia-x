@@ -39,8 +39,14 @@ import VirgilCryptoApiImpl
 
 /// Exstension with Obj-C compatible methods
 extension BrainKey {
+    /// Generates key pair based on given password and brainkeyId
+    ///
+    /// - Parameters:
+    ///   - password: password from which key pair will be generated
+    ///   - brainKeyId: optional brainKey identifier (in case one wants to generate several key pairs from 1
+    ///   - completion: completion handler
     @objc open func generateKeyPair(password: String, brainKeyId: String?,
-                                    completion: @escaping (VirgilKeyPair?, Error?) -> ()) {
+                                    completion: @escaping (VirgilKeyPair?, Error?) -> Void) {
         self.generateKeyPair(password: password, brainKeyId: brainKeyId).start { result in
             switch result {
             case .success(let keyPair):

@@ -13,10 +13,10 @@
 			buildPhases = (
 			);
 			dependencies = (
-				42A76BF220AEDA8E00561EA2 /* PBXTargetDependency */,
-				42A76BF420AEDA8E00561EA2 /* PBXTargetDependency */,
-				42A76BF620AEDA8E00561EA2 /* PBXTargetDependency */,
-				42A76BF820AEDA8E00561EA2 /* PBXTargetDependency */,
+				4249A04721EE90B30076851C /* PBXTargetDependency */,
+				4249A04921EE90B30076851C /* PBXTargetDependency */,
+				4249A04B21EE90B30076851C /* PBXTargetDependency */,
+				4249A04D21EE90B30076851C /* PBXTargetDependency */,
 			);
 			name = VirgilSDKPythia;
 			productName = VirgilSDKPythia;
@@ -28,6 +28,26 @@
 		420120F7207625F500632FD9 /* PythiaClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420120F1207625F400632FD9 /* PythiaClient.swift */; };
 		420120FA207625F500632FD9 /* PythiaClient+Queries.swift in Sources */ = {isa = PBXBuildFile; fileRef = 420120F5207625F400632FD9 /* PythiaClient+Queries.swift */; };
 		4201210B2077C1E800632FD9 /* PythiaCryptoProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4201210A2077C1E800632FD9 /* PythiaCryptoProtocol.swift */; };
+		42499FF121EE8FA20076851C /* VirgilCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42499FCC21EE8F670076851C /* VirgilCrypto.framework */; };
+		42499FF221EE8FA20076851C /* VirgilCryptoApiImpl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42499FDA21EE8F670076851C /* VirgilCryptoApiImpl.framework */; };
+		42499FF321EE8FA20076851C /* VirgilSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42499FA121EE8F610076851C /* VirgilSDK.framework */; };
+		42499FF421EE8FA20076851C /* VSCCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42499FE821EE8F670076851C /* VSCCrypto.framework */; };
+		4249A01621EE8FC40076851C /* VirgilCryptoAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4249A00921EE8FBC0076851C /* VirgilCryptoAPI.framework */; };
+		4249A01921EE8FDD0076851C /* VirgilCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42499FD021EE8F670076851C /* VirgilCrypto.framework */; };
+		4249A01A21EE8FDD0076851C /* VirgilCryptoAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4249A00D21EE8FBC0076851C /* VirgilCryptoAPI.framework */; };
+		4249A01B21EE8FDD0076851C /* VirgilCryptoApiImpl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42499FDE21EE8F670076851C /* VirgilCryptoApiImpl.framework */; };
+		4249A01C21EE8FDD0076851C /* VirgilSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42499FA721EE8F610076851C /* VirgilSDK.framework */; };
+		4249A01D21EE8FDD0076851C /* VSCCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42499FEA21EE8F670076851C /* VSCCrypto.framework */; };
+		4249A02821EE90140076851C /* VirgilCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42499FD421EE8F670076851C /* VirgilCrypto.framework */; };
+		4249A02921EE90140076851C /* VirgilCryptoAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4249A01121EE8FBC0076851C /* VirgilCryptoAPI.framework */; };
+		4249A02A21EE90140076851C /* VirgilCryptoApiImpl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42499FE221EE8F670076851C /* VirgilCryptoApiImpl.framework */; };
+		4249A02B21EE90140076851C /* VirgilSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42499FAB21EE8F610076851C /* VirgilSDK.framework */; };
+		4249A02C21EE90140076851C /* VSCCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42499FEC21EE8F670076851C /* VSCCrypto.framework */; };
+		4249A03721EE903C0076851C /* VirgilCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42499FD821EE8F670076851C /* VirgilCrypto.framework */; };
+		4249A03821EE903C0076851C /* VirgilCryptoAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4249A01521EE8FBC0076851C /* VirgilCryptoAPI.framework */; };
+		4249A03921EE903C0076851C /* VirgilCryptoApiImpl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42499FE621EE8F670076851C /* VirgilCryptoApiImpl.framework */; };
+		4249A03A21EE903C0076851C /* VirgilSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42499FB121EE8F610076851C /* VirgilSDK.framework */; };
+		4249A03B21EE903C0076851C /* VSCCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42499FEE21EE8F670076851C /* VSCCrypto.framework */; };
 		42792EB820A9A4B400C95A29 /* BrainKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42792EB720A9A4B400C95A29 /* BrainKey.swift */; };
 		42792EBA20A9A52C00C95A29 /* BrainKey+Obj-C.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42792EB920A9A52C00C95A29 /* BrainKey+Obj-C.swift */; };
 		42792EBC20A9AAE200C95A29 /* BrainKeyContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42792EBB20A9AAE200C95A29 /* BrainKeyContext.swift */; };
@@ -75,45 +95,419 @@
 		42A76D4620AF1B4F00561EA2 /* TestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A76D4520AF1B4F00561EA2 /* TestConfig.swift */; };
 		42A76D4720AF1B4F00561EA2 /* TestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A76D4520AF1B4F00561EA2 /* TestConfig.swift */; };
 		42A76D4820AF1B4F00561EA2 /* TestConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 42A76D4520AF1B4F00561EA2 /* TestConfig.swift */; };
-		42D9E4CC216D41B200AA51C2 /* VirgilCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E460216D417000AA51C2 /* VirgilCrypto.framework */; };
-		42D9E4CD216D41B200AA51C2 /* VirgilCryptoApiImpl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E46E216D417000AA51C2 /* VirgilCryptoApiImpl.framework */; };
-		42D9E4CE216D41B200AA51C2 /* VirgilSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E495216D417600AA51C2 /* VirgilSDK.framework */; };
-		42D9E4CF216D41B200AA51C2 /* VSCCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E47A216D417000AA51C2 /* VSCCrypto.framework */; };
-		42D9E4F8216D41DB00AA51C2 /* VirgilCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E464216D417000AA51C2 /* VirgilCrypto.framework */; };
-		42D9E4F9216D41DB00AA51C2 /* VirgilCryptoApiImpl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E472216D417000AA51C2 /* VirgilCryptoApiImpl.framework */; };
-		42D9E4FA216D41DB00AA51C2 /* VirgilSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E499216D417600AA51C2 /* VirgilSDK.framework */; };
-		42D9E4FB216D41DB00AA51C2 /* VSCCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E47C216D417000AA51C2 /* VSCCrypto.framework */; };
-		42D9E4FE216D41E800AA51C2 /* VirgilCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E468216D417000AA51C2 /* VirgilCrypto.framework */; };
-		42D9E4FF216D41E800AA51C2 /* VirgilCryptoApiImpl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E476216D417000AA51C2 /* VirgilCryptoApiImpl.framework */; };
-		42D9E500216D41E800AA51C2 /* VirgilSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E49F216D417600AA51C2 /* VirgilSDK.framework */; };
-		42D9E501216D41E800AA51C2 /* VSCCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E47E216D417000AA51C2 /* VSCCrypto.framework */; };
 		42D9E550216D4BDC00AA51C2 /* VirgilCryptoAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E54F216D4BDC00AA51C2 /* VirgilCryptoAPI.framework */; };
-		42D9E551216D4BDC00AA51C2 /* VirgilCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E45C216D417000AA51C2 /* VirgilCrypto.framework */; };
-		42D9E552216D4BDC00AA51C2 /* VirgilCryptoApiImpl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E46A216D417000AA51C2 /* VirgilCryptoApiImpl.framework */; };
-		42D9E553216D4BDC00AA51C2 /* VirgilSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E48F216D417600AA51C2 /* VirgilSDK.framework */; };
-		42D9E554216D4BDC00AA51C2 /* VSCCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E478216D417000AA51C2 /* VSCCrypto.framework */; };
 		42D9E556216D4BED00AA51C2 /* VirgilCryptoAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E555216D4BED00AA51C2 /* VirgilCryptoAPI.framework */; };
-		42D9E557216D4BED00AA51C2 /* VirgilCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E460216D417000AA51C2 /* VirgilCrypto.framework */; };
-		42D9E558216D4BED00AA51C2 /* VirgilCryptoApiImpl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E46E216D417000AA51C2 /* VirgilCryptoApiImpl.framework */; };
-		42D9E559216D4BED00AA51C2 /* VirgilSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E495216D417600AA51C2 /* VirgilSDK.framework */; };
-		42D9E55A216D4BED00AA51C2 /* VSCCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E47A216D417000AA51C2 /* VSCCrypto.framework */; };
 		42D9E55C216D4BFA00AA51C2 /* VirgilCryptoAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E55B216D4BFA00AA51C2 /* VirgilCryptoAPI.framework */; };
-		42D9E55D216D4BFA00AA51C2 /* VirgilCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E464216D417000AA51C2 /* VirgilCrypto.framework */; };
-		42D9E55E216D4BFA00AA51C2 /* VirgilCryptoApiImpl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E472216D417000AA51C2 /* VirgilCryptoApiImpl.framework */; };
-		42D9E55F216D4BFA00AA51C2 /* VirgilSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E499216D417600AA51C2 /* VirgilSDK.framework */; };
-		42D9E560216D4BFA00AA51C2 /* VSCCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E47C216D417000AA51C2 /* VSCCrypto.framework */; };
-		42D9E577216D4F9400AA51C2 /* VirgilCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E45C216D417000AA51C2 /* VirgilCrypto.framework */; };
-		42D9E578216D4F9400AA51C2 /* VirgilCryptoApiImpl.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E46A216D417000AA51C2 /* VirgilCryptoApiImpl.framework */; };
-		42D9E579216D4F9400AA51C2 /* VirgilSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E48F216D417600AA51C2 /* VirgilSDK.framework */; };
-		42D9E57A216D4F9400AA51C2 /* VSCCrypto.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E478216D417000AA51C2 /* VSCCrypto.framework */; };
-		42D9E596216D5D2800AA51C2 /* VirgilCryptoAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E587216D5D1400AA51C2 /* VirgilCryptoAPI.framework */; };
-		42D9E5AC216D5EE000AA51C2 /* VirgilCryptoAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E58B216D5D1400AA51C2 /* VirgilCryptoAPI.framework */; };
-		42D9E5AF216D5EF200AA51C2 /* VirgilCryptoAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E58F216D5D1400AA51C2 /* VirgilCryptoAPI.framework */; };
-		42D9E5B2216D5F0600AA51C2 /* VirgilCryptoAPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42D9E593216D5D1400AA51C2 /* VirgilCryptoAPI.framework */; };
 		42DD2A3C207522DA00C9C014 /* VirgilSDKPythia.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 42DD298F20751B1A00C9C014 /* VirgilSDKPythia.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		42499FA021EE8F610076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499F9121EE8F610076851C /* VirgilSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 42EB30E41DB8EC17001DF4C0;
+			remoteInfo = "VirgilSDK iOS";
+		};
+		42499FA221EE8F610076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499F9121EE8F610076851C /* VirgilSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 42D0589120EB894500FC544E;
+			remoteInfo = "SDKTestApp iOS";
+		};
+		42499FA421EE8F610076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499F9121EE8F610076851C /* VirgilSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 42D058A720EB896200FC544E;
+			remoteInfo = "VirgilSDK AppTests iOS";
+		};
+		42499FA621EE8F610076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499F9121EE8F610076851C /* VirgilSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 422499BA1EB39B380032F556;
+			remoteInfo = "VirgilSDK macOS";
+		};
+		42499FA821EE8F610076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499F9121EE8F610076851C /* VirgilSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 422499C21EB39B380032F556;
+			remoteInfo = "VirgilSDK macOS Tests";
+		};
+		42499FAA21EE8F610076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499F9121EE8F610076851C /* VirgilSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4284C3861F6BE95700B75491;
+			remoteInfo = "VirgilSDK tvOS";
+		};
+		42499FAC21EE8F610076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499F9121EE8F610076851C /* VirgilSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 42D058B520EB897200FC544E;
+			remoteInfo = "SDKTestApp tvOS";
+		};
+		42499FAE21EE8F610076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499F9121EE8F610076851C /* VirgilSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 42D058F420EB89E000FC544E;
+			remoteInfo = "VirgilSDK AppTests tvOS";
+		};
+		42499FB021EE8F610076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499F9121EE8F610076851C /* VirgilSDK.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4284C3951F6BE97C00B75491;
+			remoteInfo = "VirgilSDK watchOS";
+		};
+		42499FCB21EE8F670076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FB221EE8F660076851C /* VirgilCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 42F85ECD1DC7469D00C3184C;
+			remoteInfo = "VirgilCrypto iOS";
+		};
+		42499FCD21EE8F670076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FB221EE8F660076851C /* VirgilCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 42F85F2D1DC765AC00C3184C;
+			remoteInfo = "VirgilCrypto iOS Tests";
+		};
+		42499FCF21EE8F670076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FB221EE8F660076851C /* VirgilCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 423F00301E719EF200CC98A3;
+			remoteInfo = "VirgilCrypto macOS";
+		};
+		42499FD121EE8F670076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FB221EE8F660076851C /* VirgilCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 423F00841E71A0FC00CC98A3;
+			remoteInfo = "VirgilCrypto macOS Tests";
+		};
+		42499FD321EE8F670076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FB221EE8F660076851C /* VirgilCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 42A01F7C1F7D51FE00FF8804;
+			remoteInfo = "VirgilCrypto tvOS";
+		};
+		42499FD521EE8F670076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FB221EE8F660076851C /* VirgilCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 42CDC30A1F6970C700D69111;
+			remoteInfo = "VirgilCrypto tvOS Tests";
+		};
+		42499FD721EE8F670076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FB221EE8F660076851C /* VirgilCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 42CDC2821F696DB900D69111;
+			remoteInfo = "VirgilCrypto watchOS";
+		};
+		42499FD921EE8F670076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FB221EE8F660076851C /* VirgilCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 42B129EB201FD2790082F9BC;
+			remoteInfo = "VirgilCryptoApiImpl iOS";
+		};
+		42499FDB21EE8F670076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FB221EE8F660076851C /* VirgilCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 42B12B1E201FDC2E0082F9BC;
+			remoteInfo = "VirgilCryptoApiImpl iOS Tests";
+		};
+		42499FDD21EE8F670076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FB221EE8F660076851C /* VirgilCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 42B12ABF201FD6F70082F9BC;
+			remoteInfo = "VirgilCryptoApiImpl macOS";
+		};
+		42499FDF21EE8F670076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FB221EE8F660076851C /* VirgilCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 42B12B6A201FDCC60082F9BC;
+			remoteInfo = "VirgilCryptoApiImpl macOS Tests";
+		};
+		42499FE121EE8F670076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FB221EE8F660076851C /* VirgilCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 42B12ADB201FD74C0082F9BC;
+			remoteInfo = "VirgilCryptoApiImpl tvOS";
+		};
+		42499FE321EE8F670076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FB221EE8F660076851C /* VirgilCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 42B12B79201FDCE00082F9BC;
+			remoteInfo = "VirgilCryptoApiImpl tvOS Tests";
+		};
+		42499FE521EE8F670076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FB221EE8F660076851C /* VirgilCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 42B12ACE201FD73F0082F9BC;
+			remoteInfo = "VirgilCryptoApiImpl watchOS";
+		};
+		42499FE721EE8F670076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FB221EE8F660076851C /* VirgilCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 42D61B63202A5843007E0758;
+			remoteInfo = "VSCCrypto iOS";
+		};
+		42499FE921EE8F670076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FB221EE8F660076851C /* VirgilCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 42D61B7E202A58B8007E0758;
+			remoteInfo = "VSCCrypto macOS";
+		};
+		42499FEB21EE8F670076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FB221EE8F660076851C /* VirgilCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 42D61B8D202A5963007E0758;
+			remoteInfo = "VSCCrypto tvOS";
+		};
+		42499FED21EE8F670076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FB221EE8F660076851C /* VirgilCrypto.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 42D61B9B202A59C4007E0758;
+			remoteInfo = "VSCCrypto watchOS";
+		};
+		42499FF521EE8FB50076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FB221EE8F660076851C /* VirgilCrypto.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 42F85ECC1DC7469D00C3184C;
+			remoteInfo = "VirgilCrypto iOS";
+		};
+		42499FF721EE8FB50076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FB221EE8F660076851C /* VirgilCrypto.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 42B129EA201FD2790082F9BC;
+			remoteInfo = "VirgilCryptoApiImpl iOS";
+		};
+		42499FF921EE8FB50076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FB221EE8F660076851C /* VirgilCrypto.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 42D61B62202A5843007E0758;
+			remoteInfo = "VSCCrypto iOS";
+		};
+		42499FFB21EE8FB50076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499F9121EE8F610076851C /* VirgilSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 42EB30E31DB8EC17001DF4C0;
+			remoteInfo = "VirgilSDK iOS";
+		};
+		4249A00821EE8FBC0076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FFD21EE8FBC0076851C /* VirgilCryptoAPI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 428A614A1F67FF0E00D6C057;
+			remoteInfo = "VirgilCryptoAPI iOS";
+		};
+		4249A00A21EE8FBC0076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FFD21EE8FBC0076851C /* VirgilCryptoAPI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 428A61A11F681D6A00D6C057;
+			remoteInfo = "VirgilCryptoAPI iOS Tests";
+		};
+		4249A00C21EE8FBC0076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FFD21EE8FBC0076851C /* VirgilCryptoAPI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 428A615D1F6800A800D6C057;
+			remoteInfo = "VirgilCryptoAPI macOS";
+		};
+		4249A00E21EE8FBC0076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FFD21EE8FBC0076851C /* VirgilCryptoAPI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 42CDC2201F68209300D69111;
+			remoteInfo = "VirgilCryptoAPI macOS Tests";
+		};
+		4249A01021EE8FBC0076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FFD21EE8FBC0076851C /* VirgilCryptoAPI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 428A61771F6800DB00D6C057;
+			remoteInfo = "VirgilCryptoAPI tvOS";
+		};
+		4249A01221EE8FBC0076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FFD21EE8FBC0076851C /* VirgilCryptoAPI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 42CDC22F1F6820A900D69111;
+			remoteInfo = "VirgilCryptoAPI tvOS Tests";
+		};
+		4249A01421EE8FBC0076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FFD21EE8FBC0076851C /* VirgilCryptoAPI.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 428A616A1F6800CA00D6C057;
+			remoteInfo = "VirgilCryptoAPI watchOS";
+		};
+		4249A01721EE8FCA0076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FFD21EE8FBC0076851C /* VirgilCryptoAPI.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 428A61491F67FF0E00D6C057;
+			remoteInfo = "VirgilCryptoAPI iOS";
+		};
+		4249A01E21EE8FEC0076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FFD21EE8FBC0076851C /* VirgilCryptoAPI.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 428A615C1F6800A800D6C057;
+			remoteInfo = "VirgilCryptoAPI macOS";
+		};
+		4249A02021EE8FEC0076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FB221EE8F660076851C /* VirgilCrypto.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 423F002F1E719EF200CC98A3;
+			remoteInfo = "VirgilCrypto macOS";
+		};
+		4249A02221EE8FEC0076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FB221EE8F660076851C /* VirgilCrypto.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 42B12ABE201FD6F70082F9BC;
+			remoteInfo = "VirgilCryptoApiImpl macOS";
+		};
+		4249A02421EE8FEC0076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FB221EE8F660076851C /* VirgilCrypto.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 42D61B7D202A58B8007E0758;
+			remoteInfo = "VSCCrypto macOS";
+		};
+		4249A02621EE8FF70076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499F9121EE8F610076851C /* VirgilSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 422499B91EB39B380032F556;
+			remoteInfo = "VirgilSDK macOS";
+		};
+		4249A02D21EE90280076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FFD21EE8FBC0076851C /* VirgilCryptoAPI.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 428A61761F6800DB00D6C057;
+			remoteInfo = "VirgilCryptoAPI tvOS";
+		};
+		4249A02F21EE90280076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FB221EE8F660076851C /* VirgilCrypto.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 42A01F7B1F7D51FE00FF8804;
+			remoteInfo = "VirgilCrypto tvOS";
+		};
+		4249A03121EE90280076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FB221EE8F660076851C /* VirgilCrypto.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 42B12ADA201FD74C0082F9BC;
+			remoteInfo = "VirgilCryptoApiImpl tvOS";
+		};
+		4249A03321EE90280076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FB221EE8F660076851C /* VirgilCrypto.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 42D61B8C202A5963007E0758;
+			remoteInfo = "VSCCrypto tvOS";
+		};
+		4249A03521EE90280076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499F9121EE8F610076851C /* VirgilSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 42D058B420EB897200FC544E;
+			remoteInfo = "SDKTestApp tvOS";
+		};
+		4249A03C21EE904B0076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FFD21EE8FBC0076851C /* VirgilCryptoAPI.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 428A61691F6800CA00D6C057;
+			remoteInfo = "VirgilCryptoAPI watchOS";
+		};
+		4249A03E21EE904B0076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FB221EE8F660076851C /* VirgilCrypto.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 42CDC2811F696DB900D69111;
+			remoteInfo = "VirgilCrypto watchOS";
+		};
+		4249A04021EE904B0076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FB221EE8F660076851C /* VirgilCrypto.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 42B12ACD201FD73F0082F9BC;
+			remoteInfo = "VirgilCryptoApiImpl watchOS";
+		};
+		4249A04221EE904B0076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499FB221EE8F660076851C /* VirgilCrypto.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 42D61B9A202A59C4007E0758;
+			remoteInfo = "VSCCrypto watchOS";
+		};
+		4249A04421EE904B0076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42499F9121EE8F610076851C /* VirgilSDK.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = 4284C3941F6BE97C00B75491;
+			remoteInfo = "VirgilSDK watchOS";
+		};
+		4249A04621EE90B30076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42DD298620751B1A00C9C014 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42DD298E20751B1A00C9C014;
+			remoteInfo = "VirgilSDKPythia iOS";
+		};
+		4249A04821EE90B30076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42DD298620751B1A00C9C014 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42A76B6020AED95200561EA2;
+			remoteInfo = "VirgilSDKPythia macOS";
+		};
+		4249A04A21EE90B30076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42DD298620751B1A00C9C014 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42A76B9D20AED99A00561EA2;
+			remoteInfo = "VirgilSDKPythia tvOS";
+		};
+		4249A04C21EE90B30076851C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 42DD298620751B1A00C9C014 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 42A76BB920AED9D200561EA2;
+			remoteInfo = "VirgilSDKPythia watchOS";
+		};
 		42A76B6B20AED95200561EA2 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 42DD298620751B1A00C9C014 /* Project object */;
@@ -127,412 +521,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = 42A76B9D20AED99A00561EA2;
 			remoteInfo = VirgilSDKPythia;
-		};
-		42A76BF120AEDA8E00561EA2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42DD298620751B1A00C9C014 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 42DD298E20751B1A00C9C014;
-			remoteInfo = "VirgilSDKPythia iOS";
-		};
-		42A76BF320AEDA8E00561EA2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42DD298620751B1A00C9C014 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 42A76B6020AED95200561EA2;
-			remoteInfo = "VirgilSDKPythia macOS";
-		};
-		42A76BF520AEDA8E00561EA2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42DD298620751B1A00C9C014 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 42A76B9D20AED99A00561EA2;
-			remoteInfo = "VirgilSDKPythia tvOS";
-		};
-		42A76BF720AEDA8E00561EA2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42DD298620751B1A00C9C014 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = 42A76BB920AED9D200561EA2;
-			remoteInfo = "VirgilSDKPythia watchOS";
-		};
-		42D9E45B216D417000AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E442216D417000AA51C2 /* VirgilCrypto.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 42F85ECD1DC7469D00C3184C;
-			remoteInfo = "VirgilCrypto iOS";
-		};
-		42D9E45D216D417000AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E442216D417000AA51C2 /* VirgilCrypto.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 42F85F2D1DC765AC00C3184C;
-			remoteInfo = "VirgilCrypto iOS Tests";
-		};
-		42D9E45F216D417000AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E442216D417000AA51C2 /* VirgilCrypto.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 423F00301E719EF200CC98A3;
-			remoteInfo = "VirgilCrypto macOS";
-		};
-		42D9E461216D417000AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E442216D417000AA51C2 /* VirgilCrypto.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 423F00841E71A0FC00CC98A3;
-			remoteInfo = "VirgilCrypto macOS Tests";
-		};
-		42D9E463216D417000AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E442216D417000AA51C2 /* VirgilCrypto.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 42A01F7C1F7D51FE00FF8804;
-			remoteInfo = "VirgilCrypto tvOS";
-		};
-		42D9E465216D417000AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E442216D417000AA51C2 /* VirgilCrypto.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 42CDC30A1F6970C700D69111;
-			remoteInfo = "VirgilCrypto tvOS Tests";
-		};
-		42D9E467216D417000AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E442216D417000AA51C2 /* VirgilCrypto.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 42CDC2821F696DB900D69111;
-			remoteInfo = "VirgilCrypto watchOS";
-		};
-		42D9E469216D417000AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E442216D417000AA51C2 /* VirgilCrypto.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 42B129EB201FD2790082F9BC;
-			remoteInfo = "VirgilCryptoApiImpl iOS";
-		};
-		42D9E46B216D417000AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E442216D417000AA51C2 /* VirgilCrypto.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 42B12B1E201FDC2E0082F9BC;
-			remoteInfo = "VirgilCryptoApiImpl iOS Tests";
-		};
-		42D9E46D216D417000AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E442216D417000AA51C2 /* VirgilCrypto.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 42B12ABF201FD6F70082F9BC;
-			remoteInfo = "VirgilCryptoApiImpl macOS";
-		};
-		42D9E46F216D417000AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E442216D417000AA51C2 /* VirgilCrypto.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 42B12B6A201FDCC60082F9BC;
-			remoteInfo = "VirgilCryptoApiImpl macOS Tests";
-		};
-		42D9E471216D417000AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E442216D417000AA51C2 /* VirgilCrypto.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 42B12ADB201FD74C0082F9BC;
-			remoteInfo = "VirgilCryptoApiImpl tvOS";
-		};
-		42D9E473216D417000AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E442216D417000AA51C2 /* VirgilCrypto.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 42B12B79201FDCE00082F9BC;
-			remoteInfo = "VirgilCryptoApiImpl tvOS Tests";
-		};
-		42D9E475216D417000AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E442216D417000AA51C2 /* VirgilCrypto.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 42B12ACE201FD73F0082F9BC;
-			remoteInfo = "VirgilCryptoApiImpl watchOS";
-		};
-		42D9E477216D417000AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E442216D417000AA51C2 /* VirgilCrypto.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 42D61B63202A5843007E0758;
-			remoteInfo = "VSCCrypto iOS";
-		};
-		42D9E479216D417000AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E442216D417000AA51C2 /* VirgilCrypto.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 42D61B7E202A58B8007E0758;
-			remoteInfo = "VSCCrypto macOS";
-		};
-		42D9E47B216D417000AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E442216D417000AA51C2 /* VirgilCrypto.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 42D61B8D202A5963007E0758;
-			remoteInfo = "VSCCrypto tvOS";
-		};
-		42D9E47D216D417000AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E442216D417000AA51C2 /* VirgilCrypto.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 42D61B9B202A59C4007E0758;
-			remoteInfo = "VSCCrypto watchOS";
-		};
-		42D9E48E216D417600AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E47F216D417600AA51C2 /* VirgilSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 42EB30E41DB8EC17001DF4C0;
-			remoteInfo = "VirgilSDK iOS";
-		};
-		42D9E490216D417600AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E47F216D417600AA51C2 /* VirgilSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 42D0589120EB894500FC544E;
-			remoteInfo = "SDKTestApp iOS";
-		};
-		42D9E492216D417600AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E47F216D417600AA51C2 /* VirgilSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 42D058A720EB896200FC544E;
-			remoteInfo = "VirgilSDK AppTests iOS";
-		};
-		42D9E494216D417600AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E47F216D417600AA51C2 /* VirgilSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 422499BA1EB39B380032F556;
-			remoteInfo = "VirgilSDK macOS";
-		};
-		42D9E496216D417600AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E47F216D417600AA51C2 /* VirgilSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 422499C21EB39B380032F556;
-			remoteInfo = "VirgilSDK macOS Tests";
-		};
-		42D9E498216D417600AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E47F216D417600AA51C2 /* VirgilSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4284C3861F6BE95700B75491;
-			remoteInfo = "VirgilSDK tvOS";
-		};
-		42D9E49A216D417600AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E47F216D417600AA51C2 /* VirgilSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 42D058B520EB897200FC544E;
-			remoteInfo = "SDKTestApp tvOS";
-		};
-		42D9E49C216D417600AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E47F216D417600AA51C2 /* VirgilSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 42D058F420EB89E000FC544E;
-			remoteInfo = "VirgilSDK AppTests tvOS";
-		};
-		42D9E49E216D417600AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E47F216D417600AA51C2 /* VirgilSDK.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 4284C3951F6BE97C00B75491;
-			remoteInfo = "VirgilSDK watchOS";
-		};
-		42D9E502216D41FD00AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E47F216D417600AA51C2 /* VirgilSDK.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 42EB30E31DB8EC17001DF4C0;
-			remoteInfo = "VirgilSDK iOS";
-		};
-		42D9E504216D41FD00AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E442216D417000AA51C2 /* VirgilCrypto.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 42F85ECC1DC7469D00C3184C;
-			remoteInfo = "VirgilCrypto iOS";
-		};
-		42D9E506216D41FD00AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E442216D417000AA51C2 /* VirgilCrypto.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 42B129EA201FD2790082F9BC;
-			remoteInfo = "VirgilCryptoApiImpl iOS";
-		};
-		42D9E508216D41FD00AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E442216D417000AA51C2 /* VirgilCrypto.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 42D61B62202A5843007E0758;
-			remoteInfo = "VSCCrypto iOS";
-		};
-		42D9E50A216D427700AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E47F216D417600AA51C2 /* VirgilSDK.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 422499B91EB39B380032F556;
-			remoteInfo = "VirgilSDK macOS";
-		};
-		42D9E50C216D427700AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E442216D417000AA51C2 /* VirgilCrypto.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 423F002F1E719EF200CC98A3;
-			remoteInfo = "VirgilCrypto macOS";
-		};
-		42D9E50E216D427700AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E442216D417000AA51C2 /* VirgilCrypto.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 42B12ABE201FD6F70082F9BC;
-			remoteInfo = "VirgilCryptoApiImpl macOS";
-		};
-		42D9E510216D427700AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E442216D417000AA51C2 /* VirgilCrypto.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 42D61B7D202A58B8007E0758;
-			remoteInfo = "VSCCrypto macOS";
-		};
-		42D9E512216D428600AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E47F216D417600AA51C2 /* VirgilSDK.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 4284C3851F6BE95700B75491;
-			remoteInfo = "VirgilSDK tvOS";
-		};
-		42D9E514216D428600AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E442216D417000AA51C2 /* VirgilCrypto.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 42A01F7B1F7D51FE00FF8804;
-			remoteInfo = "VirgilCrypto tvOS";
-		};
-		42D9E516216D428600AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E442216D417000AA51C2 /* VirgilCrypto.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 42B12ADA201FD74C0082F9BC;
-			remoteInfo = "VirgilCryptoApiImpl tvOS";
-		};
-		42D9E518216D428600AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E442216D417000AA51C2 /* VirgilCrypto.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 42D61B8C202A5963007E0758;
-			remoteInfo = "VSCCrypto tvOS";
-		};
-		42D9E51A216D429400AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E47F216D417600AA51C2 /* VirgilSDK.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 4284C3941F6BE97C00B75491;
-			remoteInfo = "VirgilSDK watchOS";
-		};
-		42D9E51C216D429400AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E442216D417000AA51C2 /* VirgilCrypto.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 42CDC2811F696DB900D69111;
-			remoteInfo = "VirgilCrypto watchOS";
-		};
-		42D9E51E216D429400AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E442216D417000AA51C2 /* VirgilCrypto.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 42B12ACD201FD73F0082F9BC;
-			remoteInfo = "VirgilCryptoApiImpl watchOS";
-		};
-		42D9E520216D429400AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E442216D417000AA51C2 /* VirgilCrypto.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 42D61B9A202A59C4007E0758;
-			remoteInfo = "VSCCrypto watchOS";
-		};
-		42D9E586216D5D1400AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E57B216D5D1400AA51C2 /* VirgilCryptoAPI.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 428A614A1F67FF0E00D6C057;
-			remoteInfo = "VirgilCryptoAPI iOS";
-		};
-		42D9E588216D5D1400AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E57B216D5D1400AA51C2 /* VirgilCryptoAPI.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 428A61A11F681D6A00D6C057;
-			remoteInfo = "VirgilCryptoAPI iOS Tests";
-		};
-		42D9E58A216D5D1400AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E57B216D5D1400AA51C2 /* VirgilCryptoAPI.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 428A615D1F6800A800D6C057;
-			remoteInfo = "VirgilCryptoAPI macOS";
-		};
-		42D9E58C216D5D1400AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E57B216D5D1400AA51C2 /* VirgilCryptoAPI.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 42CDC2201F68209300D69111;
-			remoteInfo = "VirgilCryptoAPI macOS Tests";
-		};
-		42D9E58E216D5D1400AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E57B216D5D1400AA51C2 /* VirgilCryptoAPI.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 428A61771F6800DB00D6C057;
-			remoteInfo = "VirgilCryptoAPI tvOS";
-		};
-		42D9E590216D5D1400AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E57B216D5D1400AA51C2 /* VirgilCryptoAPI.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 42CDC22F1F6820A900D69111;
-			remoteInfo = "VirgilCryptoAPI tvOS Tests";
-		};
-		42D9E592216D5D1400AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E57B216D5D1400AA51C2 /* VirgilCryptoAPI.xcodeproj */;
-			proxyType = 2;
-			remoteGlobalIDString = 428A616A1F6800CA00D6C057;
-			remoteInfo = "VirgilCryptoAPI watchOS";
-		};
-		42D9E594216D5D1A00AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E57B216D5D1400AA51C2 /* VirgilCryptoAPI.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 428A61491F67FF0E00D6C057;
-			remoteInfo = "VirgilCryptoAPI iOS";
-		};
-		42D9E5AA216D5ED800AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E57B216D5D1400AA51C2 /* VirgilCryptoAPI.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 428A615C1F6800A800D6C057;
-			remoteInfo = "VirgilCryptoAPI macOS";
-		};
-		42D9E5AD216D5EEA00AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E57B216D5D1400AA51C2 /* VirgilCryptoAPI.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 428A61761F6800DB00D6C057;
-			remoteInfo = "VirgilCryptoAPI tvOS";
-		};
-		42D9E5B0216D5EFE00AA51C2 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = 42D9E57B216D5D1400AA51C2 /* VirgilCryptoAPI.xcodeproj */;
-			proxyType = 1;
-			remoteGlobalIDString = 428A61691F6800CA00D6C057;
-			remoteInfo = "VirgilCryptoAPI watchOS";
 		};
 		42DD2A3D207522DA00C9C014 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -549,6 +537,10 @@
 		420120F1207625F400632FD9 /* PythiaClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PythiaClient.swift; sourceTree = "<group>"; };
 		420120F5207625F400632FD9 /* PythiaClient+Queries.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "PythiaClient+Queries.swift"; sourceTree = "<group>"; };
 		4201210A2077C1E800632FD9 /* PythiaCryptoProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PythiaCryptoProtocol.swift; sourceTree = "<group>"; };
+		42499F9121EE8F610076851C /* VirgilSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VirgilSDK.xcodeproj; path = "Carthage/Checkouts/virgil-sdk-x/VirgilSDK.xcodeproj"; sourceTree = "<group>"; };
+		42499FB221EE8F660076851C /* VirgilCrypto.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VirgilCrypto.xcodeproj; path = "Carthage/Checkouts/virgil-crypto-x/VirgilCrypto.xcodeproj"; sourceTree = "<group>"; };
+		42499FEF21EE8FA20076851C /* VirgilCryptoAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VirgilCryptoAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		42499FFD21EE8FBC0076851C /* VirgilCryptoAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VirgilCryptoAPI.xcodeproj; path = "Carthage/Checkouts/virgil-cryptoapi-x/VirgilCryptoAPI.xcodeproj"; sourceTree = "<group>"; };
 		42792EB720A9A4B400C95A29 /* BrainKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainKey.swift; sourceTree = "<group>"; };
 		42792EB920A9A52C00C95A29 /* BrainKey+Obj-C.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "BrainKey+Obj-C.swift"; sourceTree = "<group>"; };
 		42792EBB20A9AAE200C95A29 /* BrainKeyContext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BrainKeyContext.swift; sourceTree = "<group>"; };
@@ -568,8 +560,6 @@
 		42A76BFF20AEDAD800561EA2 /* VirgilCryptoAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VirgilCryptoAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A76D3E20AF1AFD00561EA2 /* TestConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestConfig.plist; sourceTree = "<group>"; };
 		42A76D4520AF1B4F00561EA2 /* TestConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConfig.swift; sourceTree = "<group>"; };
-		42D9E442216D417000AA51C2 /* VirgilCrypto.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VirgilCrypto.xcodeproj; path = "Carthage/Checkouts/crypto-x/VirgilCrypto.xcodeproj"; sourceTree = "<group>"; };
-		42D9E47F216D417600AA51C2 /* VirgilSDK.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VirgilSDK.xcodeproj; path = "Carthage/Checkouts/sdk-x/VirgilSDK.xcodeproj"; sourceTree = "<group>"; };
 		42D9E4A5216D419D00AA51C2 /* VirgilCryptoAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VirgilCryptoAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42D9E4CA216D41B200AA51C2 /* VirgilCryptoAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VirgilCryptoAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42D9E4D7216D41DB00AA51C2 /* VirgilCryptoAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VirgilCryptoAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -578,7 +568,6 @@
 		42D9E555216D4BED00AA51C2 /* VirgilCryptoAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VirgilCryptoAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42D9E55B216D4BFA00AA51C2 /* VirgilCryptoAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VirgilCryptoAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42D9E575216D4F9400AA51C2 /* VirgilCryptoAPI.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = VirgilCryptoAPI.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		42D9E57B216D5D1400AA51C2 /* VirgilCryptoAPI.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = VirgilCryptoAPI.xcodeproj; path = "Carthage/Checkouts/cryptoapi-x/VirgilCryptoAPI.xcodeproj"; sourceTree = "<group>"; };
 		42DD298F20751B1A00C9C014 /* VirgilSDKPythia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VirgilSDKPythia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		42DD299320751B1A00C9C014 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42DD2A37207522D900C9C014 /* VirgilSDKPythia iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VirgilSDKPythia iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -589,11 +578,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42D9E5AC216D5EE000AA51C2 /* VirgilCryptoAPI.framework in Frameworks */,
-				42D9E4CC216D41B200AA51C2 /* VirgilCrypto.framework in Frameworks */,
-				42D9E4CD216D41B200AA51C2 /* VirgilCryptoApiImpl.framework in Frameworks */,
-				42D9E4CE216D41B200AA51C2 /* VirgilSDK.framework in Frameworks */,
-				42D9E4CF216D41B200AA51C2 /* VSCCrypto.framework in Frameworks */,
+				4249A01921EE8FDD0076851C /* VirgilCrypto.framework in Frameworks */,
+				4249A01A21EE8FDD0076851C /* VirgilCryptoAPI.framework in Frameworks */,
+				4249A01B21EE8FDD0076851C /* VirgilCryptoApiImpl.framework in Frameworks */,
+				4249A01C21EE8FDD0076851C /* VirgilSDK.framework in Frameworks */,
+				4249A01D21EE8FDD0076851C /* VSCCrypto.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,11 +590,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42D9E557216D4BED00AA51C2 /* VirgilCrypto.framework in Frameworks */,
 				42D9E556216D4BED00AA51C2 /* VirgilCryptoAPI.framework in Frameworks */,
-				42D9E558216D4BED00AA51C2 /* VirgilCryptoApiImpl.framework in Frameworks */,
-				42D9E559216D4BED00AA51C2 /* VirgilSDK.framework in Frameworks */,
-				42D9E55A216D4BED00AA51C2 /* VSCCrypto.framework in Frameworks */,
 				42A76B6A20AED95200561EA2 /* VirgilSDKPythia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -614,11 +599,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42D9E5AF216D5EF200AA51C2 /* VirgilCryptoAPI.framework in Frameworks */,
-				42D9E4F8216D41DB00AA51C2 /* VirgilCrypto.framework in Frameworks */,
-				42D9E4F9216D41DB00AA51C2 /* VirgilCryptoApiImpl.framework in Frameworks */,
-				42D9E4FA216D41DB00AA51C2 /* VirgilSDK.framework in Frameworks */,
-				42D9E4FB216D41DB00AA51C2 /* VSCCrypto.framework in Frameworks */,
+				4249A02821EE90140076851C /* VirgilCrypto.framework in Frameworks */,
+				4249A02921EE90140076851C /* VirgilCryptoAPI.framework in Frameworks */,
+				4249A02A21EE90140076851C /* VirgilCryptoApiImpl.framework in Frameworks */,
+				4249A02B21EE90140076851C /* VirgilSDK.framework in Frameworks */,
+				4249A02C21EE90140076851C /* VSCCrypto.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -626,11 +611,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42D9E55D216D4BFA00AA51C2 /* VirgilCrypto.framework in Frameworks */,
 				42D9E55C216D4BFA00AA51C2 /* VirgilCryptoAPI.framework in Frameworks */,
-				42D9E55E216D4BFA00AA51C2 /* VirgilCryptoApiImpl.framework in Frameworks */,
-				42D9E55F216D4BFA00AA51C2 /* VirgilSDK.framework in Frameworks */,
-				42D9E560216D4BFA00AA51C2 /* VSCCrypto.framework in Frameworks */,
 				42A76BA720AED99B00561EA2 /* VirgilSDKPythia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -639,11 +620,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42D9E5B2216D5F0600AA51C2 /* VirgilCryptoAPI.framework in Frameworks */,
-				42D9E4FE216D41E800AA51C2 /* VirgilCrypto.framework in Frameworks */,
-				42D9E4FF216D41E800AA51C2 /* VirgilCryptoApiImpl.framework in Frameworks */,
-				42D9E500216D41E800AA51C2 /* VirgilSDK.framework in Frameworks */,
-				42D9E501216D41E800AA51C2 /* VSCCrypto.framework in Frameworks */,
+				4249A03721EE903C0076851C /* VirgilCrypto.framework in Frameworks */,
+				4249A03821EE903C0076851C /* VirgilCryptoAPI.framework in Frameworks */,
+				4249A03921EE903C0076851C /* VirgilCryptoApiImpl.framework in Frameworks */,
+				4249A03A21EE903C0076851C /* VirgilSDK.framework in Frameworks */,
+				4249A03B21EE903C0076851C /* VSCCrypto.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -651,11 +632,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42D9E596216D5D2800AA51C2 /* VirgilCryptoAPI.framework in Frameworks */,
-				42D9E577216D4F9400AA51C2 /* VirgilCrypto.framework in Frameworks */,
-				42D9E578216D4F9400AA51C2 /* VirgilCryptoApiImpl.framework in Frameworks */,
-				42D9E579216D4F9400AA51C2 /* VirgilSDK.framework in Frameworks */,
-				42D9E57A216D4F9400AA51C2 /* VSCCrypto.framework in Frameworks */,
+				4249A01621EE8FC40076851C /* VirgilCryptoAPI.framework in Frameworks */,
+				42499FF121EE8FA20076851C /* VirgilCrypto.framework in Frameworks */,
+				42499FF221EE8FA20076851C /* VirgilCryptoApiImpl.framework in Frameworks */,
+				42499FF321EE8FA20076851C /* VirgilSDK.framework in Frameworks */,
+				42499FF421EE8FA20076851C /* VSCCrypto.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -663,11 +644,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				42D9E551216D4BDC00AA51C2 /* VirgilCrypto.framework in Frameworks */,
 				42D9E550216D4BDC00AA51C2 /* VirgilCryptoAPI.framework in Frameworks */,
-				42D9E552216D4BDC00AA51C2 /* VirgilCryptoApiImpl.framework in Frameworks */,
-				42D9E553216D4BDC00AA51C2 /* VirgilSDK.framework in Frameworks */,
-				42D9E554216D4BDC00AA51C2 /* VSCCrypto.framework in Frameworks */,
 				42DD2A3C207522DA00C9C014 /* VirgilSDKPythia.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -695,6 +672,61 @@
 			path = Crypto;
 			sourceTree = "<group>";
 		};
+		42499F9221EE8F610076851C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42499FA121EE8F610076851C /* VirgilSDK.framework */,
+				42499FA321EE8F610076851C /* SDKTestApp iOS.app */,
+				42499FA521EE8F610076851C /* VirgilSDK AppTests iOS.xctest */,
+				42499FA721EE8F610076851C /* VirgilSDK.framework */,
+				42499FA921EE8F610076851C /* VirgilSDK macOS Tests.xctest */,
+				42499FAB21EE8F610076851C /* VirgilSDK.framework */,
+				42499FAD21EE8F610076851C /* SDKTestApp tvOS.app */,
+				42499FAF21EE8F610076851C /* VirgilSDK AppTests tvOS.xctest */,
+				42499FB121EE8F610076851C /* VirgilSDK.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42499FB321EE8F660076851C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				42499FCC21EE8F670076851C /* VirgilCrypto.framework */,
+				42499FCE21EE8F670076851C /* VirgilCrypto iOS Tests.xctest */,
+				42499FD021EE8F670076851C /* VirgilCrypto.framework */,
+				42499FD221EE8F670076851C /* VirgilCrypto macOS Tests.xctest */,
+				42499FD421EE8F670076851C /* VirgilCrypto.framework */,
+				42499FD621EE8F670076851C /* VirgilCrypto tvOS Tests.xctest */,
+				42499FD821EE8F670076851C /* VirgilCrypto.framework */,
+				42499FDA21EE8F670076851C /* VirgilCryptoApiImpl.framework */,
+				42499FDC21EE8F670076851C /* VirgilCryptoApiImpl iOS Tests.xctest */,
+				42499FDE21EE8F670076851C /* VirgilCryptoApiImpl.framework */,
+				42499FE021EE8F670076851C /* VirgilCryptoApiImpl macOS Tests.xctest */,
+				42499FE221EE8F670076851C /* VirgilCryptoApiImpl.framework */,
+				42499FE421EE8F670076851C /* VirgilCryptoApiImpl tvOS Tests.xctest */,
+				42499FE621EE8F670076851C /* VirgilCryptoApiImpl.framework */,
+				42499FE821EE8F670076851C /* VSCCrypto.framework */,
+				42499FEA21EE8F670076851C /* VSCCrypto.framework */,
+				42499FEC21EE8F670076851C /* VSCCrypto.framework */,
+				42499FEE21EE8F670076851C /* VSCCrypto.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		42499FFE21EE8FBC0076851C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4249A00921EE8FBC0076851C /* VirgilCryptoAPI.framework */,
+				4249A00B21EE8FBC0076851C /* VirgilCryptoAPI iOS Tests.xctest */,
+				4249A00D21EE8FBC0076851C /* VirgilCryptoAPI.framework */,
+				4249A00F21EE8FBC0076851C /* VirgilCryptoAPI macOS Tests.xctest */,
+				4249A01121EE8FBC0076851C /* VirgilCryptoAPI.framework */,
+				4249A01321EE8FBC0076851C /* VirgilCryptoAPI tvOS Tests.xctest */,
+				4249A01521EE8FBC0076851C /* VirgilCryptoAPI.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		42792EB620A9A4A800C95A29 /* BrainKey */ = {
 			isa = PBXGroup;
 			children = (
@@ -714,67 +746,12 @@
 			path = Data;
 			sourceTree = "<group>";
 		};
-		42D9E443216D417000AA51C2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				42D9E45C216D417000AA51C2 /* VirgilCrypto.framework */,
-				42D9E45E216D417000AA51C2 /* VirgilCrypto iOS Tests.xctest */,
-				42D9E460216D417000AA51C2 /* VirgilCrypto.framework */,
-				42D9E462216D417000AA51C2 /* VirgilCrypto macOS Tests.xctest */,
-				42D9E464216D417000AA51C2 /* VirgilCrypto.framework */,
-				42D9E466216D417000AA51C2 /* VirgilCrypto tvOS Tests.xctest */,
-				42D9E468216D417000AA51C2 /* VirgilCrypto.framework */,
-				42D9E46A216D417000AA51C2 /* VirgilCryptoApiImpl.framework */,
-				42D9E46C216D417000AA51C2 /* VirgilCryptoApiImpl iOS Tests.xctest */,
-				42D9E46E216D417000AA51C2 /* VirgilCryptoApiImpl.framework */,
-				42D9E470216D417000AA51C2 /* VirgilCryptoApiImpl macOS Tests.xctest */,
-				42D9E472216D417000AA51C2 /* VirgilCryptoApiImpl.framework */,
-				42D9E474216D417000AA51C2 /* VirgilCryptoApiImpl tvOS Tests.xctest */,
-				42D9E476216D417000AA51C2 /* VirgilCryptoApiImpl.framework */,
-				42D9E478216D417000AA51C2 /* VSCCrypto.framework */,
-				42D9E47A216D417000AA51C2 /* VSCCrypto.framework */,
-				42D9E47C216D417000AA51C2 /* VSCCrypto.framework */,
-				42D9E47E216D417000AA51C2 /* VSCCrypto.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		42D9E480216D417600AA51C2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				42D9E48F216D417600AA51C2 /* VirgilSDK.framework */,
-				42D9E491216D417600AA51C2 /* SDKTestApp iOS.app */,
-				42D9E493216D417600AA51C2 /* VirgilSDK AppTests iOS.xctest */,
-				42D9E495216D417600AA51C2 /* VirgilSDK.framework */,
-				42D9E497216D417600AA51C2 /* VirgilSDK macOS Tests.xctest */,
-				42D9E499216D417600AA51C2 /* VirgilSDK.framework */,
-				42D9E49B216D417600AA51C2 /* SDKTestApp tvOS.app */,
-				42D9E49D216D417600AA51C2 /* VirgilSDK AppTests tvOS.xctest */,
-				42D9E49F216D417600AA51C2 /* VirgilSDK.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
-		42D9E57C216D5D1400AA51C2 /* Products */ = {
-			isa = PBXGroup;
-			children = (
-				42D9E587216D5D1400AA51C2 /* VirgilCryptoAPI.framework */,
-				42D9E589216D5D1400AA51C2 /* VirgilCryptoAPI iOS Tests.xctest */,
-				42D9E58B216D5D1400AA51C2 /* VirgilCryptoAPI.framework */,
-				42D9E58D216D5D1400AA51C2 /* VirgilCryptoAPI macOS Tests.xctest */,
-				42D9E58F216D5D1400AA51C2 /* VirgilCryptoAPI.framework */,
-				42D9E591216D5D1400AA51C2 /* VirgilCryptoAPI tvOS Tests.xctest */,
-				42D9E593216D5D1400AA51C2 /* VirgilCryptoAPI.framework */,
-			);
-			name = Products;
-			sourceTree = "<group>";
-		};
 		42DD298520751B1A00C9C014 = {
 			isa = PBXGroup;
 			children = (
-				42D9E57B216D5D1400AA51C2 /* VirgilCryptoAPI.xcodeproj */,
-				42D9E47F216D417600AA51C2 /* VirgilSDK.xcodeproj */,
-				42D9E442216D417000AA51C2 /* VirgilCrypto.xcodeproj */,
+				42499FFD21EE8FBC0076851C /* VirgilCryptoAPI.xcodeproj */,
+				42499FB221EE8F660076851C /* VirgilCrypto.xcodeproj */,
+				42499F9121EE8F610076851C /* VirgilSDK.xcodeproj */,
 				42DD29A020751EAC00C9C014 /* Source */,
 				42DD299120751B1A00C9C014 /* VirgilSDKPythia */,
 				42DD2A422075234C00C9C014 /* Tests */,
@@ -828,6 +805,7 @@
 		42DD2A722075294900C9C014 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				42499FEF21EE8FA20076851C /* VirgilCryptoAPI.framework */,
 				42D9E575216D4F9400AA51C2 /* VirgilCryptoAPI.framework */,
 				42D9E55B216D4BFA00AA51C2 /* VirgilCryptoAPI.framework */,
 				42D9E555216D4BED00AA51C2 /* VirgilCryptoAPI.framework */,
@@ -892,11 +870,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				42D9E5AB216D5ED800AA51C2 /* PBXTargetDependency */,
-				42D9E50B216D427700AA51C2 /* PBXTargetDependency */,
-				42D9E50D216D427700AA51C2 /* PBXTargetDependency */,
-				42D9E50F216D427700AA51C2 /* PBXTargetDependency */,
-				42D9E511216D427700AA51C2 /* PBXTargetDependency */,
+				4249A02721EE8FF70076851C /* PBXTargetDependency */,
+				4249A01F21EE8FEC0076851C /* PBXTargetDependency */,
+				4249A02121EE8FEC0076851C /* PBXTargetDependency */,
+				4249A02321EE8FEC0076851C /* PBXTargetDependency */,
+				4249A02521EE8FEC0076851C /* PBXTargetDependency */,
 			);
 			name = "VirgilSDKPythia macOS";
 			productName = VirgilSDKPythia;
@@ -933,11 +911,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				42D9E5AE216D5EEA00AA51C2 /* PBXTargetDependency */,
-				42D9E513216D428600AA51C2 /* PBXTargetDependency */,
-				42D9E515216D428600AA51C2 /* PBXTargetDependency */,
-				42D9E517216D428600AA51C2 /* PBXTargetDependency */,
-				42D9E519216D428600AA51C2 /* PBXTargetDependency */,
+				4249A02E21EE90280076851C /* PBXTargetDependency */,
+				4249A03021EE90280076851C /* PBXTargetDependency */,
+				4249A03221EE90280076851C /* PBXTargetDependency */,
+				4249A03421EE90280076851C /* PBXTargetDependency */,
+				4249A03621EE90280076851C /* PBXTargetDependency */,
 			);
 			name = "VirgilSDKPythia tvOS";
 			productName = VirgilSDKPythia;
@@ -974,11 +952,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				42D9E5B1216D5EFE00AA51C2 /* PBXTargetDependency */,
-				42D9E51B216D429400AA51C2 /* PBXTargetDependency */,
-				42D9E51D216D429400AA51C2 /* PBXTargetDependency */,
-				42D9E51F216D429400AA51C2 /* PBXTargetDependency */,
-				42D9E521216D429400AA51C2 /* PBXTargetDependency */,
+				4249A03D21EE904B0076851C /* PBXTargetDependency */,
+				4249A03F21EE904B0076851C /* PBXTargetDependency */,
+				4249A04121EE904B0076851C /* PBXTargetDependency */,
+				4249A04321EE904B0076851C /* PBXTargetDependency */,
+				4249A04521EE904B0076851C /* PBXTargetDependency */,
 			);
 			name = "VirgilSDKPythia watchOS";
 			productName = VirgilSDKPythia;
@@ -997,11 +975,11 @@
 			buildRules = (
 			);
 			dependencies = (
-				42D9E595216D5D1A00AA51C2 /* PBXTargetDependency */,
-				42D9E503216D41FD00AA51C2 /* PBXTargetDependency */,
-				42D9E505216D41FD00AA51C2 /* PBXTargetDependency */,
-				42D9E507216D41FD00AA51C2 /* PBXTargetDependency */,
-				42D9E509216D41FD00AA51C2 /* PBXTargetDependency */,
+				4249A01821EE8FCA0076851C /* PBXTargetDependency */,
+				42499FF621EE8FB50076851C /* PBXTargetDependency */,
+				42499FF821EE8FB50076851C /* PBXTargetDependency */,
+				42499FFA21EE8FB50076851C /* PBXTargetDependency */,
+				42499FFC21EE8FB50076851C /* PBXTargetDependency */,
 			);
 			name = "VirgilSDKPythia iOS";
 			productName = VirgilSDKPythia;
@@ -1090,16 +1068,16 @@
 			projectDirPath = "";
 			projectReferences = (
 				{
-					ProductGroup = 42D9E443216D417000AA51C2 /* Products */;
-					ProjectRef = 42D9E442216D417000AA51C2 /* VirgilCrypto.xcodeproj */;
+					ProductGroup = 42499FB321EE8F660076851C /* Products */;
+					ProjectRef = 42499FB221EE8F660076851C /* VirgilCrypto.xcodeproj */;
 				},
 				{
-					ProductGroup = 42D9E57C216D5D1400AA51C2 /* Products */;
-					ProjectRef = 42D9E57B216D5D1400AA51C2 /* VirgilCryptoAPI.xcodeproj */;
+					ProductGroup = 42499FFE21EE8FBC0076851C /* Products */;
+					ProjectRef = 42499FFD21EE8FBC0076851C /* VirgilCryptoAPI.xcodeproj */;
 				},
 				{
-					ProductGroup = 42D9E480216D417600AA51C2 /* Products */;
-					ProjectRef = 42D9E47F216D417600AA51C2 /* VirgilSDK.xcodeproj */;
+					ProductGroup = 42499F9221EE8F610076851C /* Products */;
+					ProjectRef = 42499F9121EE8F610076851C /* VirgilSDK.xcodeproj */;
 				},
 			);
 			projectRoot = "";
@@ -1117,242 +1095,242 @@
 /* End PBXProject section */
 
 /* Begin PBXReferenceProxy section */
-		42D9E45C216D417000AA51C2 /* VirgilCrypto.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = VirgilCrypto.framework;
-			remoteRef = 42D9E45B216D417000AA51C2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		42D9E45E216D417000AA51C2 /* VirgilCrypto iOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "VirgilCrypto iOS Tests.xctest";
-			remoteRef = 42D9E45D216D417000AA51C2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		42D9E460216D417000AA51C2 /* VirgilCrypto.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = VirgilCrypto.framework;
-			remoteRef = 42D9E45F216D417000AA51C2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		42D9E462216D417000AA51C2 /* VirgilCrypto macOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "VirgilCrypto macOS Tests.xctest";
-			remoteRef = 42D9E461216D417000AA51C2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		42D9E464216D417000AA51C2 /* VirgilCrypto.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = VirgilCrypto.framework;
-			remoteRef = 42D9E463216D417000AA51C2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		42D9E466216D417000AA51C2 /* VirgilCrypto tvOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "VirgilCrypto tvOS Tests.xctest";
-			remoteRef = 42D9E465216D417000AA51C2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		42D9E468216D417000AA51C2 /* VirgilCrypto.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = VirgilCrypto.framework;
-			remoteRef = 42D9E467216D417000AA51C2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		42D9E46A216D417000AA51C2 /* VirgilCryptoApiImpl.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = VirgilCryptoApiImpl.framework;
-			remoteRef = 42D9E469216D417000AA51C2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		42D9E46C216D417000AA51C2 /* VirgilCryptoApiImpl iOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "VirgilCryptoApiImpl iOS Tests.xctest";
-			remoteRef = 42D9E46B216D417000AA51C2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		42D9E46E216D417000AA51C2 /* VirgilCryptoApiImpl.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = VirgilCryptoApiImpl.framework;
-			remoteRef = 42D9E46D216D417000AA51C2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		42D9E470216D417000AA51C2 /* VirgilCryptoApiImpl macOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "VirgilCryptoApiImpl macOS Tests.xctest";
-			remoteRef = 42D9E46F216D417000AA51C2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		42D9E472216D417000AA51C2 /* VirgilCryptoApiImpl.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = VirgilCryptoApiImpl.framework;
-			remoteRef = 42D9E471216D417000AA51C2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		42D9E474216D417000AA51C2 /* VirgilCryptoApiImpl tvOS Tests.xctest */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.cfbundle;
-			path = "VirgilCryptoApiImpl tvOS Tests.xctest";
-			remoteRef = 42D9E473216D417000AA51C2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		42D9E476216D417000AA51C2 /* VirgilCryptoApiImpl.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = VirgilCryptoApiImpl.framework;
-			remoteRef = 42D9E475216D417000AA51C2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		42D9E478216D417000AA51C2 /* VSCCrypto.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = VSCCrypto.framework;
-			remoteRef = 42D9E477216D417000AA51C2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		42D9E47A216D417000AA51C2 /* VSCCrypto.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = VSCCrypto.framework;
-			remoteRef = 42D9E479216D417000AA51C2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		42D9E47C216D417000AA51C2 /* VSCCrypto.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = VSCCrypto.framework;
-			remoteRef = 42D9E47B216D417000AA51C2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		42D9E47E216D417000AA51C2 /* VSCCrypto.framework */ = {
-			isa = PBXReferenceProxy;
-			fileType = wrapper.framework;
-			path = VSCCrypto.framework;
-			remoteRef = 42D9E47D216D417000AA51C2 /* PBXContainerItemProxy */;
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		42D9E48F216D417600AA51C2 /* VirgilSDK.framework */ = {
+		42499FA121EE8F610076851C /* VirgilSDK.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = VirgilSDK.framework;
-			remoteRef = 42D9E48E216D417600AA51C2 /* PBXContainerItemProxy */;
+			remoteRef = 42499FA021EE8F610076851C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		42D9E491216D417600AA51C2 /* SDKTestApp iOS.app */ = {
+		42499FA321EE8F610076851C /* SDKTestApp iOS.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			path = "SDKTestApp iOS.app";
-			remoteRef = 42D9E490216D417600AA51C2 /* PBXContainerItemProxy */;
+			remoteRef = 42499FA221EE8F610076851C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		42D9E493216D417600AA51C2 /* VirgilSDK AppTests iOS.xctest */ = {
+		42499FA521EE8F610076851C /* VirgilSDK AppTests iOS.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "VirgilSDK AppTests iOS.xctest";
-			remoteRef = 42D9E492216D417600AA51C2 /* PBXContainerItemProxy */;
+			remoteRef = 42499FA421EE8F610076851C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		42D9E495216D417600AA51C2 /* VirgilSDK.framework */ = {
+		42499FA721EE8F610076851C /* VirgilSDK.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = VirgilSDK.framework;
-			remoteRef = 42D9E494216D417600AA51C2 /* PBXContainerItemProxy */;
+			remoteRef = 42499FA621EE8F610076851C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		42D9E497216D417600AA51C2 /* VirgilSDK macOS Tests.xctest */ = {
+		42499FA921EE8F610076851C /* VirgilSDK macOS Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "VirgilSDK macOS Tests.xctest";
-			remoteRef = 42D9E496216D417600AA51C2 /* PBXContainerItemProxy */;
+			remoteRef = 42499FA821EE8F610076851C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		42D9E499216D417600AA51C2 /* VirgilSDK.framework */ = {
+		42499FAB21EE8F610076851C /* VirgilSDK.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = VirgilSDK.framework;
-			remoteRef = 42D9E498216D417600AA51C2 /* PBXContainerItemProxy */;
+			remoteRef = 42499FAA21EE8F610076851C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		42D9E49B216D417600AA51C2 /* SDKTestApp tvOS.app */ = {
+		42499FAD21EE8F610076851C /* SDKTestApp tvOS.app */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.application;
 			path = "SDKTestApp tvOS.app";
-			remoteRef = 42D9E49A216D417600AA51C2 /* PBXContainerItemProxy */;
+			remoteRef = 42499FAC21EE8F610076851C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		42D9E49D216D417600AA51C2 /* VirgilSDK AppTests tvOS.xctest */ = {
+		42499FAF21EE8F610076851C /* VirgilSDK AppTests tvOS.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "VirgilSDK AppTests tvOS.xctest";
-			remoteRef = 42D9E49C216D417600AA51C2 /* PBXContainerItemProxy */;
+			remoteRef = 42499FAE21EE8F610076851C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		42D9E49F216D417600AA51C2 /* VirgilSDK.framework */ = {
+		42499FB121EE8F610076851C /* VirgilSDK.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = VirgilSDK.framework;
-			remoteRef = 42D9E49E216D417600AA51C2 /* PBXContainerItemProxy */;
+			remoteRef = 42499FB021EE8F610076851C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		42D9E587216D5D1400AA51C2 /* VirgilCryptoAPI.framework */ = {
+		42499FCC21EE8F670076851C /* VirgilCrypto.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VirgilCrypto.framework;
+			remoteRef = 42499FCB21EE8F670076851C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		42499FCE21EE8F670076851C /* VirgilCrypto iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "VirgilCrypto iOS Tests.xctest";
+			remoteRef = 42499FCD21EE8F670076851C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		42499FD021EE8F670076851C /* VirgilCrypto.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VirgilCrypto.framework;
+			remoteRef = 42499FCF21EE8F670076851C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		42499FD221EE8F670076851C /* VirgilCrypto macOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "VirgilCrypto macOS Tests.xctest";
+			remoteRef = 42499FD121EE8F670076851C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		42499FD421EE8F670076851C /* VirgilCrypto.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VirgilCrypto.framework;
+			remoteRef = 42499FD321EE8F670076851C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		42499FD621EE8F670076851C /* VirgilCrypto tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "VirgilCrypto tvOS Tests.xctest";
+			remoteRef = 42499FD521EE8F670076851C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		42499FD821EE8F670076851C /* VirgilCrypto.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VirgilCrypto.framework;
+			remoteRef = 42499FD721EE8F670076851C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		42499FDA21EE8F670076851C /* VirgilCryptoApiImpl.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VirgilCryptoApiImpl.framework;
+			remoteRef = 42499FD921EE8F670076851C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		42499FDC21EE8F670076851C /* VirgilCryptoApiImpl iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "VirgilCryptoApiImpl iOS Tests.xctest";
+			remoteRef = 42499FDB21EE8F670076851C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		42499FDE21EE8F670076851C /* VirgilCryptoApiImpl.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VirgilCryptoApiImpl.framework;
+			remoteRef = 42499FDD21EE8F670076851C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		42499FE021EE8F670076851C /* VirgilCryptoApiImpl macOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "VirgilCryptoApiImpl macOS Tests.xctest";
+			remoteRef = 42499FDF21EE8F670076851C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		42499FE221EE8F670076851C /* VirgilCryptoApiImpl.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VirgilCryptoApiImpl.framework;
+			remoteRef = 42499FE121EE8F670076851C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		42499FE421EE8F670076851C /* VirgilCryptoApiImpl tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "VirgilCryptoApiImpl tvOS Tests.xctest";
+			remoteRef = 42499FE321EE8F670076851C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		42499FE621EE8F670076851C /* VirgilCryptoApiImpl.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VirgilCryptoApiImpl.framework;
+			remoteRef = 42499FE521EE8F670076851C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		42499FE821EE8F670076851C /* VSCCrypto.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VSCCrypto.framework;
+			remoteRef = 42499FE721EE8F670076851C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		42499FEA21EE8F670076851C /* VSCCrypto.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VSCCrypto.framework;
+			remoteRef = 42499FE921EE8F670076851C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		42499FEC21EE8F670076851C /* VSCCrypto.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VSCCrypto.framework;
+			remoteRef = 42499FEB21EE8F670076851C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		42499FEE21EE8F670076851C /* VSCCrypto.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = VSCCrypto.framework;
+			remoteRef = 42499FED21EE8F670076851C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		4249A00921EE8FBC0076851C /* VirgilCryptoAPI.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = VirgilCryptoAPI.framework;
-			remoteRef = 42D9E586216D5D1400AA51C2 /* PBXContainerItemProxy */;
+			remoteRef = 4249A00821EE8FBC0076851C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		42D9E589216D5D1400AA51C2 /* VirgilCryptoAPI iOS Tests.xctest */ = {
+		4249A00B21EE8FBC0076851C /* VirgilCryptoAPI iOS Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "VirgilCryptoAPI iOS Tests.xctest";
-			remoteRef = 42D9E588216D5D1400AA51C2 /* PBXContainerItemProxy */;
+			remoteRef = 4249A00A21EE8FBC0076851C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		42D9E58B216D5D1400AA51C2 /* VirgilCryptoAPI.framework */ = {
+		4249A00D21EE8FBC0076851C /* VirgilCryptoAPI.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = VirgilCryptoAPI.framework;
-			remoteRef = 42D9E58A216D5D1400AA51C2 /* PBXContainerItemProxy */;
+			remoteRef = 4249A00C21EE8FBC0076851C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		42D9E58D216D5D1400AA51C2 /* VirgilCryptoAPI macOS Tests.xctest */ = {
+		4249A00F21EE8FBC0076851C /* VirgilCryptoAPI macOS Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "VirgilCryptoAPI macOS Tests.xctest";
-			remoteRef = 42D9E58C216D5D1400AA51C2 /* PBXContainerItemProxy */;
+			remoteRef = 4249A00E21EE8FBC0076851C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		42D9E58F216D5D1400AA51C2 /* VirgilCryptoAPI.framework */ = {
+		4249A01121EE8FBC0076851C /* VirgilCryptoAPI.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = VirgilCryptoAPI.framework;
-			remoteRef = 42D9E58E216D5D1400AA51C2 /* PBXContainerItemProxy */;
+			remoteRef = 4249A01021EE8FBC0076851C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		42D9E591216D5D1400AA51C2 /* VirgilCryptoAPI tvOS Tests.xctest */ = {
+		4249A01321EE8FBC0076851C /* VirgilCryptoAPI tvOS Tests.xctest */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.cfbundle;
 			path = "VirgilCryptoAPI tvOS Tests.xctest";
-			remoteRef = 42D9E590216D5D1400AA51C2 /* PBXContainerItemProxy */;
+			remoteRef = 4249A01221EE8FBC0076851C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
-		42D9E593216D5D1400AA51C2 /* VirgilCryptoAPI.framework */ = {
+		4249A01521EE8FBC0076851C /* VirgilCryptoAPI.framework */ = {
 			isa = PBXReferenceProxy;
 			fileType = wrapper.framework;
 			path = VirgilCryptoAPI.framework;
-			remoteRef = 42D9E592216D5D1400AA51C2 /* PBXContainerItemProxy */;
+			remoteRef = 4249A01421EE8FBC0076851C /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
 /* End PBXReferenceProxy section */
@@ -1511,6 +1489,126 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		42499FF621EE8FB50076851C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "VirgilCrypto iOS";
+			targetProxy = 42499FF521EE8FB50076851C /* PBXContainerItemProxy */;
+		};
+		42499FF821EE8FB50076851C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "VirgilCryptoApiImpl iOS";
+			targetProxy = 42499FF721EE8FB50076851C /* PBXContainerItemProxy */;
+		};
+		42499FFA21EE8FB50076851C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "VSCCrypto iOS";
+			targetProxy = 42499FF921EE8FB50076851C /* PBXContainerItemProxy */;
+		};
+		42499FFC21EE8FB50076851C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "VirgilSDK iOS";
+			targetProxy = 42499FFB21EE8FB50076851C /* PBXContainerItemProxy */;
+		};
+		4249A01821EE8FCA0076851C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "VirgilCryptoAPI iOS";
+			targetProxy = 4249A01721EE8FCA0076851C /* PBXContainerItemProxy */;
+		};
+		4249A01F21EE8FEC0076851C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "VirgilCryptoAPI macOS";
+			targetProxy = 4249A01E21EE8FEC0076851C /* PBXContainerItemProxy */;
+		};
+		4249A02121EE8FEC0076851C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "VirgilCrypto macOS";
+			targetProxy = 4249A02021EE8FEC0076851C /* PBXContainerItemProxy */;
+		};
+		4249A02321EE8FEC0076851C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "VirgilCryptoApiImpl macOS";
+			targetProxy = 4249A02221EE8FEC0076851C /* PBXContainerItemProxy */;
+		};
+		4249A02521EE8FEC0076851C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "VSCCrypto macOS";
+			targetProxy = 4249A02421EE8FEC0076851C /* PBXContainerItemProxy */;
+		};
+		4249A02721EE8FF70076851C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "VirgilSDK macOS";
+			targetProxy = 4249A02621EE8FF70076851C /* PBXContainerItemProxy */;
+		};
+		4249A02E21EE90280076851C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "VirgilCryptoAPI tvOS";
+			targetProxy = 4249A02D21EE90280076851C /* PBXContainerItemProxy */;
+		};
+		4249A03021EE90280076851C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "VirgilCrypto tvOS";
+			targetProxy = 4249A02F21EE90280076851C /* PBXContainerItemProxy */;
+		};
+		4249A03221EE90280076851C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "VirgilCryptoApiImpl tvOS";
+			targetProxy = 4249A03121EE90280076851C /* PBXContainerItemProxy */;
+		};
+		4249A03421EE90280076851C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "VSCCrypto tvOS";
+			targetProxy = 4249A03321EE90280076851C /* PBXContainerItemProxy */;
+		};
+		4249A03621EE90280076851C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "SDKTestApp tvOS";
+			targetProxy = 4249A03521EE90280076851C /* PBXContainerItemProxy */;
+		};
+		4249A03D21EE904B0076851C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "VirgilCryptoAPI watchOS";
+			targetProxy = 4249A03C21EE904B0076851C /* PBXContainerItemProxy */;
+		};
+		4249A03F21EE904B0076851C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "VirgilCrypto watchOS";
+			targetProxy = 4249A03E21EE904B0076851C /* PBXContainerItemProxy */;
+		};
+		4249A04121EE904B0076851C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "VirgilCryptoApiImpl watchOS";
+			targetProxy = 4249A04021EE904B0076851C /* PBXContainerItemProxy */;
+		};
+		4249A04321EE904B0076851C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "VSCCrypto watchOS";
+			targetProxy = 4249A04221EE904B0076851C /* PBXContainerItemProxy */;
+		};
+		4249A04521EE904B0076851C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = "VirgilSDK watchOS";
+			targetProxy = 4249A04421EE904B0076851C /* PBXContainerItemProxy */;
+		};
+		4249A04721EE90B30076851C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42DD298E20751B1A00C9C014 /* VirgilSDKPythia iOS */;
+			targetProxy = 4249A04621EE90B30076851C /* PBXContainerItemProxy */;
+		};
+		4249A04921EE90B30076851C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42A76B6020AED95200561EA2 /* VirgilSDKPythia macOS */;
+			targetProxy = 4249A04821EE90B30076851C /* PBXContainerItemProxy */;
+		};
+		4249A04B21EE90B30076851C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42A76B9D20AED99A00561EA2 /* VirgilSDKPythia tvOS */;
+			targetProxy = 4249A04A21EE90B30076851C /* PBXContainerItemProxy */;
+		};
+		4249A04D21EE90B30076851C /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 42A76BB920AED9D200561EA2 /* VirgilSDKPythia watchOS */;
+			targetProxy = 4249A04C21EE90B30076851C /* PBXContainerItemProxy */;
+		};
 		42A76B6C20AED95200561EA2 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 42A76B6020AED95200561EA2 /* VirgilSDKPythia macOS */;
@@ -1520,126 +1618,6 @@
 			isa = PBXTargetDependency;
 			target = 42A76B9D20AED99A00561EA2 /* VirgilSDKPythia tvOS */;
 			targetProxy = 42A76BA820AED99B00561EA2 /* PBXContainerItemProxy */;
-		};
-		42A76BF220AEDA8E00561EA2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 42DD298E20751B1A00C9C014 /* VirgilSDKPythia iOS */;
-			targetProxy = 42A76BF120AEDA8E00561EA2 /* PBXContainerItemProxy */;
-		};
-		42A76BF420AEDA8E00561EA2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 42A76B6020AED95200561EA2 /* VirgilSDKPythia macOS */;
-			targetProxy = 42A76BF320AEDA8E00561EA2 /* PBXContainerItemProxy */;
-		};
-		42A76BF620AEDA8E00561EA2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 42A76B9D20AED99A00561EA2 /* VirgilSDKPythia tvOS */;
-			targetProxy = 42A76BF520AEDA8E00561EA2 /* PBXContainerItemProxy */;
-		};
-		42A76BF820AEDA8E00561EA2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 42A76BB920AED9D200561EA2 /* VirgilSDKPythia watchOS */;
-			targetProxy = 42A76BF720AEDA8E00561EA2 /* PBXContainerItemProxy */;
-		};
-		42D9E503216D41FD00AA51C2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "VirgilSDK iOS";
-			targetProxy = 42D9E502216D41FD00AA51C2 /* PBXContainerItemProxy */;
-		};
-		42D9E505216D41FD00AA51C2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "VirgilCrypto iOS";
-			targetProxy = 42D9E504216D41FD00AA51C2 /* PBXContainerItemProxy */;
-		};
-		42D9E507216D41FD00AA51C2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "VirgilCryptoApiImpl iOS";
-			targetProxy = 42D9E506216D41FD00AA51C2 /* PBXContainerItemProxy */;
-		};
-		42D9E509216D41FD00AA51C2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "VSCCrypto iOS";
-			targetProxy = 42D9E508216D41FD00AA51C2 /* PBXContainerItemProxy */;
-		};
-		42D9E50B216D427700AA51C2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "VirgilSDK macOS";
-			targetProxy = 42D9E50A216D427700AA51C2 /* PBXContainerItemProxy */;
-		};
-		42D9E50D216D427700AA51C2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "VirgilCrypto macOS";
-			targetProxy = 42D9E50C216D427700AA51C2 /* PBXContainerItemProxy */;
-		};
-		42D9E50F216D427700AA51C2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "VirgilCryptoApiImpl macOS";
-			targetProxy = 42D9E50E216D427700AA51C2 /* PBXContainerItemProxy */;
-		};
-		42D9E511216D427700AA51C2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "VSCCrypto macOS";
-			targetProxy = 42D9E510216D427700AA51C2 /* PBXContainerItemProxy */;
-		};
-		42D9E513216D428600AA51C2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "VirgilSDK tvOS";
-			targetProxy = 42D9E512216D428600AA51C2 /* PBXContainerItemProxy */;
-		};
-		42D9E515216D428600AA51C2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "VirgilCrypto tvOS";
-			targetProxy = 42D9E514216D428600AA51C2 /* PBXContainerItemProxy */;
-		};
-		42D9E517216D428600AA51C2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "VirgilCryptoApiImpl tvOS";
-			targetProxy = 42D9E516216D428600AA51C2 /* PBXContainerItemProxy */;
-		};
-		42D9E519216D428600AA51C2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "VSCCrypto tvOS";
-			targetProxy = 42D9E518216D428600AA51C2 /* PBXContainerItemProxy */;
-		};
-		42D9E51B216D429400AA51C2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "VirgilSDK watchOS";
-			targetProxy = 42D9E51A216D429400AA51C2 /* PBXContainerItemProxy */;
-		};
-		42D9E51D216D429400AA51C2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "VirgilCrypto watchOS";
-			targetProxy = 42D9E51C216D429400AA51C2 /* PBXContainerItemProxy */;
-		};
-		42D9E51F216D429400AA51C2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "VirgilCryptoApiImpl watchOS";
-			targetProxy = 42D9E51E216D429400AA51C2 /* PBXContainerItemProxy */;
-		};
-		42D9E521216D429400AA51C2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "VSCCrypto watchOS";
-			targetProxy = 42D9E520216D429400AA51C2 /* PBXContainerItemProxy */;
-		};
-		42D9E595216D5D1A00AA51C2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "VirgilCryptoAPI iOS";
-			targetProxy = 42D9E594216D5D1A00AA51C2 /* PBXContainerItemProxy */;
-		};
-		42D9E5AB216D5ED800AA51C2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "VirgilCryptoAPI macOS";
-			targetProxy = 42D9E5AA216D5ED800AA51C2 /* PBXContainerItemProxy */;
-		};
-		42D9E5AE216D5EEA00AA51C2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "VirgilCryptoAPI tvOS";
-			targetProxy = 42D9E5AD216D5EEA00AA51C2 /* PBXContainerItemProxy */;
-		};
-		42D9E5B1216D5EFE00AA51C2 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			name = "VirgilCryptoAPI watchOS";
-			targetProxy = 42D9E5B0216D5EFE00AA51C2 /* PBXContainerItemProxy */;
 		};
 		42DD2A3E207522DA00C9C014 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;

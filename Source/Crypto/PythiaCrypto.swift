@@ -57,10 +57,11 @@ import VirgilCryptoPythia
     
     @objc public init(crypto: VirgilCrypto) {
         self.crypto = crypto
+        self.pythia =
         PythiaCrypto.initQueue.sync {
             Pythia.globalInit()
+            return Pythia()
         }
-        self.pythia = Pythia()
     }
     
     deinit {
@@ -83,7 +84,9 @@ import VirgilCryptoPythia
             throw PythiaCryptoError.passwordIsNotUTF8
         }
         
-        let res = try self.pythia.blind(password: passwordData)
+        let res = try PythiaCrypto.initQueue.sync {
+            try self.pythia.blind(password: passwordData)
+        }
 
         return BlindResult(blindedPassword: res.blindedPassword, blindingSecret: res.blindingSecret)
     }
@@ -96,7 +99,9 @@ import VirgilCryptoPythia
     /// - Returns: GT deblinded transformed password
     /// - Throws: Rethrows from VirgilPythia.deblind
     @objc open func deblind(transformedPassword: Data, blindingSecret: Data) throws -> Data {
-        return try self.pythia.deblind(transformedPassword: transformedPassword, blindingSecret: blindingSecret)
+        return try PythiaCrypto.initQueue.sync {
+            try self.pythia.deblind(transformedPassword: transformedPassword, blindingSecret: blindingSecret)
+        }
     }
 
     /// Generates key pair of given type using random seed

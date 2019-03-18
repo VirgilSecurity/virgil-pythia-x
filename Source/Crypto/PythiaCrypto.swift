@@ -35,8 +35,8 @@
 //
 
 import Foundation
-import VirgilCryptoApiImpl
 import VirgilCrypto
+import VirgilCryptoPythia
 
 /// Declares client error types and codes
 ///
@@ -48,10 +48,26 @@ import VirgilCrypto
 
 /// Implementation of PythiaCryptoProtocol using Virgil crypto library
 @objc(VSYPythiaCrypto) open class PythiaCrypto: NSObject, PythiaCryptoProtocol {
-    /// VirgilPythia
-    @objc public let virgilPythia = VirgilPythia()
     /// Virgil Crypto
-    @objc public let virgilCrypto = VirgilCrypto()
+    @objc public let crypto: VirgilCrypto
+    
+    @objc public let pythia: Pythia
+    
+    private static let initQueue = DispatchQueue(label: "Pythia init queue")
+    
+    @objc public init(crypto: VirgilCrypto) {
+        self.crypto = crypto
+        PythiaCrypto.initQueue.sync {
+            Pythia.globalInit()
+        }
+        self.pythia = Pythia()
+    }
+    
+    deinit {
+        PythiaCrypto.initQueue.sync {
+            Pythia.globalCleanup()
+        }
+    }
 
     /// Blinds password.
     ///
@@ -66,10 +82,10 @@ import VirgilCrypto
         guard let passwordData = password.data(using: .utf8) else {
             throw PythiaCryptoError.passwordIsNotUTF8
         }
+        
+        let res = try self.pythia.blind(password: passwordData)
 
-        let blindResult = try self.virgilPythia.blind(password: passwordData)
-
-        return BlindResult(blindedPassword: blindResult.blindedPassword, blindingSecret: blindResult.blindingSecret)
+        return BlindResult(blindedPassword: res.blindedPassword, blindingSecret: res.blindingSecret)
     }
 
     /// Deblinds transformed password value using previously returned blinding_secret from blind operation.
@@ -80,7 +96,7 @@ import VirgilCrypto
     /// - Returns: GT deblinded transformed password
     /// - Throws: Rethrows from VirgilPythia.deblind
     @objc open func deblind(transformedPassword: Data, blindingSecret: Data) throws -> Data {
-        return try self.virgilPythia.deblind(transformedPassword: transformedPassword, blindingSecret: blindingSecret)
+        return try self.pythia.deblind(transformedPassword: transformedPassword, blindingSecret: blindingSecret)
     }
 
     /// Generates key pair of given type using random seed
@@ -91,11 +107,7 @@ import VirgilCrypto
     /// - Returns: generated key pair
     /// - Throws: PythiaCryptoError.errorWhileGeneratingKeyPair if key generation failed
     ///           Rethrows from VirgilCrypto.wrapKeyPair
-    @objc open func generateKeyPair(ofType type: VSCKeyType, fromSeed seed: Data) throws -> VirgilKeyPair {
-        guard let keyPair = KeyPair(keyPairType: type, keyMaterial: seed, password: nil) else {
-            throw PythiaCryptoError.errorWhileGeneratingKeyPair
-        }
-
-        return try self.virgilCrypto.wrapKeyPair(privateKey: keyPair.privateKey(), publicKey: keyPair.publicKey())
+    @objc open func generateKeyPair(usingSeed seed: Data) throws -> VirgilKeyPair {
+        return try self.crypto.generateKeyPair(usingSeed:seed)
     }
 }

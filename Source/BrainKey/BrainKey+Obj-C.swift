@@ -35,7 +35,7 @@
 //
 
 import Foundation
-import VirgilCryptoApiImpl
+import VirgilCrypto
 
 /// Exstension with Obj-C compatible methods
 extension BrainKey {

@@ -37,7 +37,6 @@
 import Foundation
 import VirgilSDK
 import VirgilCrypto
-import VirgilCryptoApiImpl
 
 /// Class for Pythia BrainKey
 @objc(VSYBrainKey) open class BrainKey: NSObject {
@@ -47,8 +46,6 @@ import VirgilCryptoApiImpl
     @objc public let pythiaCrypto: PythiaCryptoProtocol
     /// AccessTokenProvider implementation
     @objc public let accessTokenProvider: AccessTokenProvider
-    /// Default key type to be generated
-    @objc public let keyPairType: VSCKeyType
 
     /// Initializer
     ///
@@ -57,7 +54,6 @@ import VirgilCryptoApiImpl
         self.client = context.client
         self.accessTokenProvider = context.accessTokenProvider
         self.pythiaCrypto = context.pythiaCrypto
-        self.keyPairType = context.keyPairType
     }
 
     /// Generates key pair based on given password and brainkeyId

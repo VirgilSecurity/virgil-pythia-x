@@ -53,6 +53,8 @@ import VirgilCryptoPythia
     
     @objc public static let initQueue = DispatchQueue(label: "Pythia init queue")
     
+    @objc public private(set) static var instanceCount = 0
+    
     @objc public init(crypto: VirgilCrypto? = nil) throws {
         if let crypto = crypto {
             self.crypto = crypto
@@ -62,13 +64,21 @@ import VirgilCryptoPythia
         }
             
         try PythiaCrypto.initQueue.sync {
-            try Pythia.configure()
+            if PythiaCrypto.instanceCount == 0 {
+                try Pythia.configure()
+            }
+            
+            PythiaCrypto.instanceCount += 1
         }
     }
     
     deinit {
         PythiaCrypto.initQueue.sync {
-            Pythia.cleanup()
+            PythiaCrypto.instanceCount -= 1
+            
+            if PythiaCrypto.instanceCount == 0 {
+                Pythia.cleanup()
+            }
         }
     }
 

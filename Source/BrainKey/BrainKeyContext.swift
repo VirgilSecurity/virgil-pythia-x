@@ -63,7 +63,7 @@ import VirgilCrypto
         }
         else {
             let crypto = try VirgilCrypto(defaultKeyType: keyPairType, useSHA256Fingerprints: false)
-            self.pythiaCrypto = PythiaCrypto(crypto: crypto)
+            self.pythiaCrypto = try PythiaCrypto(crypto: crypto)
         }
         self.accessTokenProvider = accessTokenProvider
 

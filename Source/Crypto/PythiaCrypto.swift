@@ -53,17 +53,22 @@ import VirgilCryptoPythia
     
     @objc public static let initQueue = DispatchQueue(label: "Pythia init queue")
     
-    @objc public init(crypto: VirgilCrypto) {
-        self.crypto = crypto
+    @objc public init(crypto: VirgilCrypto? = nil) throws {
+        if let crypto = crypto {
+            self.crypto = crypto
+        }
+        else {
+            self.crypto = try VirgilCrypto()
+        }
             
-        PythiaCrypto.initQueue.sync {
-            Pythia.globalInit()
+        try PythiaCrypto.initQueue.sync {
+            try Pythia.configure()
         }
     }
     
     deinit {
         PythiaCrypto.initQueue.sync {
-            Pythia.globalCleanup()
+            Pythia.cleanup()
         }
     }
 
@@ -81,9 +86,7 @@ import VirgilCryptoPythia
             throw PythiaCryptoError.passwordIsNotUTF8
         }
         
-        let pythia = Pythia()
-        
-        let res = try pythia.blind(password: passwordData)
+        let res = try Pythia.blind(password: passwordData)
 
         return BlindResult(blindedPassword: res.blindedPassword, blindingSecret: res.blindingSecret)
     }
@@ -96,9 +99,7 @@ import VirgilCryptoPythia
     /// - Returns: GT deblinded transformed password
     /// - Throws: Rethrows from VirgilPythia.deblind
     @objc open func deblind(transformedPassword: Data, blindingSecret: Data) throws -> Data {
-        let pythia = Pythia()
-        
-        return try pythia.deblind(transformedPassword: transformedPassword, blindingSecret: blindingSecret)
+        return try Pythia.deblind(transformedPassword: transformedPassword, blindingSecret: blindingSecret)
     }
 
     /// Generates key pair of given type using random seed
@@ -110,6 +111,6 @@ import VirgilCryptoPythia
     /// - Throws: PythiaCryptoError.errorWhileGeneratingKeyPair if key generation failed
     ///           Rethrows from VirgilCrypto.wrapKeyPair
     @objc open func generateKeyPair(usingSeed seed: Data) throws -> VirgilKeyPair {
-        return try self.crypto.generateKeyPair(usingSeed:seed)
+        return try self.crypto.generateKeyPair(usingSeed: seed)
     }
 }

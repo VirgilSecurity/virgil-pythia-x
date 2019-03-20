@@ -43,7 +43,7 @@ To integrate Virgil Pythia into your Xcode project using CocoaPods, specify it i
 target '<Your Target Name>' do
   use_frameworks!
 
-  pod 'VirgilSDKPythia', '~> 0.5'
+  pod 'VirgilSDKPythia', '~> 0.5.0'
 end
 ```
 
@@ -67,7 +67,7 @@ $ brew install carthage
 To integrate Virgil Pythia into your Xcode project using Carthage, create an empty file with name *Cartfile* in your project's root folder and add following lines to your *Cartfile*
 
 ```
-github "VirgilSecurity/virgil-pythia-x" ~> 0.5
+github "VirgilSecurity/virgil-pythia-x" ~> 0.5.0
 ```
 
 #### Linking against prebuilt binaries

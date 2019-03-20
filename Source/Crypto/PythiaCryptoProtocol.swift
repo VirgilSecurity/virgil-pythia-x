@@ -35,7 +35,6 @@
 //
 
 import Foundation
-import VirgilCryptoApiImpl
 import VirgilCrypto
 
 /// Crypto operations needed for Pythia BrainKey
@@ -61,10 +60,8 @@ import VirgilCrypto
 
     /// Generates key pair of given type using random seed
     ///
-    /// - Parameters:
-    ///   - type: type of key pair
-    ///   - seed: random seed
+    /// - Parameter seed: random seed
     /// - Returns: generated key pair
     /// - Throws: Depends on implementation
-    @objc func generateKeyPair(ofType type: VSCKeyType, fromSeed seed: Data) throws -> VirgilKeyPair
+    @objc func generateKeyPair(usingSeed seed: Data) throws -> VirgilKeyPair
 }

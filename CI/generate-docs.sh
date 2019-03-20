@@ -5,6 +5,6 @@ jazzy \
 --author_url "https://virgilsecurity.com/" \
 --xcodebuild-arguments -scheme,"VirgilSDKPythia macOS" \
 --module "VirgilSDKPythia" \
---output "${VIRGIL_SDK_HTML_PATH_DST}" \
+--output "${OUTPUT}" \
 --hide-documentation-coverage \
 --theme apple

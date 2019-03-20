@@ -46,8 +46,6 @@ import VirgilCrypto
     @objc public let pythiaCrypto: PythiaCryptoProtocol
     /// AccessTokenProvider implementation
     @objc public let accessTokenProvider: AccessTokenProvider
-    /// Default key type to be generated
-    @objc public let keyPairType: VSCKeyType
 
     /// Initializer
     ///
@@ -55,15 +53,19 @@ import VirgilCrypto
     ///   - client: PythiaClientProtocol implementation
     ///   - pythiaCrypto: PythiaCryptoProtocol implementation
     ///   - accessTokenProvider: AccessTokenProvider implementation
-    ///   - keyPairType: Default key type to be generated
     @objc public init(client: PythiaClientProtocol = PythiaClient(),
-                      pythiaCrypto: PythiaCryptoProtocol = PythiaCrypto(),
+                      pythiaCrypto: PythiaCryptoProtocol? = nil,
                       accessTokenProvider: AccessTokenProvider,
-                      keyPairType: VSCKeyType = .FAST_EC_ED25519) {
+                      keyPairType: KeyPairType = .ed25519) throws {
         self.client = client
-        self.pythiaCrypto = pythiaCrypto
+        if let pythiaCrypto = pythiaCrypto {
+            self.pythiaCrypto = pythiaCrypto
+        }
+        else {
+            let crypto = try VirgilCrypto(defaultKeyType: keyPairType, useSHA256Fingerprints: false)
+            self.pythiaCrypto = try PythiaCrypto(crypto: crypto)
+        }
         self.accessTokenProvider = accessTokenProvider
-        self.keyPairType = keyPairType
 
         super.init()
     }
@@ -72,10 +74,9 @@ import VirgilCrypto
     ///
     /// - Parameter accessTokenProvider: AccessTokenProvider implementation
     /// - Returns: Initialized BrainKeyContext instance
-    @objc public static func makeContext(accessTokenProvider: AccessTokenProvider) -> BrainKeyContext {
-        return BrainKeyContext(client: PythiaClient(),
-                               pythiaCrypto: PythiaCrypto(),
-                               accessTokenProvider: accessTokenProvider,
-                               keyPairType: .FAST_EC_ED25519)
+    @objc public static func makeContext(accessTokenProvider: AccessTokenProvider) throws -> BrainKeyContext {
+        return try BrainKeyContext(client: PythiaClient(),
+                                   pythiaCrypto: PythiaCrypto(crypto: try VirgilCrypto()),
+                                   accessTokenProvider: accessTokenProvider)
     }
 }

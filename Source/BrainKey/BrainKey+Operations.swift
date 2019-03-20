@@ -36,7 +36,7 @@
 
 import Foundation
 import VirgilSDK
-import VirgilCryptoApiImpl
+import VirgilCrypto
 
 extension BrainKey {
     internal func makeSeedOperation(blindedPassword: Data, brainKeyId: String?) -> GenericOperation<Data> {
@@ -64,8 +64,7 @@ extension BrainKey {
                 let deblindedPassword = try self.pythiaCrypto.deblind(transformedPassword: seed,
                                                                       blindingSecret: blindingSecret)
 
-                completion(try self.pythiaCrypto.generateKeyPair(ofType: self.keyPairType,
-                                                                 fromSeed: deblindedPassword), nil)
+                completion(try self.pythiaCrypto.generateKeyPair(usingSeed: deblindedPassword), nil)
             }
             catch {
                 completion(nil, error)

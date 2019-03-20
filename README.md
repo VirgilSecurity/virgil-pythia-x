@@ -3,7 +3,7 @@
 [![Build Status](https://api.travis-ci.com/VirgilSecurity/virgil-pythia-x.svg?branch=master)](https://travis-ci.com/VirgilSecurity/virgil-pythia-x)
 [![CocoaPods Compatible](https://img.shields.io/cocoapods/v/VirgilSDKPythia.svg)](https://cocoapods.org/pods/VirgilSDKPythia)
 [![Carthage compatible](https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat)](https://github.com/Carthage/Carthage)
-[![Platform](https://img.shields.io/cocoapods/p/VirgilSDKPythia.svg?style=flat)](http://cocoadocs.org/docsets/VirgilSDKPythia)
+![Platform](https://img.shields.io/cocoapods/p/VirgilSDKPythia.svg?style=flat)
 [![GitHub license](https://img.shields.io/badge/license-BSD%203--Clause-blue.svg)](https://github.com/VirgilSecurity/virgil/blob/master/LICENSE)
 
 
@@ -43,7 +43,7 @@ To integrate Virgil Pythia into your Xcode project using CocoaPods, specify it i
 target '<Your Target Name>' do
   use_frameworks!
 
-  pod 'VirgilSDKPythia', '~> 0.4'
+  pod 'VirgilSDKPythia', '~> 0.5'
 end
 ```
 
@@ -67,7 +67,7 @@ $ brew install carthage
 To integrate Virgil Pythia into your Xcode project using Carthage, create an empty file with name *Cartfile* in your project's root folder and add following lines to your *Cartfile*
 
 ```
-github "VirgilSecurity/virgil-pythia-x" ~> 0.4
+github "VirgilSecurity/virgil-pythia-x" ~> 0.5
 ```
 
 #### Linking against prebuilt binaries
@@ -86,9 +86,10 @@ On your application targets’ “General” settings tab, in the “Linked Fram
  - VirgilSDKPythia
  - VirgilSDK
  - VirgilCryptoAPI
- - VirgilCryptoApiImpl
  - VirgilCrypto
- - VSCCrypto
+ - VirgilCryptoFoundation
+ - VSCCommon
+ - VSCFoundation
 
 On your application targets’ “Build Phases” settings tab, click the “+” icon and choose “New Run Script Phase.” Create a Run Script in which you specify your shell (ex: */bin/sh*), add the following contents to the script area below the shell:
 
@@ -102,9 +103,10 @@ and add the paths to the frameworks you want to use under “Input Files”, e.g
 $(SRCROOT)/Carthage/Build/iOS/VirgilSDKPythia.framework
 $(SRCROOT)/Carthage/Build/iOS/VirgilSDK.framework
 $(SRCROOT)/Carthage/Build/iOS/VirgilCryptoAPI.framework
-$(SRCROOT)/Carthage/Build/iOS/VirgilCryptoAPIImpl.framework
 $(SRCROOT)/Carthage/Build/iOS/VirgilCrypto.framework
-$(SRCROOT)/Carthage/Build/iOS/VSCCrypto.framework
+$(SRCROOT)/Carthage/Build/iOS/VirgilCryptoFoundation.framework
+$(SRCROOT)/Carthage/Build/iOS/VSCCommon.framework
+$(SRCROOT)/Carthage/Build/iOS/VSCFoundation.framework
 ```
 
 ##### Building for macOS
@@ -113,9 +115,10 @@ On your application target's “General” settings tab, in the “Embedded Bina
  - VirgilSDKPythia
  - VirgilSDK
  - VirgilCryptoAPI
- - VirgilCryptoApiImpl
  - VirgilCrypto
- - VSCCrypto
+ - VirgilCryptoFoundation
+ - VSCCommon
+ - VSCFoundation
 
 Additionally, you'll need to copy debug symbols for debugging and crash reporting on macOS.
 
@@ -189,7 +192,7 @@ You can find us on [Twitter](https://twitter.com/VirgilSecurity) or send us emai
 
 Also, get extra help from our support team on [Slack](https://virgilsecurity.slack.com/join/shared_invite/enQtMjg4MDE4ODM3ODA4LTc2OWQwOTQ3YjNhNTQ0ZjJiZDc2NjkzYjYxNTI0YzhmNTY2ZDliMGJjYWQ5YmZiOGU5ZWEzNmJiMWZhYWVmYTM).
 
-[_virgil_crypto]: https://github.com/VirgilSecurity/virgil-crypto
+[_virgil_crypto]: https://github.com/VirgilSecurity/virgil-crypto-c
 [_pythia_use_case]: https://developer.virgilsecurity.com/docs/cs/use-cases/v5/breach-proof-password
 [_documentation]: https://developer.virgilsecurity.com/
 [_dashboard]: https://dashboard.virgilsecurity.com/

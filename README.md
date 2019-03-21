@@ -88,8 +88,10 @@ On your application targets’ “General” settings tab, in the “Linked Fram
  - VirgilCryptoAPI
  - VirgilCrypto
  - VirgilCryptoFoundation
+ - VirgilCryptoPythia
  - VSCCommon
  - VSCFoundation
+ - VSCPythia
 
 On your application targets’ “Build Phases” settings tab, click the “+” icon and choose “New Run Script Phase.” Create a Run Script in which you specify your shell (ex: */bin/sh*), add the following contents to the script area below the shell:
 
@@ -105,8 +107,10 @@ $(SRCROOT)/Carthage/Build/iOS/VirgilSDK.framework
 $(SRCROOT)/Carthage/Build/iOS/VirgilCryptoAPI.framework
 $(SRCROOT)/Carthage/Build/iOS/VirgilCrypto.framework
 $(SRCROOT)/Carthage/Build/iOS/VirgilCryptoFoundation.framework
+$(SRCROOT)/Carthage/Build/iOS/VirgilCryptoPythia.framework
 $(SRCROOT)/Carthage/Build/iOS/VSCCommon.framework
 $(SRCROOT)/Carthage/Build/iOS/VSCFoundation.framework
+$(SRCROOT)/Carthage/Build/iOS/VSCPythia.framework
 ```
 
 ##### Building for macOS
@@ -117,8 +121,10 @@ On your application target's “General” settings tab, in the “Embedded Bina
  - VirgilCryptoAPI
  - VirgilCrypto
  - VirgilCryptoFoundation
+ - VirgilCryptoPythia
  - VSCCommon
  - VSCFoundation
+ - VSCPythia
 
 Additionally, you'll need to copy debug symbols for debugging and crash reporting on macOS.
 

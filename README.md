@@ -207,7 +207,6 @@ Important notes for implementation:
 ## Docs
 Virgil Security has a powerful set of APIs, and the documentation below can get you started today.
 
-* [Breach-Proof Password][_pythia_use_case] Use Case
 * [Brain Key][_brain_key_use_case] Use Case
 * [The Pythia PRF Service](https://eprint.iacr.org/2015/644.pdf) - foundation principles of the protocol
 * [Virgil Security Documentation][_documentation]
@@ -225,7 +224,6 @@ Also, get extra help from our support team on [Slack](https://virgilsecurity.com
 
 [_virgil_crypto]: https://github.com/VirgilSecurity/virgil-crypto-c
 [_brain_key_use_case]: https://developer.virgilsecurity.com/docs/use-cases/v1/brainkey
-[_pythia_use_case]: https://developer.virgilsecurity.com/docs/cs/use-cases/v1/breach-proof-password
 [_documentation]: https://developer.virgilsecurity.com/
 [_dashboard]: https://dashboard.virgilsecurity.com/
 

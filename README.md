@@ -176,7 +176,7 @@ let brainKey = BrainKey(context: brainKeyContext)
 // If you need to generate several BrainKeys for the same password,
 // use different IDs (optional). Default brainKeyId value is nil.
 let keyPair = try! brainKey.generateKeyPair(password: "Your password",
-    brainKeyId: "Optional BrainKey id").startSync().getResult()
+                                            brainKeyId: "Optional BrainKey id").startSync().getResult()
 ```
 
 #### Generate BrainKey based on unique URL
@@ -198,7 +198,8 @@ Important notes for implementation:
 
 ```swift
 ...
-    let keyPair = try! brainKey.generateKeyPair(password: "abcdef13803488", brainKeyId: "Optional User SSN").startSync().getResult()
+    let keyPair = try! brainKey.generateKeyPair(password: "abcdef13803488",
+                                                brainKeyId: "Optional User SSN").startSync().getResult()
 ...
 ```
 > Note! if you don't need to use additional parameters, like "Optional User SSN", you can just omit it: `let keyPair = try! brainKey.generateKeyPair(password: "abcdef13803488").startSync().getResult()`

@@ -39,6 +39,10 @@ import VirgilSDK
 
 // MARK: - PythiaClientProtocol implementation
 extension PythiaClient: PythiaClientProtocol {
+    private func createRetry() -> RetryProtocol {
+        return ExpBackoffRetry(config: self.retryConfig)
+    }
+
     /// Generates seed using given blinded password and brainkey id
     ///
     /// - Parameters:
@@ -49,7 +53,7 @@ extension PythiaClient: PythiaClientProtocol {
     /// - Throws: PythiaClientError.constructingUrl if url is not valid
     ///           Rethrows from HttpConnectionProtocol.send, PythiaClient.proccessResponse
     ///           See PythiaClient.handleError
-    @objc public func generateSeed(blindedPassword: Data, brainKeyId: String?, token: String) throws -> Data {
+    @objc public func generateSeed(blindedPassword: Data, brainKeyId: String?) throws -> Data {
         guard let url = URL(string: "pythia/v1/brainkey", relativeTo: self.serviceUrl) else {
             throw PythiaClientError.constructingUrl
         }
@@ -62,9 +66,13 @@ extension PythiaClient: PythiaClientProtocol {
             params["brainkey_id"] = brainKeyId
         }
 
-        let request = try ServiceRequest(url: url, method: .post, accessToken: token, params: params)
+        let tokenContext = TokenContext(service: "pythia", operation: "seed", forceReload: false)
 
-        let response = try self.connection.send(request)
+        let request = try ServiceRequest(url: url, method: .post, params: params)
+
+        let response = try self.sendWithRetry(request, retry: self.createRetry(), tokenContext: tokenContext)
+            .startSync()
+            .getResult()
 
         class SeedResponse: Codable {
             let seed: Data

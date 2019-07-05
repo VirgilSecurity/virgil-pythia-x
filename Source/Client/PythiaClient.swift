@@ -76,38 +76,45 @@ import VirgilSDK
     /// Error domain for Error instances thrown from service
     @objc override open class var serviceErrorDomain: String { return "VirgilSDK.PythiaServiceErrorDomain" }
 
-    /// Initializes a new `PythiaClient` instance
+    internal let retryConfig: ExpBackoffRetry.Config
+
+    /// Initializes new `PythiaClient` instance
+    ///
+    /// - Parameter accessTokenProvider: Access Token Provider
+    @objc public convenience init(accessTokenProvider: AccessTokenProvider) {
+        self.init(accessTokenProvider: accessTokenProvider, serviceUrl: CardClient.defaultURL)
+    }
+
+    /// Initializes new `PythiaClient` instance
     ///
     /// - Parameters:
-    ///   - serviceUrl: URL of service client will use
-    ///   - connection: custom HTTPConnection
-    override public init(serviceUrl: URL = PythiaClient.defaultURL, connection: HttpConnectionProtocol) {
-        super.init(serviceUrl: serviceUrl, connection: connection)
+    ///   - accessTokenProvider: Access Token Provider
+    ///   - serviceUrl: service URL
+    @objc public convenience init(accessTokenProvider: AccessTokenProvider, serviceUrl: URL) {
+        self.init(accessTokenProvider: accessTokenProvider,
+                  serviceUrl: serviceUrl,
+                  retryConfig: ExpBackoffRetry.Config())
     }
 
-    /// Initializes a new `PythiaClient` instance
-    @objc public convenience init() {
-        self.init(serviceUrl: PythiaClient.defaultURL)
-    }
-
-    /// Initializes a new `PythiaClient` instance
-    ///
-    /// - Parameter serviceUrl: URL of service client will use
-    @objc public convenience init(serviceUrl: URL) {
-        self.init(serviceUrl: serviceUrl, connection: HttpConnection())
-    }
-
-    /// Handles error
+    /// Initializes new `PythiaClient` instance
     ///
     /// - Parameters:
-    ///   - statusCode: http status code
-    ///   - body: response
-    /// - Returns: Corresponding error
-    override open func handleError(statusCode: Int, body: Data?) -> Error {
-        if let body = body, let rawServiceError = try? JSONDecoder().decode(RawServiceError.self, from: body) {
-            return PythiaServiceError(httpStatusCode: statusCode, rawServiceError: rawServiceError)
-        }
+    ///   - accessTokenProvider: Access Token Provider
+    ///   - serviceUrl: service URL
+    ///   - requestRetryConfig: Retry config
+    public init(accessTokenProvider: AccessTokenProvider,
+                serviceUrl: URL,
+                connection: HttpConnectionProtocol? = nil,
+                retryConfig: ExpBackoffRetry.Config) {
+        let version = VersionUtils.getVersion(bundleIdentitifer: "com.virgilsecurity.VirgilSDKPythia")
 
-        return super.handleError(statusCode: statusCode, body: body)
+        let connection = connection ??
+            HttpConnection(adapters: [VirgilAgentAdapter(product: "brainkey", version: version)])
+
+        self.retryConfig = retryConfig
+
+        super.init(accessTokenProvider: accessTokenProvider,
+                   serviceUrl: serviceUrl,
+                   connection: connection)
     }
 }

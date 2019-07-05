@@ -44,15 +44,12 @@ import VirgilCrypto
     @objc public let client: PythiaClientProtocol
     /// PythiaCryptoProtocol implementation
     @objc public let pythiaCrypto: PythiaCryptoProtocol
-    /// AccessTokenProvider implementation
-    @objc public let accessTokenProvider: AccessTokenProvider
 
     /// Initializer
     ///
     /// - Parameter context: BrainKey context
     @objc public init(context: BrainKeyContext) {
         self.client = context.client
-        self.accessTokenProvider = context.accessTokenProvider
         self.pythiaCrypto = context.pythiaCrypto
     }
 
@@ -64,37 +61,23 @@ import VirgilCrypto
     /// - Returns: GenericOperation with VirgilKeyPair
     open func generateKeyPair(password: String, brainKeyId: String? = nil) -> GenericOperation<VirgilKeyPair> {
         return CallbackOperation { _, completion in
-            let tokenContext = TokenContext(service: "pythia", operation: "seed", forceReload: false)
-            let getTokenOperation = OperationUtils.makeGetTokenOperation(
-                tokenContext: tokenContext, accessTokenProvider: self.accessTokenProvider)
-
-            let blindedResult: BlindResult
             do {
-                blindedResult = try self.pythiaCrypto.blind(password: password)
+                let blindedResult = try self.pythiaCrypto.blind(password: password)
+
+                let seed = try self.client.generateSeed(blindedPassword: blindedResult.blindedPassword,
+                                                        brainKeyId: brainKeyId)
+
+                let deblindedPassword = try self.pythiaCrypto.deblind(transformedPassword: seed,
+                                                                      blindingSecret: blindedResult.blindingSecret)
+
+                let keyPair = try self.pythiaCrypto.generateKeyPair(usingSeed: deblindedPassword)
+
+                completion(keyPair, nil)
             }
             catch {
                 completion(nil, error)
                 return
             }
-
-            let seedOperation = self.makeSeedOperation(blindedPassword: blindedResult.blindedPassword,
-                                                       brainKeyId: brainKeyId)
-
-            let generateOperation = self.makeGenerateOperation(blindingSecret: blindedResult.blindingSecret)
-
-            let completionOperation = OperationUtils.makeCompletionOperation(completion: completion)
-
-            seedOperation.addDependency(getTokenOperation)
-
-            generateOperation.addDependency(seedOperation)
-
-            completionOperation.addDependency(getTokenOperation)
-            completionOperation.addDependency(seedOperation)
-            completionOperation.addDependency(generateOperation)
-
-            let queue = OperationQueue()
-            let operations = [getTokenOperation, seedOperation, generateOperation, completionOperation]
-            queue.addOperations(operations, waitUntilFinished: false)
         }
     }
 }

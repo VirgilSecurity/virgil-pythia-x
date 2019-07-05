@@ -37,7 +37,6 @@
 import Foundation
 
 class TestConfig: Decodable {
-    let ApiPublicKeyId: String
     let ApiPrivateKey: String
     let AppId: String
     let ServiceURL: String

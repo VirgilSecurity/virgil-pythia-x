@@ -44,18 +44,14 @@ import VirgilCrypto
     @objc public let client: PythiaClientProtocol
     /// PythiaCryptoProtocol implementation
     @objc public let pythiaCrypto: PythiaCryptoProtocol
-    /// AccessTokenProvider implementation
-    @objc public let accessTokenProvider: AccessTokenProvider
-
     /// Initializer
     ///
     /// - Parameters:
     ///   - client: PythiaClientProtocol implementation
     ///   - pythiaCrypto: PythiaCryptoProtocol implementation
-    ///   - accessTokenProvider: AccessTokenProvider implementation
-    @objc public init(client: PythiaClientProtocol = PythiaClient(),
+    ///   - keyPairType: Keypair type
+    @objc public init(client: PythiaClientProtocol,
                       pythiaCrypto: PythiaCryptoProtocol? = nil,
-                      accessTokenProvider: AccessTokenProvider,
                       keyPairType: KeyPairType = .ed25519) throws {
         self.client = client
         if let pythiaCrypto = pythiaCrypto {
@@ -65,7 +61,6 @@ import VirgilCrypto
             let crypto = try VirgilCrypto(defaultKeyType: keyPairType, useSHA256Fingerprints: false)
             self.pythiaCrypto = try PythiaCrypto(crypto: crypto)
         }
-        self.accessTokenProvider = accessTokenProvider
 
         super.init()
     }
@@ -75,8 +70,7 @@ import VirgilCrypto
     /// - Parameter accessTokenProvider: AccessTokenProvider implementation
     /// - Returns: Initialized BrainKeyContext instance
     @objc public static func makeContext(accessTokenProvider: AccessTokenProvider) throws -> BrainKeyContext {
-        return try BrainKeyContext(client: PythiaClient(),
-                                   pythiaCrypto: PythiaCrypto(crypto: try VirgilCrypto()),
-                                   accessTokenProvider: accessTokenProvider)
+        return try BrainKeyContext(client: PythiaClient(accessTokenProvider: accessTokenProvider),
+                                   pythiaCrypto: PythiaCrypto(crypto: try VirgilCrypto()))
     }
 }

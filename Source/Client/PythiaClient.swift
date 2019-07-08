@@ -34,14 +34,21 @@
 // Lead Maintainer: Virgil Security Inc. <support@virgilsecurity.com>
 //
 
-import Foundation
 import VirgilSDK
 
 /// Declares client error types and codes
 ///
 /// - constructingUrl: constructing url of endpoint failed
-@objc(VSYPythiaClientError) public enum PythiaClientError: Int, Error {
+@objc(VSYPythiaClientError) public enum PythiaClientError: Int, LocalizedError {
     case constructingUrl = 1
+
+    /// Human-readable localized description
+    public var errorDescription: String? {
+        switch self {
+        case .constructingUrl:
+            return "Constructing url of endpoint failed"
+        }
+    }
 }
 
 /// Represent card service error

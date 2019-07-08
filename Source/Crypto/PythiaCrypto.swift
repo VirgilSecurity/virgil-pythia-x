@@ -34,16 +34,22 @@
 // Lead Maintainer: Virgil Security Inc. <support@virgilsecurity.com>
 //
 
-import Foundation
 import VirgilCrypto
 import VirgilCryptoPythia
 
-/// Declares client error types and codes
+/// Declares crypto error types and codes
 ///
-/// - constructingUrl: constructing url of endpoint failed
-@objc(VSYPythiaCryptoError) public enum PythiaCryptoError: Int, Error {
+/// - passwordIsNotUTF8: password cannot be converted to UTF8
+@objc(VSYPythiaCryptoError) public enum PythiaCryptoError: Int, LocalizedError {
     case passwordIsNotUTF8 = 1
-    case errorWhileGeneratingKeyPair = 2
+
+    /// Human-readable localized description
+    public var errorDescription: String? {
+        switch self {
+        case .passwordIsNotUTF8:
+            return "Password cannot be converted to UTF8"
+        }
+    }
 }
 
 /// Implementation of PythiaCryptoProtocol using Virgil crypto library
@@ -89,8 +95,9 @@ import VirgilCryptoPythia
     ///
     /// - Parameter password: end user's password.
     /// - Returns: BlindResult with blinded password and blinding secret
-    /// - Throws: PythiaCryptoError.passwordIsNotUTF8 is password cannot be converted to UTF8
-    ///           Rethrows from VirgilPythia.blind
+    /// - Throws:
+    ///   - `PythiaCryptoError.passwordIsNotUTF8` if password cannot be converted to UTF8
+    ///   - Rethrows from VirgilPythia.blind
     @objc open func blind(password: String) throws -> BlindResult {
         guard let passwordData = password.data(using: .utf8) else {
             throw PythiaCryptoError.passwordIsNotUTF8
@@ -118,8 +125,9 @@ import VirgilCryptoPythia
     ///   - type: type of key pair
     ///   - seed: random seed
     /// - Returns: generated key pair
-    /// - Throws: PythiaCryptoError.errorWhileGeneratingKeyPair if key generation failed
-    ///           Rethrows from VirgilCrypto.wrapKeyPair
+    /// - Throws:
+    ///   - `PythiaCryptoError.errorWhileGeneratingKeyPair` if key generation failed
+    ///   - Rethrows from VirgilCrypto.generateKeyPair
     @objc open func generateKeyPair(usingSeed seed: Data) throws -> VirgilKeyPair {
         return try self.crypto.generateKeyPair(usingSeed: seed)
     }

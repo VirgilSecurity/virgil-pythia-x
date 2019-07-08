@@ -34,7 +34,6 @@
 // Lead Maintainer: Virgil Security Inc. <support@virgilsecurity.com>
 //
 
-import Foundation
 import VirgilSDK
 
 // MARK: - PythiaClientProtocol implementation
@@ -46,9 +45,10 @@ extension PythiaClient: PythiaClientProtocol {
     ///   - brainKeyId: brainkey id
     ///   - token: authorization token
     /// - Returns: Generated seed
-    /// - Throws: PythiaClientError.constructingUrl if url is not valid
-    ///           Rethrows from HttpConnectionProtocol.send, PythiaClient.proccessResponse
-    ///           See PythiaClient.handleError
+    /// - Throws:
+    ///   - `PythiaClientError.constructingUrl` if url is not valid
+    ///   - Rethrows from HttpConnectionProtocol.send, PythiaClient.proccessResponse.
+    ///     See PythiaClient.handleError
     @objc public func generateSeed(blindedPassword: Data, brainKeyId: String?, token: String) throws -> Data {
         guard let url = URL(string: "pythia/v1/brainkey", relativeTo: self.serviceUrl) else {
             throw PythiaClientError.constructingUrl

@@ -45,8 +45,10 @@ extension BrainKey {
     ///   - password: password from which key pair will be generated
     ///   - brainKeyId: optional brainKey identifier (in case one wants to generate several key pairs from 1
     ///   - completion: completion handler
+    ///   - keyPair: generated `VirgilKeyPair`
+    ///   - error: corresponding error
     @objc open func generateKeyPair(password: String, brainKeyId: String?,
-                                    completion: @escaping (VirgilKeyPair?, Error?) -> Void) {
+                                    completion: @escaping (_ keyPair: VirgilKeyPair?, _ error: Error?) -> Void) {
         self.generateKeyPair(password: password, brainKeyId: brainKeyId).start { result in
             switch result {
             case .success(let keyPair):

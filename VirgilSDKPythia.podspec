@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                        = "VirgilSDKPythia"
-  s.version                     = "0.5.2"
+  s.version                     = "0.5.3"
   s.license                     = { :type => "BSD", :file => "LICENSE" }
   s.summary                     = "Virgil Pythia SDK for Apple devices and languages."
   s.homepage                    = "https://github.com/VirgilSecurity/virgil-pythia-x/"
@@ -13,5 +13,5 @@ Pod::Spec.new do |s|
   s.source_files                = 'Source/**/*.{swift}'
   s.dependency "VirgilSDK", "~> 5.7"
   s.dependency "VirgilCryptoPythia", "~> 0.8.0"
-  s.dependency "VirgilCrypto", "~> 5.0.0-alpha5"
+  s.dependency "VirgilCrypto", "5.0.0-alpha5"
 end

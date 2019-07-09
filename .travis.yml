@@ -24,7 +24,7 @@ before_install:
   - set -o pipefail
 
 script:
-  - openssl aes-256-cbc -K $encrypted_ceba4cc4fb2f_key -iv $encrypted_ceba4cc4fb2f_iv -in config.tar.enc -out config.tar -d
+  - openssl aes-256-cbc -K $encrypted_0b555ac22efa_key -iv $encrypted_0b555ac22efa_iv -in config.tar.enc -out config.tar -d
   - tar xvf config.tar
 
   - |

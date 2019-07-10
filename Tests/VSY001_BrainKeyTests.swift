@@ -44,23 +44,28 @@ class VSY001_BrainKeyTests: XCTestCase {
     
     func test001_RealClient() {
         let crypto = try! VirgilCrypto()
-        let client = PythiaClient(serviceUrl: URL(string: self.config.ServiceURL)!)
         let apiKey = try! crypto.importPrivateKey(from: Data(base64Encoded: self.config.ApiPrivateKey)!).privateKey
         
-        let generator = JwtGenerator(apiKey: apiKey, apiPublicKeyIdentifier: self.config.ApiPublicKeyId, accessTokenSigner: VirgilAccessTokenSigner(virgilCrypto: crypto), appId: self.config.AppId, ttl: 3600)
+        let generator = try! JwtGenerator(apiKey: apiKey,
+                                          apiPublicKeyIdentifier: self.config.ApiKeyId,
+                                          crypto: crypto,
+                                          appId: self.config.AppId,
+                                          ttl: 3600)
         let identity = UUID().uuidString
         let provider = GeneratorJwtProvider(jwtGenerator: generator, defaultIdentity: identity)
         
-        let brainKeyContext = try! BrainKeyContext.init(client: client, pythiaCrypto: PythiaCrypto(crypto: crypto), accessTokenProvider: provider)
+        let client = PythiaClient(accessTokenProvider: provider, serviceUrl: URL(string: self.config.ServiceURL)!)
+        
+        let brainKeyContext = try! BrainKeyContext.init(client: client, pythiaCrypto: PythiaCrypto(crypto: crypto))
         let brainKey = BrainKey(context: brainKeyContext)
         
-        let keyPair1 = try! brainKey.generateKeyPair(password: "some password").startSync().getResult()
+        let keyPair1 = try! brainKey.generateKeyPair(password: "some password").startSync().get()
         sleep(5)
-        let keyPair2 = try! brainKey.generateKeyPair(password: "some password").startSync().getResult()
+        let keyPair2 = try! brainKey.generateKeyPair(password: "some password").startSync().get()
         sleep(5)
-        let keyPair3 = try! brainKey.generateKeyPair(password: "another password").startSync().getResult()
+        let keyPair3 = try! brainKey.generateKeyPair(password: "another password").startSync().get()
         sleep(5)
-        let keyPair4 = try! brainKey.generateKeyPair(password: "some password", brainKeyId: "my password 1").startSync().getResult()
+        let keyPair4 = try! brainKey.generateKeyPair(password: "some password", brainKeyId: "my password 1").startSync().get()
         
         XCTAssert(keyPair1.publicKey.identifier == keyPair2.publicKey.identifier)
         XCTAssert(keyPair1.publicKey.identifier != keyPair3.publicKey.identifier)

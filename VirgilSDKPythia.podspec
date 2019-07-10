@@ -1,6 +1,7 @@
 Pod::Spec.new do |s|
   s.name                        = "VirgilSDKPythia"
-  s.version                     = "0.5.3"
+  s.version                     = "0.6.0"
+  s.swift_version               = "5.0"
   s.license                     = { :type => "BSD", :file => "LICENSE" }
   s.summary                     = "Virgil Pythia SDK for Apple devices and languages."
   s.homepage                    = "https://github.com/VirgilSecurity/virgil-pythia-x/"
@@ -11,7 +12,6 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target      = "9.0"
   s.watchos.deployment_target   = "2.0"
   s.source_files                = 'Source/**/*.{swift}'
-  s.dependency "VirgilSDK", "~> 5.7"
+  s.dependency "VirgilSDK", "~> 6.0"
   s.dependency "VirgilCryptoPythia", "~> 0.8.0"
-  s.dependency "VirgilCrypto", "5.0.0-alpha5"
 end

@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name                        = "VirgilSDKPythia"
-  s.version                     = "0.7.0"
+  s.version                     = "0.7.1"
   s.swift_version               = "5.0"
   s.license                     = { :type => "BSD", :file => "LICENSE" }
   s.summary                     = "Virgil Pythia SDK for Apple devices and languages."
@@ -13,5 +13,5 @@ Pod::Spec.new do |s|
   s.watchos.deployment_target   = "2.0"
   s.source_files                = 'Source/**/*.{swift}'
   s.dependency "VirgilSDK", "~> 7.0"
-  s.dependency "VirgilCryptoPythia", "~> 0.10.0"
+  s.dependency "VirgilCryptoPythia", "~> 0.11.0"
 end

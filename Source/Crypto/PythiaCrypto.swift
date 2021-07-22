@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2015-2019 Virgil Security Inc.
+// Copyright (C) 2015-2021 Virgil Security Inc.
 //
 // All rights reserved.
 //
@@ -116,7 +116,7 @@ import VirgilCryptoPythia
     /// - Returns: GT deblinded transformed password
     /// - Throws: Rethrows from VirgilPythia.deblind
     @objc open func deblind(transformedPassword: Data, blindingSecret: Data) throws -> Data {
-        return try Pythia.deblind(transformedPassword: transformedPassword, blindingSecret: blindingSecret)
+        try Pythia.deblind(transformedPassword: transformedPassword, blindingSecret: blindingSecret)
     }
 
     /// Generates key pair of given type using random seed
@@ -129,6 +129,6 @@ import VirgilCryptoPythia
     ///   - `PythiaCryptoError.errorWhileGeneratingKeyPair` if key generation failed
     ///   - Rethrows from VirgilCrypto.generateKeyPair
     @objc open func generateKeyPair(usingSeed seed: Data) throws -> VirgilKeyPair {
-        return try self.crypto.generateKeyPair(usingSeed: seed)
+        try self.crypto.generateKeyPair(usingSeed: seed)
     }
 }

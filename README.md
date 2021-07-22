@@ -75,7 +75,7 @@ github "VirgilSecurity/virgil-pythia-x" ~> 0.9.1
 To link prebuilt frameworks to your app, run following command:
 
 ```bash
-$ carthage update
+$ carthage update --use-xcframeworks
 ```
 
 This will build each dependency or download a pre-compiled framework from github Releases.
@@ -93,25 +93,7 @@ On your application targets’ “General” settings tab, in the “Linked Fram
  - VSCFoundation
  - VSCPythia
 
-On your application targets’ “Build Phases” settings tab, click the “+” icon and choose “New Run Script Phase.” Create a Run Script in which you specify your shell (ex: */bin/sh*), add the following contents to the script area below the shell:
-
-```bash
-/usr/local/bin/carthage copy-frameworks
-```
-
-and add the paths to the frameworks you want to use under “Input Files”, e.g.:
-
-```
-$(SRCROOT)/Carthage/Build/iOS/VirgilSDKPythia.framework
-$(SRCROOT)/Carthage/Build/iOS/VirgilSDK.framework
-$(SRCROOT)/Carthage/Build/iOS/VirgilCryptoAPI.framework
-$(SRCROOT)/Carthage/Build/iOS/VirgilCrypto.framework
-$(SRCROOT)/Carthage/Build/iOS/VirgilCryptoFoundation.framework
-$(SRCROOT)/Carthage/Build/iOS/VirgilCryptoPythia.framework
-$(SRCROOT)/Carthage/Build/iOS/VSCCommon.framework
-$(SRCROOT)/Carthage/Build/iOS/VSCFoundation.framework
-$(SRCROOT)/Carthage/Build/iOS/VSCPythia.framework
-```
+Check Embed & sign for each.
 
 ##### Building for macOS
 

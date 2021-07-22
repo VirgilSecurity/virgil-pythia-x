@@ -38,7 +38,7 @@ import Foundation
 import VirgilCrypto
 
 /// Crypto operations needed for Pythia BrainKey
-@objc(VSYPythiaCryptoProtocol) public protocol PythiaCryptoProtocol: class {
+@objc(VSYPythiaCryptoProtocol) public protocol PythiaCryptoProtocol: AnyObject {
     /// Blinds password.
     ///
     /// Turns password into a pseudo-random string.

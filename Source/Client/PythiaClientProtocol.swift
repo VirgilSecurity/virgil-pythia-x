@@ -39,7 +39,7 @@ import Foundation
 /// Protocol for PythiaClient
 ///
 /// See: PythiaClient for default implementation
-@objc(VSYPythiaClientProtocol) public protocol PythiaClientProtocol: class {
+@objc(VSYPythiaClientProtocol) public protocol PythiaClientProtocol: AnyObject {
     /// Generates seed using given blinded password and brainkey id
     ///
     /// - Parameters:

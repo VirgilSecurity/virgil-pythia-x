@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2015-2019 Virgil Security Inc.
+// Copyright (C) 2015-2021 Virgil Security Inc.
 //
 // All rights reserved.
 //
@@ -69,7 +69,7 @@ import VirgilCrypto
     /// - Parameter accessTokenProvider: AccessTokenProvider implementation
     /// - Returns: Initialized BrainKeyContext instance
     @objc public static func makeContext(accessTokenProvider: AccessTokenProvider) throws -> BrainKeyContext {
-        return try BrainKeyContext(client: PythiaClient(accessTokenProvider: accessTokenProvider),
-                                   pythiaCrypto: PythiaCrypto(crypto: try VirgilCrypto()))
+        try BrainKeyContext(client: PythiaClient(accessTokenProvider: accessTokenProvider),
+                            pythiaCrypto: PythiaCrypto(crypto: try VirgilCrypto()))
     }
 }

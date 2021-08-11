@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2015-2019 Virgil Security Inc.
+// Copyright (C) 2015-2021 Virgil Security Inc.
 //
 // All rights reserved.
 //
@@ -38,7 +38,7 @@ import Foundation
 import VirgilCrypto
 
 /// Crypto operations needed for Pythia BrainKey
-@objc(VSYPythiaCryptoProtocol) public protocol PythiaCryptoProtocol: class {
+@objc(VSYPythiaCryptoProtocol) public protocol PythiaCryptoProtocol: AnyObject {
     /// Blinds password.
     ///
     /// Turns password into a pseudo-random string.

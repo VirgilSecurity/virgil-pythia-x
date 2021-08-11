@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2015-2019 Virgil Security Inc.
+// Copyright (C) 2015-2021 Virgil Security Inc.
 //
 // All rights reserved.
 //
@@ -59,7 +59,7 @@ import VirgilCrypto
     ///   - brainKeyId: optional brainKey identifier (in case one wants to generate several key pairs from 1 password)
     /// - Returns: GenericOperation with VirgilKeyPair
     open func generateKeyPair(password: String, brainKeyId: String? = nil) -> GenericOperation<VirgilKeyPair> {
-        return CallbackOperation { _, completion in
+        CallbackOperation { _, completion in
             do {
                 let blindedResult = try self.pythiaCrypto.blind(password: password)
 

@@ -1,5 +1,5 @@
 //
-// Copyright (C) 2015-2019 Virgil Security Inc.
+// Copyright (C) 2015-2021 Virgil Security Inc.
 //
 // All rights reserved.
 //
@@ -67,11 +67,11 @@ import VirgilSDK
     }
 
     /// Error domain or Error instances thrown from Service
-    @objc public static var errorDomain: String { return PythiaClient.serviceErrorDomain }
+    @objc public static var errorDomain: String { PythiaClient.serviceErrorDomain }
     /// Code of error
-    @objc public var errorCode: Int { return self.rawServiceError.code }
+    @objc public var errorCode: Int { self.rawServiceError.code }
     /// Provides info about the error. Error message can be recieve by NSLocalizedDescriptionKey
-    @objc public var errorUserInfo: [String: Any] { return [NSLocalizedDescriptionKey: self.rawServiceError.message] }
+    @objc public var errorUserInfo: [String: Any] { [NSLocalizedDescriptionKey: self.rawServiceError.message] }
 }
 
 /// Class representing operations with Virgil Cards service
@@ -81,7 +81,7 @@ import VirgilSDK
     @objc public static let defaultURL = URL(string: "https://api.virgilsecurity.com")!
     // swiftlint:enable force_unwrapping
     /// Error domain for Error instances thrown from service
-    @objc override open class var serviceErrorDomain: String { return "VirgilSDK.PythiaServiceErrorDomain" }
+    @objc override open class var serviceErrorDomain: String { "VirgilSDK.PythiaServiceErrorDomain" }
 
     internal let retryConfig: ExpBackoffRetry.Config
 

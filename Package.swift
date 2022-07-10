@@ -25,6 +25,17 @@ let package = Package(
                 .product(name: "VirgilSDK", package: "virgil-sdk-x"),
             ],
             path: "Source"
+        ),
+        .testTarget(
+            name: "VirgilSDKPythiaTests",
+            dependencies: ["VirgilSDKPythia"],
+            path: "Tests",
+            resources: [
+                .process("Data/TestConfig.plist")
+            ],
+            swiftSettings: [
+                .define("SPM_BUILD")
+            ]
         )
     ]
 )

@@ -12,6 +12,6 @@ Pod::Spec.new do |s|
   s.tvos.deployment_target      = "9.0"
   s.watchos.deployment_target   = "2.0"
   s.source_files                = 'Source/**/*.{swift}'
-  s.dependency "VirgilSDK", "~> 8.0.0"
-  s.dependency "VirgilCryptoPythia", "~> 0.16.0"
+  s.dependency "VirgilSDK", "~> 8.1.0"
+  s.dependency "VirgilCryptoPythia", "~> 0.16.1"
 end

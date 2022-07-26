@@ -15,7 +15,8 @@ let package = Package(
     ],
 
     dependencies: [
-        .package(url: "https://github.com/VirgilSecurity/virgil-sdk-x.git", branch: "develop")
+        .package(url: "https://github.com/VirgilSecurity/virgil-sdk-x.git",
+                 Range(uncheckedBounds: (lower: Version(8, 1, 0), upper: Version(8, 2, 0))))
     ],
 
     targets: [

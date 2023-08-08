@@ -75,55 +75,14 @@
 		973E09A0287B221400F11F3F /* Bundle+SPM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973E099F287B221400F11F3F /* Bundle+SPM.swift */; };
 		973E09A1287B221400F11F3F /* Bundle+SPM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973E099F287B221400F11F3F /* Bundle+SPM.swift */; };
 		973E09A2287B221400F11F3F /* Bundle+SPM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 973E099F287B221400F11F3F /* Bundle+SPM.swift */; };
-		9794E1C926AA0962001CF665 /* VSCFoundation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794E1C226AA0962001CF665 /* VSCFoundation.xcframework */; };
-		9794E1CB26AA0962001CF665 /* VirgilCrypto.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794E1C326AA0962001CF665 /* VirgilCrypto.xcframework */; };
-		9794E1CD26AA0962001CF665 /* VSCPythia.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794E1C426AA0962001CF665 /* VSCPythia.xcframework */; };
-		9794E1CF26AA0962001CF665 /* VirgilCryptoFoundation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794E1C526AA0962001CF665 /* VirgilCryptoFoundation.xcframework */; };
-		9794E1D126AA0962001CF665 /* VirgilCryptoPythia.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794E1C626AA0962001CF665 /* VirgilCryptoPythia.xcframework */; };
-		9794E1D326AA0962001CF665 /* VirgilSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794E1C726AA0962001CF665 /* VirgilSDK.xcframework */; };
-		9794E1D526AA0962001CF665 /* VSCCommon.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794E1C826AA0962001CF665 /* VSCCommon.xcframework */; };
-		9794E1D826AA09CA001CF665 /* VirgilCrypto.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794E1C326AA0962001CF665 /* VirgilCrypto.xcframework */; };
-		9794E1DA26AA09CA001CF665 /* VirgilCryptoFoundation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794E1C526AA0962001CF665 /* VirgilCryptoFoundation.xcframework */; };
-		9794E1DC26AA09CA001CF665 /* VirgilCryptoPythia.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794E1C626AA0962001CF665 /* VirgilCryptoPythia.xcframework */; };
-		9794E1DE26AA09CA001CF665 /* VirgilSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794E1C726AA0962001CF665 /* VirgilSDK.xcframework */; };
-		9794E1E026AA09CA001CF665 /* VSCCommon.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794E1C826AA0962001CF665 /* VSCCommon.xcframework */; };
-		9794E1E226AA09CA001CF665 /* VSCFoundation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794E1C226AA0962001CF665 /* VSCFoundation.xcframework */; };
-		9794E1E426AA09CA001CF665 /* VSCPythia.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794E1C426AA0962001CF665 /* VSCPythia.xcframework */; };
-		9794E1E726AA09F9001CF665 /* VirgilCrypto.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794E1C326AA0962001CF665 /* VirgilCrypto.xcframework */; };
-		9794E1E926AA09F9001CF665 /* VirgilCryptoFoundation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794E1C526AA0962001CF665 /* VirgilCryptoFoundation.xcframework */; };
-		9794E1EB26AA09F9001CF665 /* VirgilCryptoPythia.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794E1C626AA0962001CF665 /* VirgilCryptoPythia.xcframework */; };
-		9794E1ED26AA09F9001CF665 /* VirgilSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794E1C726AA0962001CF665 /* VirgilSDK.xcframework */; };
-		9794E1EF26AA09F9001CF665 /* VSCCommon.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794E1C826AA0962001CF665 /* VSCCommon.xcframework */; };
-		9794E1F126AA09F9001CF665 /* VSCFoundation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794E1C226AA0962001CF665 /* VSCFoundation.xcframework */; };
-		9794E1F326AA09F9001CF665 /* VSCPythia.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794E1C426AA0962001CF665 /* VSCPythia.xcframework */; };
-		9794E1F626AA0A1F001CF665 /* VirgilCrypto.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794E1C326AA0962001CF665 /* VirgilCrypto.xcframework */; };
-		9794E1F826AA0A1F001CF665 /* VirgilCryptoFoundation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794E1C526AA0962001CF665 /* VirgilCryptoFoundation.xcframework */; };
-		9794E1FA26AA0A1F001CF665 /* VirgilCryptoPythia.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794E1C626AA0962001CF665 /* VirgilCryptoPythia.xcframework */; };
-		9794E1FC26AA0A1F001CF665 /* VirgilSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794E1C726AA0962001CF665 /* VirgilSDK.xcframework */; };
-		9794E1FE26AA0A1F001CF665 /* VSCCommon.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794E1C826AA0962001CF665 /* VSCCommon.xcframework */; };
-		9794E20026AA0A1F001CF665 /* VSCFoundation.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794E1C226AA0962001CF665 /* VSCFoundation.xcframework */; };
-		9794E20226AA0A1F001CF665 /* VSCPythia.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9794E1C426AA0962001CF665 /* VSCPythia.xcframework */; };
-		9794E20526AA0AA3001CF665 /* VirgilCrypto.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9794E1C326AA0962001CF665 /* VirgilCrypto.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9794E20626AA0AA3001CF665 /* VirgilCryptoFoundation.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9794E1C526AA0962001CF665 /* VirgilCryptoFoundation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9794E20726AA0AA3001CF665 /* VirgilCryptoPythia.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9794E1C626AA0962001CF665 /* VirgilCryptoPythia.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9794E20826AA0AA3001CF665 /* VirgilSDK.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9794E1C726AA0962001CF665 /* VirgilSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9794E20926AA0AA3001CF665 /* VSCCommon.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9794E1C826AA0962001CF665 /* VSCCommon.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9794E20A26AA0AA3001CF665 /* VSCFoundation.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9794E1C226AA0962001CF665 /* VSCFoundation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9794E20B26AA0AA3001CF665 /* VSCPythia.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9794E1C426AA0962001CF665 /* VSCPythia.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9794E20C26AA0C16001CF665 /* VirgilCrypto.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9794E1C326AA0962001CF665 /* VirgilCrypto.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9794E20D26AA0C16001CF665 /* VirgilCryptoFoundation.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9794E1C526AA0962001CF665 /* VirgilCryptoFoundation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9794E20E26AA0C16001CF665 /* VirgilCryptoPythia.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9794E1C626AA0962001CF665 /* VirgilCryptoPythia.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9794E20F26AA0C16001CF665 /* VirgilSDK.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9794E1C726AA0962001CF665 /* VirgilSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9794E21026AA0C16001CF665 /* VSCCommon.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9794E1C826AA0962001CF665 /* VSCCommon.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9794E21126AA0C16001CF665 /* VSCFoundation.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9794E1C226AA0962001CF665 /* VSCFoundation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9794E21226AA0C16001CF665 /* VSCPythia.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9794E1C426AA0962001CF665 /* VSCPythia.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9794E21326AA0C28001CF665 /* VirgilCrypto.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9794E1C326AA0962001CF665 /* VirgilCrypto.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9794E21426AA0C28001CF665 /* VirgilCryptoFoundation.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9794E1C526AA0962001CF665 /* VirgilCryptoFoundation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9794E21526AA0C28001CF665 /* VirgilCryptoPythia.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9794E1C626AA0962001CF665 /* VirgilCryptoPythia.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9794E21626AA0C28001CF665 /* VirgilSDK.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9794E1C726AA0962001CF665 /* VirgilSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9794E21726AA0C28001CF665 /* VSCCommon.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9794E1C826AA0962001CF665 /* VSCCommon.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9794E21826AA0C28001CF665 /* VSCFoundation.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9794E1C226AA0962001CF665 /* VSCFoundation.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		9794E21926AA0C28001CF665 /* VSCPythia.xcframework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 9794E1C426AA0962001CF665 /* VSCPythia.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		F43238C82A8309920064F1C1 /* VirgilSDK in Frameworks */ = {isa = PBXBuildFile; productRef = F43238C72A8309920064F1C1 /* VirgilSDK */; };
+		F43238CB2A8309BC0064F1C1 /* VirgilCryptoPythia in Frameworks */ = {isa = PBXBuildFile; productRef = F43238CA2A8309BC0064F1C1 /* VirgilCryptoPythia */; };
+		F43238CD2A8309CA0064F1C1 /* VirgilSDK in Frameworks */ = {isa = PBXBuildFile; productRef = F43238CC2A8309CA0064F1C1 /* VirgilSDK */; };
+		F43238CF2A8309CA0064F1C1 /* VirgilCryptoPythia in Frameworks */ = {isa = PBXBuildFile; productRef = F43238CE2A8309CA0064F1C1 /* VirgilCryptoPythia */; };
+		F43238D12A8309D20064F1C1 /* VirgilSDK in Frameworks */ = {isa = PBXBuildFile; productRef = F43238D02A8309D20064F1C1 /* VirgilSDK */; };
+		F43238D32A8309D20064F1C1 /* VirgilCryptoPythia in Frameworks */ = {isa = PBXBuildFile; productRef = F43238D22A8309D20064F1C1 /* VirgilCryptoPythia */; };
+		F43238D52A8309D90064F1C1 /* VirgilSDK in Frameworks */ = {isa = PBXBuildFile; productRef = F43238D42A8309D90064F1C1 /* VirgilSDK */; };
+		F43238D72A8309D90064F1C1 /* VirgilCryptoPythia in Frameworks */ = {isa = PBXBuildFile; productRef = F43238D62A8309D90064F1C1 /* VirgilCryptoPythia */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -185,13 +144,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9794E21326AA0C28001CF665 /* VirgilCrypto.xcframework in CopyFiles */,
-				9794E21426AA0C28001CF665 /* VirgilCryptoFoundation.xcframework in CopyFiles */,
-				9794E21526AA0C28001CF665 /* VirgilCryptoPythia.xcframework in CopyFiles */,
-				9794E21626AA0C28001CF665 /* VirgilSDK.xcframework in CopyFiles */,
-				9794E21726AA0C28001CF665 /* VSCCommon.xcframework in CopyFiles */,
-				9794E21826AA0C28001CF665 /* VSCFoundation.xcframework in CopyFiles */,
-				9794E21926AA0C28001CF665 /* VSCPythia.xcframework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -201,13 +153,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9794E20C26AA0C16001CF665 /* VirgilCrypto.xcframework in CopyFiles */,
-				9794E20D26AA0C16001CF665 /* VirgilCryptoFoundation.xcframework in CopyFiles */,
-				9794E20E26AA0C16001CF665 /* VirgilCryptoPythia.xcframework in CopyFiles */,
-				9794E20F26AA0C16001CF665 /* VirgilSDK.xcframework in CopyFiles */,
-				9794E21026AA0C16001CF665 /* VSCCommon.xcframework in CopyFiles */,
-				9794E21126AA0C16001CF665 /* VSCFoundation.xcframework in CopyFiles */,
-				9794E21226AA0C16001CF665 /* VSCPythia.xcframework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -217,13 +162,6 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				9794E20526AA0AA3001CF665 /* VirgilCrypto.xcframework in CopyFiles */,
-				9794E20626AA0AA3001CF665 /* VirgilCryptoFoundation.xcframework in CopyFiles */,
-				9794E20726AA0AA3001CF665 /* VirgilCryptoPythia.xcframework in CopyFiles */,
-				9794E20826AA0AA3001CF665 /* VirgilSDK.xcframework in CopyFiles */,
-				9794E20926AA0AA3001CF665 /* VSCCommon.xcframework in CopyFiles */,
-				9794E20A26AA0AA3001CF665 /* VSCFoundation.xcframework in CopyFiles */,
-				9794E20B26AA0AA3001CF665 /* VSCPythia.xcframework in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -248,16 +186,8 @@
 		42A76D3E20AF1AFD00561EA2 /* TestConfig.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = TestConfig.plist; sourceTree = "<group>"; };
 		42A76D4520AF1B4F00561EA2 /* TestConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestConfig.swift; sourceTree = "<group>"; };
 		42DD298F20751B1A00C9C014 /* VirgilSDKPythia.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = VirgilSDKPythia.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		42DD299320751B1A00C9C014 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		42DD2A37207522D900C9C014 /* VirgilSDKPythia iOS Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "VirgilSDKPythia iOS Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		973E099F287B221400F11F3F /* Bundle+SPM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+SPM.swift"; sourceTree = "<group>"; };
-		9794E1C226AA0962001CF665 /* VSCFoundation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VSCFoundation.xcframework; path = Carthage/Build/VSCFoundation.xcframework; sourceTree = "<group>"; };
-		9794E1C326AA0962001CF665 /* VirgilCrypto.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VirgilCrypto.xcframework; path = Carthage/Build/VirgilCrypto.xcframework; sourceTree = "<group>"; };
-		9794E1C426AA0962001CF665 /* VSCPythia.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VSCPythia.xcframework; path = Carthage/Build/VSCPythia.xcframework; sourceTree = "<group>"; };
-		9794E1C526AA0962001CF665 /* VirgilCryptoFoundation.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VirgilCryptoFoundation.xcframework; path = Carthage/Build/VirgilCryptoFoundation.xcframework; sourceTree = "<group>"; };
-		9794E1C626AA0962001CF665 /* VirgilCryptoPythia.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VirgilCryptoPythia.xcframework; path = Carthage/Build/VirgilCryptoPythia.xcframework; sourceTree = "<group>"; };
-		9794E1C726AA0962001CF665 /* VirgilSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VirgilSDK.xcframework; path = Carthage/Build/VirgilSDK.xcframework; sourceTree = "<group>"; };
-		9794E1C826AA0962001CF665 /* VSCCommon.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = VSCCommon.xcframework; path = Carthage/Build/VSCCommon.xcframework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -265,13 +195,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9794E1E426AA09CA001CF665 /* VSCPythia.xcframework in Frameworks */,
-				9794E1E026AA09CA001CF665 /* VSCCommon.xcframework in Frameworks */,
-				9794E1DA26AA09CA001CF665 /* VirgilCryptoFoundation.xcframework in Frameworks */,
-				9794E1E226AA09CA001CF665 /* VSCFoundation.xcframework in Frameworks */,
-				9794E1DC26AA09CA001CF665 /* VirgilCryptoPythia.xcframework in Frameworks */,
-				9794E1D826AA09CA001CF665 /* VirgilCrypto.xcframework in Frameworks */,
-				9794E1DE26AA09CA001CF665 /* VirgilSDK.xcframework in Frameworks */,
+				F43238CD2A8309CA0064F1C1 /* VirgilSDK in Frameworks */,
+				F43238CF2A8309CA0064F1C1 /* VirgilCryptoPythia in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -287,13 +212,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9794E1F326AA09F9001CF665 /* VSCPythia.xcframework in Frameworks */,
-				9794E1EF26AA09F9001CF665 /* VSCCommon.xcframework in Frameworks */,
-				9794E1E926AA09F9001CF665 /* VirgilCryptoFoundation.xcframework in Frameworks */,
-				9794E1F126AA09F9001CF665 /* VSCFoundation.xcframework in Frameworks */,
-				9794E1EB26AA09F9001CF665 /* VirgilCryptoPythia.xcframework in Frameworks */,
-				9794E1E726AA09F9001CF665 /* VirgilCrypto.xcframework in Frameworks */,
-				9794E1ED26AA09F9001CF665 /* VirgilSDK.xcframework in Frameworks */,
+				F43238D12A8309D20064F1C1 /* VirgilSDK in Frameworks */,
+				F43238D32A8309D20064F1C1 /* VirgilCryptoPythia in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,13 +229,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9794E20226AA0A1F001CF665 /* VSCPythia.xcframework in Frameworks */,
-				9794E1FE26AA0A1F001CF665 /* VSCCommon.xcframework in Frameworks */,
-				9794E1F826AA0A1F001CF665 /* VirgilCryptoFoundation.xcframework in Frameworks */,
-				9794E20026AA0A1F001CF665 /* VSCFoundation.xcframework in Frameworks */,
-				9794E1FA26AA0A1F001CF665 /* VirgilCryptoPythia.xcframework in Frameworks */,
-				9794E1F626AA0A1F001CF665 /* VirgilCrypto.xcframework in Frameworks */,
-				9794E1FC26AA0A1F001CF665 /* VirgilSDK.xcframework in Frameworks */,
+				F43238D52A8309D90064F1C1 /* VirgilSDK in Frameworks */,
+				F43238D72A8309D90064F1C1 /* VirgilCryptoPythia in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -323,13 +238,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				9794E1CF26AA0962001CF665 /* VirgilCryptoFoundation.xcframework in Frameworks */,
-				9794E1C926AA0962001CF665 /* VSCFoundation.xcframework in Frameworks */,
-				9794E1CB26AA0962001CF665 /* VirgilCrypto.xcframework in Frameworks */,
-				9794E1CD26AA0962001CF665 /* VSCPythia.xcframework in Frameworks */,
-				9794E1D326AA0962001CF665 /* VirgilSDK.xcframework in Frameworks */,
-				9794E1D526AA0962001CF665 /* VSCCommon.xcframework in Frameworks */,
-				9794E1D126AA0962001CF665 /* VirgilCryptoPythia.xcframework in Frameworks */,
+				F43238C82A8309920064F1C1 /* VirgilSDK in Frameworks */,
+				F43238CB2A8309BC0064F1C1 /* VirgilCryptoPythia in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -386,7 +296,6 @@
 			isa = PBXGroup;
 			children = (
 				42DD29A020751EAC00C9C014 /* Source */,
-				42DD299120751B1A00C9C014 /* VirgilSDKPythia */,
 				42DD2A422075234C00C9C014 /* Tests */,
 				42DD299020751B1A00C9C014 /* Products */,
 				42DD2A722075294900C9C014 /* Frameworks */,
@@ -405,14 +314,6 @@
 				42A76BBA20AED9D200561EA2 /* VirgilSDKPythia.framework */,
 			);
 			name = Products;
-			sourceTree = "<group>";
-		};
-		42DD299120751B1A00C9C014 /* VirgilSDKPythia */ = {
-			isa = PBXGroup;
-			children = (
-				42DD299320751B1A00C9C014 /* Info.plist */,
-			);
-			path = VirgilSDKPythia;
 			sourceTree = "<group>";
 		};
 		42DD29A020751EAC00C9C014 /* Source */ = {
@@ -439,13 +340,6 @@
 		42DD2A722075294900C9C014 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				9794E1C326AA0962001CF665 /* VirgilCrypto.xcframework */,
-				9794E1C526AA0962001CF665 /* VirgilCryptoFoundation.xcframework */,
-				9794E1C626AA0962001CF665 /* VirgilCryptoPythia.xcframework */,
-				9794E1C726AA0962001CF665 /* VirgilSDK.xcframework */,
-				9794E1C826AA0962001CF665 /* VSCCommon.xcframework */,
-				9794E1C226AA0962001CF665 /* VSCFoundation.xcframework */,
-				9794E1C426AA0962001CF665 /* VSCPythia.xcframework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -498,6 +392,10 @@
 			dependencies = (
 			);
 			name = "VirgilSDKPythia macOS";
+			packageProductDependencies = (
+				F43238CC2A8309CA0064F1C1 /* VirgilSDK */,
+				F43238CE2A8309CA0064F1C1 /* VirgilCryptoPythia */,
+			);
 			productName = VirgilSDKPythia;
 			productReference = 42A76B6120AED95200561EA2 /* VirgilSDKPythia.framework */;
 			productType = "com.apple.product-type.framework";
@@ -535,6 +433,10 @@
 			dependencies = (
 			);
 			name = "VirgilSDKPythia tvOS";
+			packageProductDependencies = (
+				F43238D02A8309D20064F1C1 /* VirgilSDK */,
+				F43238D22A8309D20064F1C1 /* VirgilCryptoPythia */,
+			);
 			productName = VirgilSDKPythia;
 			productReference = 42A76B9E20AED99A00561EA2 /* VirgilSDKPythia.framework */;
 			productType = "com.apple.product-type.framework";
@@ -572,6 +474,10 @@
 			dependencies = (
 			);
 			name = "VirgilSDKPythia watchOS";
+			packageProductDependencies = (
+				F43238D42A8309D90064F1C1 /* VirgilSDK */,
+				F43238D62A8309D90064F1C1 /* VirgilCryptoPythia */,
+			);
 			productName = VirgilSDKPythia;
 			productReference = 42A76BBA20AED9D200561EA2 /* VirgilSDKPythia.framework */;
 			productType = "com.apple.product-type.framework";
@@ -590,6 +496,10 @@
 			dependencies = (
 			);
 			name = "VirgilSDKPythia iOS";
+			packageProductDependencies = (
+				F43238C72A8309920064F1C1 /* VirgilSDK */,
+				F43238CA2A8309BC0064F1C1 /* VirgilCryptoPythia */,
+			);
 			productName = VirgilSDKPythia;
 			productReference = 42DD298F20751B1A00C9C014 /* VirgilSDKPythia.framework */;
 			productType = "com.apple.product-type.framework";
@@ -674,6 +584,10 @@
 				Base,
 			);
 			mainGroup = 42DD298520751B1A00C9C014;
+			packageReferences = (
+				F43238C62A8309920064F1C1 /* XCRemoteSwiftPackageReference "virgil-sdk-x" */,
+				F43238C92A8309BC0064F1C1 /* XCRemoteSwiftPackageReference "virgil-crypto-c" */,
+			);
 			productRefGroup = 42DD299020751B1A00C9C014 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -888,23 +802,22 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 0.12.0;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = VirgilSDKPythia/Info.plist;
+				GENERATE_INFOPLIST_FILE = YES;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 0.12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilSDKPythia;
 				PRODUCT_MODULE_NAME = VirgilSDKPythia;
 				PRODUCT_NAME = VirgilSDKPythia;
@@ -923,23 +836,22 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 0.12.0;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				FRAMEWORK_VERSION = A;
-				INFOPLIST_FILE = VirgilSDKPythia/Info.plist;
+				GENERATE_INFOPLIST_FILE = YES;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 0.12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilSDKPythia;
 				PRODUCT_MODULE_NAME = VirgilSDKPythia;
 				PRODUCT_NAME = VirgilSDKPythia;
@@ -957,13 +869,15 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build";
+				CURRENT_PROJECT_VERSION = 0.12.0;
+				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 0.12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilSDKPythiaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -980,13 +894,15 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build";
+				CURRENT_PROJECT_VERSION = 0.12.0;
+				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 					"@loader_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 0.12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilSDKPythiaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = macosx;
@@ -1001,21 +917,20 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0.12.0;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build",
-				);
-				INFOPLIST_FILE = VirgilSDKPythia/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GENERATE_INFOPLIST_FILE = YES;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilSDKPythia;
 				PRODUCT_MODULE_NAME = VirgilSDKPythia;
 				PRODUCT_NAME = VirgilSDKPythia;
@@ -1025,7 +940,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Debug;
 		};
@@ -1035,21 +950,20 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0.12.0;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build",
-				);
-				INFOPLIST_FILE = VirgilSDKPythia/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GENERATE_INFOPLIST_FILE = YES;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilSDKPythia;
 				PRODUCT_MODULE_NAME = VirgilSDKPythia;
 				PRODUCT_NAME = VirgilSDKPythia;
@@ -1058,7 +972,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 9.0;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Release;
 		};
@@ -1067,13 +981,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build";
+				CURRENT_PROJECT_VERSION = 0.12.0;
+				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 0.12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilSDKPythiaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
@@ -1081,7 +997,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 11.3;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Debug;
 		};
@@ -1090,20 +1006,22 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build";
+				CURRENT_PROJECT_VERSION = 0.12.0;
+				GENERATE_INFOPLIST_FILE = YES;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 0.12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilSDKPythiaTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = appletvos;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 3;
-				TVOS_DEPLOYMENT_TARGET = 11.3;
+				TVOS_DEPLOYMENT_TARGET = 11.0;
 			};
 			name = Release;
 		};
@@ -1113,21 +1031,20 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0.12.0;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build",
-				);
-				INFOPLIST_FILE = VirgilSDKPythia/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GENERATE_INFOPLIST_FILE = YES;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilSDKPythia;
 				PRODUCT_MODULE_NAME = VirgilSDKPythia;
 				PRODUCT_NAME = VirgilSDKPythia;
@@ -1137,7 +1054,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Debug;
 		};
@@ -1147,21 +1064,20 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0.12.0;
 				DEFINES_MODULE = YES;
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build",
-				);
-				INFOPLIST_FILE = VirgilSDKPythia/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GENERATE_INFOPLIST_FILE = YES;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilSDKPythia;
 				PRODUCT_MODULE_NAME = VirgilSDKPythia;
 				PRODUCT_NAME = VirgilSDKPythia;
@@ -1170,7 +1086,7 @@
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 2.0;
+				WATCHOS_DEPLOYMENT_TARGET = 4.0;
 			};
 			name = Release;
 		};
@@ -1315,23 +1231,22 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0.12.0;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build",
-				);
-				INFOPLIST_FILE = VirgilSDKPythia/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GENERATE_INFOPLIST_FILE = YES;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilSDKPythia;
 				PRODUCT_MODULE_NAME = VirgilSDKPythia;
 				PRODUCT_NAME = VirgilSDKPythia;
@@ -1348,23 +1263,22 @@
 				APPLICATION_EXTENSION_API_ONLY = YES;
 				CODE_SIGN_IDENTITY = "";
 				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 0.12.0;
 				DEFINES_MODULE = YES;
 				DEVELOPMENT_TEAM = "";
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build",
-				);
-				INFOPLIST_FILE = VirgilSDKPythia/Info.plist;
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
+				GENERATE_INFOPLIST_FILE = YES;
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
+				MARKETING_VERSION = 0.12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.virgilsecurity.VirgilSDKPythia;
 				PRODUCT_MODULE_NAME = VirgilSDKPythia;
 				PRODUCT_NAME = VirgilSDKPythia;
@@ -1381,13 +1295,16 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build";
+				CURRENT_PROJECT_VERSION = 0.12.0;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 0.12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.virgilsecurity.VirgilSDKPythia-iOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -1402,13 +1319,16 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
-				FRAMEWORK_SEARCH_PATHS = "$(PROJECT_DIR)/Carthage/Build";
+				CURRENT_PROJECT_VERSION = 0.12.0;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 					"@loader_path/Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MACOSX_DEPLOYMENT_TARGET = 10.13;
+				MARKETING_VERSION = 0.12.0;
 				PRODUCT_BUNDLE_IDENTIFIER = "com.virgilsecurity.VirgilSDKPythia-iOS-Tests";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -1501,6 +1421,68 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		F43238C62A8309920064F1C1 /* XCRemoteSwiftPackageReference "virgil-sdk-x" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/VirgilSecurity/virgil-sdk-x";
+			requirement = {
+				kind = exactVersion;
+				version = 9.0.0;
+			};
+		};
+		F43238C92A8309BC0064F1C1 /* XCRemoteSwiftPackageReference "virgil-crypto-c" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/VirgilSecurity/virgil-crypto-c";
+			requirement = {
+				kind = exactVersion;
+				version = 0.17.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		F43238C72A8309920064F1C1 /* VirgilSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F43238C62A8309920064F1C1 /* XCRemoteSwiftPackageReference "virgil-sdk-x" */;
+			productName = VirgilSDK;
+		};
+		F43238CA2A8309BC0064F1C1 /* VirgilCryptoPythia */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F43238C92A8309BC0064F1C1 /* XCRemoteSwiftPackageReference "virgil-crypto-c" */;
+			productName = VirgilCryptoPythia;
+		};
+		F43238CC2A8309CA0064F1C1 /* VirgilSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F43238C62A8309920064F1C1 /* XCRemoteSwiftPackageReference "virgil-sdk-x" */;
+			productName = VirgilSDK;
+		};
+		F43238CE2A8309CA0064F1C1 /* VirgilCryptoPythia */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F43238C92A8309BC0064F1C1 /* XCRemoteSwiftPackageReference "virgil-crypto-c" */;
+			productName = VirgilCryptoPythia;
+		};
+		F43238D02A8309D20064F1C1 /* VirgilSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F43238C62A8309920064F1C1 /* XCRemoteSwiftPackageReference "virgil-sdk-x" */;
+			productName = VirgilSDK;
+		};
+		F43238D22A8309D20064F1C1 /* VirgilCryptoPythia */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F43238C92A8309BC0064F1C1 /* XCRemoteSwiftPackageReference "virgil-crypto-c" */;
+			productName = VirgilCryptoPythia;
+		};
+		F43238D42A8309D90064F1C1 /* VirgilSDK */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F43238C62A8309920064F1C1 /* XCRemoteSwiftPackageReference "virgil-sdk-x" */;
+			productName = VirgilSDK;
+		};
+		F43238D62A8309D90064F1C1 /* VirgilCryptoPythia */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = F43238C92A8309BC0064F1C1 /* XCRemoteSwiftPackageReference "virgil-crypto-c" */;
+			productName = VirgilCryptoPythia;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 42DD298620751B1A00C9C014 /* Project object */;
 }

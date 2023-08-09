@@ -61,11 +61,11 @@ class VSY001_BrainKeyTests: XCTestCase {
         let brainKey = BrainKey(context: brainKeyContext)
         
         let keyPair1 = try! brainKey.generateKeyPair(password: "some password").startSync().get()
-        sleep(5)
+        sleep(10)
         let keyPair2 = try! brainKey.generateKeyPair(password: "some password").startSync().get()
-        sleep(5)
+        sleep(10)
         let keyPair3 = try! brainKey.generateKeyPair(password: "another password").startSync().get()
-        sleep(5)
+        sleep(10)
         let keyPair4 = try! brainKey.generateKeyPair(password: "some password", brainKeyId: "my password 1").startSync().get()
         
         XCTAssert(keyPair1.publicKey.identifier == keyPair2.publicKey.identifier)

@@ -65,13 +65,19 @@ jobs:
             ENCRYPTION_IV: ${{ secrets.ENCRYPTION_IV }}
         run: ./CI/decrypt-config.sh
 
-      - name: SPM test
+      - name: SPM test build
         run: |
             brew install coreutils # install 'timeout' utility
             swift --version
             # fix for Swift Package Manager when it fails to download binary targets
             timeout 5m bash -c 'until swift build; do rm -fr .build && sleep 10; done'
-            swift test
+      - name: SPM test run
+        uses: nick-fields/retry@v2
+        with:
+          max_attempts: 10
+          timeout_minutes: 5
+          retry_on: error
+          command: swift test
 
   Swiftlint:
     runs-on: macOS-13

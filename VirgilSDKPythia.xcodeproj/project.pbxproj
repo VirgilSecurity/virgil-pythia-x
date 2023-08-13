@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 56;
 	objects = {
 
 /* Begin PBXAggregateTarget section */
@@ -576,7 +576,7 @@
 				};
 			};
 			buildConfigurationList = 42DD298920751B1A00C9C014 /* Build configuration list for PBXProject "VirgilSDKPythia" */;
-			compatibilityVersion = "Xcode 8.0";
+			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
 			knownRegions = (
@@ -1427,8 +1427,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/VirgilSecurity/virgil-sdk-x";
 			requirement = {
-				kind = exactVersion;
-				version = 9.0.0;
+				branch = develop;
+				kind = branch;
 			};
 		};
 		F43238C92A8309BC0064F1C1 /* XCRemoteSwiftPackageReference "virgil-crypto-c" */ = {
@@ -1436,7 +1436,7 @@
 			repositoryURL = "https://github.com/VirgilSecurity/virgil-crypto-c";
 			requirement = {
 				kind = exactVersion;
-				version = 0.17.0;
+				version = "0.17.1-dev.2";
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */

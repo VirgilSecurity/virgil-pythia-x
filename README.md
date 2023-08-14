@@ -42,7 +42,7 @@ To integrate Virgil Pythia into your Xcode project using CocoaPods, specify it i
 target '<Your Target Name>' do
   use_frameworks!
 
-  pod 'VirgilSDKPythia', '~> 0.12.0'
+  pod 'VirgilSDKPythia', '~> 0.12.1'
 end
 ```
 

@@ -1427,8 +1427,8 @@
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/VirgilSecurity/virgil-sdk-x";
 			requirement = {
-				branch = develop;
-				kind = branch;
+				kind = exactVersion;
+				version = 9.0.1;
 			};
 		};
 		F43238C92A8309BC0064F1C1 /* XCRemoteSwiftPackageReference "virgil-crypto-c" */ = {
@@ -1436,7 +1436,7 @@
 			repositoryURL = "https://github.com/VirgilSecurity/virgil-crypto-c";
 			requirement = {
 				kind = exactVersion;
-				version = "0.17.1-dev.2";
+				version = 0.17.1;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
